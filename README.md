@@ -1,4 +1,4 @@
-#sleep-admin
+#Sleep-Machine
 ===========
 
 Sleep-Admin aims to be a physical device, software and some online-services for the administration of the sleeping process -
