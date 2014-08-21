@@ -1,7 +1,7 @@
 #Sleep-Machine
 ===========
 
-Sleep-Machine aims to be a physical device, the associated software and some online-services for the administration of the sleeping process -
+Sleep-Machine aims to be a physical device, its associated software and some online-services for the administration of the sleeping process -
 covering all the phases and transitions of sleep like falling asleep, deep-sleep, dreaming and waking up.
 
 
