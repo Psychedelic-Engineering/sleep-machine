@@ -100,9 +100,9 @@ class Graph:
 		rng = channel.getRng()
 		yRng = int(self.map_value(rng, 0, 1000, self.height, 0))
 
-		self.surface.set_at((self.x, yRng), self.colors[2])
-		self.surface.set_at((self.x, y), self.colors[0])
-		self.surface.set_at((self.x, yAvg), self.colors[1])
+		#self.surface.set_at((self.x, yRng), self.colors[2])
+		self.surface.set_at((self.x, y), self.colors[1])
+		self.surface.set_at((self.x, yAvg), self.colors[2])
 
 
 
