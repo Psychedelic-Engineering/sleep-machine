@@ -3,11 +3,10 @@ from collections import deque
 import math
 import numpy as np
 
+
 class Channel:
 
-	npBufSize = 100
-
-	def __init__(self, name, min, max, maxNum, offset=0):
+	def __init__(self, name, min, max, maxNum, offset=0.0):
 		self.name = name
 		self.min = min
 		self.max = max
@@ -17,42 +16,28 @@ class Channel:
 		self.size = maxNum
 		self.buffer = deque(maxlen=maxNum)
 		self.offset = offset
-		self.npBuffer = np.zeros(self.npBufSize)
-		self.npBufPos = 0
-		pass
 
-
-
-	def adjustQueue(self, size):
-		pass
+	def __repr__(self):
+		return "%s (%.1f-%.1f)" % (self.name, self.min, self.max)
 
 	def putValue(self, value):
 		if self.num >= self.size:
 			self.buffersum -= self.buffer[0]
 		newValue = value
-
 		self.buffersum += newValue
 		self.buffer.append(newValue)
 		self.num += 1
 		self.sum += newValue
+
 		if self.num == 20:
 			pass
 			self.offset = -self.sum / self.num
+
 		if (self.num % 1) == 0:
 			pass
 			#self.offset -= (self.offset + self.sum / self.num) / 10
 			#self.offset = - (self.offset + self.sum / self.num)
 		#print self.offset
-		if self.npBufPos < self.npBufSize:
-			self.npBufPos += 1
-		else:
-			self.npBufPos = 0
-			try:
-				self.onUpdate(self)
-			except:
-				pass
-		self.npBuffer[self.npBufPos] = newValue
-
 
 	def getValue(self):
 		#if self.num > 0:
@@ -90,10 +75,6 @@ class Channel:
 			#der = der + abs(avg-i)
 		der /= self.size
 		return der
-
-
-	def __repr__(self):
-		return "%s (%.1f-%.1f)" % (self.name, self.min, self.max)
 
 	def getDeriv(self):
 		val = self.buffer[-1]                           # current value

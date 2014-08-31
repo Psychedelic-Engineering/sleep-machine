@@ -48,16 +48,13 @@ class Graph:
 			self.surface.set_at((self.bufferX, y), self.colors[0])
 			self.bufferX += 1
 			print self.bufferX, i
-
 		pygame.display.flip()
-
-
 
 	def drawBG(self):
 		self.surface.fill((0, 0, 0))
 		for i in range(10):
 			y = int(self.map_value(i * 50, -100, 600, self.height, 0))
-			pygame.draw.line(self.surface, (64,64,64), (0,y), (self.width,y))
+			pygame.draw.line(self.surface, (64, 64, 64), (0, y), (self.width, y))
 
 	def draw(self, channel):
 		pass
@@ -66,46 +63,36 @@ class Graph:
 		self.values = values
 
 	def render(self, channels=None):
-		#return
 		if self.x >= (self.width - 1):
-			self.x = 0
-			self.drawBG()
-
-		#self.surface.scroll(-1,0)
-		#pygame.draw.rect(self.surface, (0,0,0), (self.width-1, 0, 2, self.height))
-		#x = self.width-1
+			#self.x = 0
+			#self.drawBG()
+			self.surface.scroll(-1,0)
+			pygame.draw.rect(self.surface, (0,0,0), (self.width-1, 0, 2, self.height))
 		else:
 			self.x += 1
-		#for i, value in enumerate(self.values):
-		#	if channels is None or i in channels:
 
-		#for i, channel in enumerate(self.sensor.channels):
-		channel = self.sensor.channels[1]
-		self.renderChannel(channel, self.colors[1])
+		self.renderChannel(self.sensor.channels[1], self.colors[1])
+		self.renderChannel(self.sensor.channels[2], self.colors[2])
+		self.renderChannel(self.sensor.channels[3], self.colors[3])
 
 		pygame.display.flip()
-
-	#self.screen.blit(self.surface, (0,0))
+		#self.screen.blit(self.surface, (0,0))
 
 	def renderChannel(self, channel, color):
-		min = channel.min
-		max = channel.max + 500
+		min = -200 #channel.min
+		max = 1000 #channel.max
 
 		value = channel.getValue()
 		y = int(self.map_value(value, min, max, self.height, 0))
+		#self.surface.set_at((self.x, y), color)
 
 		avg = channel.getBufferAvg()
 		yAvg = int(self.map_value(avg, min, max, self.height, 0))
+		self.surface.set_at((self.x, yAvg), color)
 
 		rng = channel.getRng()
-		yRng = int(self.map_value(rng, 0, 1000, self.height, 0))
-
-		#self.surface.set_at((self.x, yRng), self.colors[2])
-		self.surface.set_at((self.x, y), self.colors[1])
-		self.surface.set_at((self.x, yAvg), self.colors[2])
-
-
-
+		yRng = int(self.map_value(rng, 0, 100, self.height, 0))
+		#self.surface.set_at((self.x, yRng), [x / 2 for x in color])
 
 	def map_value(self, value, in_min, in_max, out_min, out_max):
 		return (value - in_min) * (out_max - out_min) / (in_max - in_min) + out_min

@@ -1,7 +1,6 @@
 import os
 from serial import Serial, SerialException
 from channel import Channel
-import numpy
 
 class Sensor:
 
@@ -9,6 +8,10 @@ class Sensor:
 		self.initialized = False
 		self.initSerial()
 		self.initChannels()
+
+	def __del__(self):
+		print "Close Teensy"
+		self.teensy.close()
 
 	def initSerial(self):
 		try:
@@ -24,7 +27,7 @@ class Sensor:
 	def checkTeensy(self):
 		self.teensy.write("i")
 		response = self.teensy.readline().strip()
-		print "init sensors: %s" % response
+		print "Init Teensy: %s" % response
 		return response == "ok"
 
 	def initChannels(self):
@@ -43,20 +46,8 @@ class Sensor:
 					min, max = float(min), float(max)
 					for i in range(num):
 						self.channels.append(Channel(name, min, max, 10))
-			self.channels[1].min = -400
-			self.channels[1].max = 400
-			#self.channels[1].offset = -1014
-			self.channels[2].min = -400
-			self.channels[2].max = 400
-			#self.channels[2].offset = -1222
-			self.channels[3].min = -400
-			self.channels[3].max = 400
-			#self.channels[3].offset = -1148
 
 			self.initialized = True
-			print self.initialized
-
-			print self.channels
 		except:
 			print "initChannels error"
 			self.initialized = False
@@ -66,40 +57,11 @@ class Sensor:
 			self.initChannels()
 		self.teensy.write("!")
 		response = self.teensy.readline().strip()
-		#print response
+
 		try:
 			values = map(float, response.split(","))
 			for i, v in enumerate(values):
 				self.channels[i].putValue(v)
 		except:
+			raise
 			self.initialized = False
-
-	def getValues(self):
-		res = []
-		for i in self.channels:
-			res.append(i.getValue())
-		return res
-
-	def getAvgs(self):
-		res = []
-		for i in self.channels:
-			res.append(i.getBufferAvg())
-		return res
-
-	def getTotalAvgs(self):
-		res = []
-		for i in self.channels:
-			res.append(i.getAvg())
-		return res
-
-	def getDerivs(self):
-		res = []
-		for i in self.channels:
-			res.append(i.getDeriv())
-		return res
-
-	def getRanges(self):
-		res = []
-		for i in self.channels:
-			res.append(i.getRng())
-		return res
