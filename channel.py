@@ -17,8 +17,27 @@ class Channel:
 		self.buffer = deque(maxlen=maxNum)
 		self.offset = offset
 
+		self.npBufferSize = 200
+		self.npBufferPos = 0
+		self.npBuffer = np.zeros(self.npBufferSize)
+
+
 	def __repr__(self):
 		return "%s (%.1f-%.1f)" % (self.name, self.min, self.max)
+
+	def calibrate(self):
+		self.offset = -self.buffersum / min(self.size, self.num)
+
+
+	def smooth(self, x,beta):
+		""" kaiser window smoothing """
+		window_len=11
+		# extending the data at beginning and at the end
+		# to apply the window at the borders
+		s = np.r_[x[window_len-1:0:-1],x,x[-1:-window_len:-1]]
+		w = np.kaiser(window_len,beta)
+		y = np.convolve(w/w.sum(),s,mode='valid')
+		return y[5:len(y)-5]
 
 	def putValue(self, value):
 		if self.num >= self.size:
@@ -29,15 +48,22 @@ class Channel:
 		self.num += 1
 		self.sum += newValue
 
-		if self.num == 20:
-			pass
-			self.offset = -self.sum / self.num
+		self.npBufferPos += 1
 
-		if (self.num % 1) == 0:
-			pass
-			#self.offset -= (self.offset + self.sum / self.num) / 10
-			#self.offset = - (self.offset + self.sum / self.num)
-		#print self.offset
+		if self.npBufferPos >= self.npBufferSize:
+			self.npBufferPos = 0
+			self.smoothed = self.smooth(self.npBuffer, 1)
+			try:
+				self.onUpdate(self)
+			except:
+				pass
+		self.npBuffer[self.npBufferPos] = value
+
+
+		# Auto Calibration
+		#if self.num % 100 == 0:
+		#	self.calibrate()
+
 
 	def getValue(self):
 		#if self.num > 0:

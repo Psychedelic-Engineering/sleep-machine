@@ -8,8 +8,8 @@ class SleepApp:
 
 	def __init__(self):
 		self.quitting = False
-		self.sensor = Sensor()
-		#self.sensor = FakeSensor()
+		#self.sensor = Sensor()
+		self.sensor = FakeSensor()
 		self.graph = Graph(1600, 900, self.sensor)
 
 	def start(self):
@@ -22,10 +22,10 @@ class SleepApp:
 			if elapsed >= 0.05:
 				lastTime = now
 				self.sensor.readData()
-				self.graph.render()
+				#self.graph.render()
 				counter += 1
-				if (counter % 10) == 0:
-					print 10 / (time.time() - startTime)
+				if (counter % 100) == 0:
+					print 100 / (time.time() - startTime)
 					startTime = time.time()
 
 	def quit(self):

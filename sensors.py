@@ -45,7 +45,7 @@ class Sensor:
 					num = int(num)
 					min, max = float(min), float(max)
 					for i in range(num):
-						self.channels.append(Channel(name, min, max, 10))
+						self.channels.append(Channel(name, min, max, 100))
 
 			self.initialized = True
 		except:

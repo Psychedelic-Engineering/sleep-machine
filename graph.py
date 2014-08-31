@@ -31,23 +31,38 @@ class Graph:
 		(0, 128, 128)
 		)
 
-		#self.sensor.channels[0].onUpdate = self.updateBuffer
+		self.sensor.channels[1].onUpdate = self.updateBuffer
 
-	bufferX = 0
+	def checkBounds(self, scroll=False):
+		if self.x >= (self.width - 1):
+			if scroll:
+				self.surface.scroll(-1,0)
+				pygame.draw.rect(self.surface, (0,0,0), (self.width-1, 0, 2, self.height))
+				self.x -= 1
+			else:
+				self.x = 0
+				self.drawBG()
+		else:
+			self.x += 1
+
 
 	def updateBuffer(self, channel):
-		min = 1000
+
+		min = 1200
 		max = 2000
 		buffer = channel.npBuffer
-
-		if self.bufferX >= (self.width - 1):
-			self.bufferX = 0
-			self.drawBG()
-		for i in np.nditer(buffer):
-			y = int(self.map_value(i, min, max, self.height, 0))
-			self.surface.set_at((self.bufferX, y), self.colors[0])
-			self.bufferX += 1
-			print self.bufferX, i
+		smoothed = channel.smoothed
+		print buffer.shape[0]
+		#for i in np.nditer(buffer):
+		for i in range(buffer.shape[0]):
+			self.checkBounds(True)
+			value = buffer[i]
+			smooth = smoothed[i]
+			y = int(self.map_value(value, min, max, self.height, 0))
+			self.surface.set_at((self.x, y), self.colors[1])
+			y = int(self.map_value(smooth, min, max, self.height, 0))
+			self.surface.set_at((self.x, y), self.colors[2])
+			self.x += 1
 		pygame.display.flip()
 
 	def drawBG(self):
@@ -63,13 +78,7 @@ class Graph:
 		self.values = values
 
 	def render(self, channels=None):
-		if self.x >= (self.width - 1):
-			#self.x = 0
-			#self.drawBG()
-			self.surface.scroll(-1,0)
-			pygame.draw.rect(self.surface, (0,0,0), (self.width-1, 0, 2, self.height))
-		else:
-			self.x += 1
+		self.checkBounds()
 
 		self.renderChannel(self.sensor.channels[1], self.colors[1])
 		self.renderChannel(self.sensor.channels[2], self.colors[2])
@@ -80,7 +89,7 @@ class Graph:
 
 	def renderChannel(self, channel, color):
 		min = -200 #channel.min
-		max = 1000 #channel.max
+		max = 1400 #channel.max
 
 		value = channel.getValue()
 		y = int(self.map_value(value, min, max, self.height, 0))
