@@ -16,17 +16,20 @@ class FakeSensor(Sensor):
 		response = self.file.readline()
 		self.line += 1
 
+		skipLines = 60000
+		for i in range(skipLines):
+			self.line += 1
+			response = self.file.readline()
+
 	def initChannels(self):
 		try:
 			size = 40
 			self.channels = []
-			self.channels.append(Channel("TouchA", -100, 600, size))
-			self.channels.append(Channel("TouchB", -100, 600, size))
-			self.channels.append(Channel("TouchC", -100, 600, size))
+			self.channels.append(Channel("TouchA", -200, 600, size))
+			self.channels.append(Channel("TouchB", -200, 600, size))
+			self.channels.append(Channel("TouchC", -200, 600, size))
 
 			self.initialized = True
-
-			print self.channels
 		except:
 			print "initChannels error"
 			self.initialized = False
@@ -34,10 +37,10 @@ class FakeSensor(Sensor):
 	def readData(self):
 		if not self.initialized:
 			self.initChannels()
-		for i in range(1):
+		for i in range(10):
 			self.line += 1
 			response = self.file.readline()
-		#response = self.file.readline()
+
 		try:
 			values = map(float, response.split(","))
 
@@ -45,6 +48,5 @@ class FakeSensor(Sensor):
 			self.channels[1].putValue(values[3])
 			self.channels[2].putValue(values[4])
 		except:
-			print self.line
 			#raise
 			pass
