@@ -2,6 +2,13 @@ import os
 from serial import Serial, SerialException
 from channel import Channel
 
+"""
+	Sensor Class
+	ToDo:
+	- ggf. abstrakte Klasse mit Sensor und Logfile als Unterklassen
+	- Teensy: Raspi- und Mac Unterschiede egalisieren
+	- ggf. Teensy in eigene klasse auslagern
+"""
 class Sensor:
 
 	def __init__(self):
