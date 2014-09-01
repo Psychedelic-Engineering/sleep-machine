@@ -2,7 +2,7 @@
 from collections import deque
 import math
 import numpy as np
-
+from scipy import signal
 
 class Channel:
 
@@ -30,16 +30,23 @@ class Channel:
 
 
 	def smooth(self, x,beta):
-		""" kaiser window smoothing """
-		window_len=11
-		# extending the data at beginning and at the end
-		# to apply the window at the borders
+
+		window_len=21
+		sampleRate = 10
+		cutOff = 0.01
+
+
+		fir_coeff = signal.firwin(window_len, cutOff)
+		smoothed = signal.lfilter(fir_coeff, 1.0, self.npBuffer)
+		return smoothed
+
 		s = np.r_[x[window_len-1:0:-1],x,x[-1:-window_len:-1]]
 		w = np.kaiser(window_len,beta)
 		y = np.convolve(w/w.sum(),s,mode='valid')
-		return y[5:len(y)-5]
+		return y[10:len(y)-10]
 
 	def putValue(self, value):
+		# deque buffer
 		if self.num >= self.size:
 			self.buffersum -= self.buffer[0]
 		newValue = value
@@ -48,14 +55,17 @@ class Channel:
 		self.num += 1
 		self.sum += newValue
 
+		# numpy buffer
 		self.npBufferPos += 1
-
 		if self.npBufferPos >= self.npBufferSize:
 			self.npBufferPos = 0
 			self.smoothed = self.smooth(self.npBuffer, 1)
+			#self.gradient = np.diff(self.npBuffer)
+
 			try:
 				self.onUpdate(self)
 			except:
+				#raise
 				pass
 		self.npBuffer[self.npBufferPos] = value
 

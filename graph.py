@@ -51,17 +51,32 @@ class Graph:
 		min = 1200
 		max = 2000
 		buffer = channel.npBuffer
-		smoothed = channel.smoothed
-		print buffer.shape[0]
+		buffer = channel.smoothed
+		std = np.std(channel.npBuffer) + 1200
+		var = np.var(channel.npBuffer) * 0.1 + 1200
+		avg = np.average(channel.npBuffer)
+		mean = np.mean(channel.npBuffer)
+		quant = 50
+		val = int(avg / quant) * quant
+		print val, var
 		#for i in np.nditer(buffer):
 		for i in range(buffer.shape[0]):
 			self.checkBounds(True)
 			value = buffer[i]
-			smooth = smoothed[i]
 			y = int(self.map_value(value, min, max, self.height, 0))
 			self.surface.set_at((self.x, y), self.colors[1])
+			"""
+			smooth = smoothed[i]
 			y = int(self.map_value(smooth, min, max, self.height, 0))
+			self.surface.set_at((self.x, y), self.colors[1])
+			"""
+			y = int(self.map_value(var, min, max, self.height, 0))
 			self.surface.set_at((self.x, y), self.colors[2])
+			y = int(self.map_value(std, min, max, self.height, 0))
+			self.surface.set_at((self.x, y), self.colors[3])
+			y = int(self.map_value(val, min, max, self.height, 0))
+			#self.surface.set_at((self.x, y), self.colors[4])
+
 			self.x += 1
 		pygame.display.flip()
 
