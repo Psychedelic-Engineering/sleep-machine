@@ -39,8 +39,9 @@ class Graph():
 		self.renderChannel(self.sensor.channels[1], self.colors[2])
 		self.renderChannel(self.sensor.channels[2], self.colors[3])
 
-		self.display.screen.blit(self.surface, (0, self.display.height * 2 / 3))
-		pygame.display.flip()
+		if self.x % 10 == 0:
+			self.display.screen.blit(self.surface, (0, self.display.height * 2 / 3))
+			pygame.display.flip()
 
 	def renderChannel(self, channel, color):
 		min = 1000 #channel.min
