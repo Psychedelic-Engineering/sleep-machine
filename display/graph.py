@@ -52,7 +52,7 @@ class Graph():
 
 		avg = channel.getBufferAvg()
 		yAvg = int(self.map_value(avg, min, max, self.height, 0))
-		self.surface.set_at((self.x, yAvg), color)
+		#self.surface.set_at((self.x, yAvg), color)
 
 		rng = channel.getRng()
 		yRng = int(self.map_value(rng, 0, 100, self.height, 0))
@@ -74,7 +74,7 @@ class Graph():
 		self.surface.fill((0, 0, 0))
 		for i in range(10):
 			y = int(self.map_value(i, 0, 10, self.height, 0))
-			pygame.draw.line(self.surface, (48, 48, 48), (0, y), (self.width, y))
+			pygame.draw.line(self.surface, (32, 32, 32), (0, y), (self.width, y))
 
 	def map_value(self, value, in_min, in_max, out_min, out_max):
 		return (value - in_min) * (out_max - out_min) / (in_max - in_min) + out_min
