@@ -35,7 +35,7 @@ class Graph():
 	def render(self, channels=None):
 		self.checkBounds()
 		for i, channel in enumerate(self.sensor.channels):
-			if channels is not None or i in channels:
+			if channels is None or i in channels:
 				self.renderChannel(channel, self.colors[i])
 		#self.renderChannel(self.sensor.channels[1], self.colors[1])
 		#self.renderChannel(self.sensor.channels[2], self.colors[2])
