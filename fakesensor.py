@@ -37,7 +37,7 @@ class FakeSensor(Sensor):
 	def readData(self):
 		if not self.initialized:
 			self.initChannels()
-		for i in range(10):
+		for i in range(50):
 			self.line += 1
 			response = self.file.readline()
 
