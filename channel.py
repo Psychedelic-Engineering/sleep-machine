@@ -51,7 +51,9 @@ class Channel:
 		if self.npBufferPos >= self.npBufferSize:
 			self.npBufferPos = 0
 			self.smoothed = self.smooth(self.npBuffer, 1)
-			#self.gradient = np.diff(self.npBuffer)
+			self.gradient = np.diff(self.npBuffer)
+
+			print self.smoothed
 
 			try:
 				self.onUpdate(self)
