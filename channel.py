@@ -17,10 +17,9 @@ class Channel:
 		self.buffer = deque(maxlen=maxNum)
 		self.offset = offset
 
-		self.npBufferSize = 200
+		self.npBufferSize = 800
 		self.npBufferPos = 0
 		self.npBuffer = np.zeros(self.npBufferSize)
-
 
 	def __repr__(self):
 		return "%s (%.1f-%.1f)" % (self.name, self.min, self.max)
@@ -28,22 +27,14 @@ class Channel:
 	def calibrate(self):
 		self.offset = -self.buffersum / min(self.size, self.num)
 
-
 	def smooth(self, x,beta):
-
-		window_len=21
+		window_len=50
 		sampleRate = 10
 		cutOff = 0.01
-
-
 		fir_coeff = signal.firwin(window_len, cutOff)
 		smoothed = signal.lfilter(fir_coeff, 1.0, self.npBuffer)
 		return smoothed
 
-		s = np.r_[x[window_len-1:0:-1],x,x[-1:-window_len:-1]]
-		w = np.kaiser(window_len,beta)
-		y = np.convolve(w/w.sum(),s,mode='valid')
-		return y[10:len(y)-10]
 
 	def putValue(self, value):
 		# deque buffer

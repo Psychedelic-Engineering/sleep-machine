@@ -16,7 +16,7 @@ class FakeSensor(Sensor):
 		response = self.file.readline()
 		self.line += 1
 
-		skipLines = 0
+		skipLines = 20000
 		for i in range(skipLines):
 			self.line += 1
 			response = self.file.readline()
@@ -37,7 +37,7 @@ class FakeSensor(Sensor):
 	def readData(self):
 		if not self.initialized:
 			self.initChannels()
-		for i in range(1):
+		for i in range(10):
 			self.line += 1
 			response = self.file.readline()
 

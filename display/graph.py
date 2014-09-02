@@ -2,14 +2,14 @@ import pygame
 import numpy as np
 
 
-class Graph:
-	def __init__(self, width, height, sensor):
+class Graph():
+
+	def __init__(self, display, sensor):
+		self.display = display
+		self.surface = self.display.screen
+		self.width = self.display.width
+		self.height = self.display.height
 		self.sensor = sensor
-		self.width = width
-		self.height = height
-		pygame.init()
-		pygame.font.init()
-		self.surface = pygame.display.set_mode((self.width, self.height))
 		#self.surface = pygame.Surface((width, height))
 		self.drawBG()
 
@@ -31,7 +31,7 @@ class Graph:
 		(0, 128, 128)
 		)
 
-		self.sensor.channels[1].onUpdate = self.updateBuffer
+		#self.sensor.channels[1].onUpdate = self.updateBuffer
 
 	def checkBounds(self, scroll=False):
 		if self.x >= (self.width - 1):
@@ -41,7 +41,7 @@ class Graph:
 				self.x -= 1
 			else:
 				self.x = 0
-				self.drawBG()
+				#self.drawBG()
 		else:
 			self.x += 1
 
@@ -58,10 +58,10 @@ class Graph:
 		mean = np.mean(channel.npBuffer)
 		quant = 50
 		val = int(avg / quant) * quant
-		print val, var
+
 		#for i in np.nditer(buffer):
 		for i in range(buffer.shape[0]):
-			self.checkBounds(True)
+			self.checkBounds()
 			value = buffer[i]
 			y = int(self.map_value(value, min, max, self.height, 0))
 			self.surface.set_at((self.x, y), self.colors[1])
@@ -95,27 +95,27 @@ class Graph:
 	def render(self, channels=None):
 		self.checkBounds()
 
-		self.renderChannel(self.sensor.channels[1], self.colors[1])
-		self.renderChannel(self.sensor.channels[2], self.colors[2])
-		self.renderChannel(self.sensor.channels[3], self.colors[3])
+		self.renderChannel(self.sensor.channels[0], self.colors[1])
+		self.renderChannel(self.sensor.channels[1], self.colors[2])
+		self.renderChannel(self.sensor.channels[2], self.colors[3])
 
 		pygame.display.flip()
-		#self.screen.blit(self.surface, (0,0))
+		#self.surface.blit(self.surface, (0,0))
 
 	def renderChannel(self, channel, color):
 		min = -200 #channel.min
 		max = 1400 #channel.max
 
 		value = channel.getValue()
-		y = int(self.map_value(value, min, max, self.height, 0))
+		y = int(self.map_value(value, min, max, self.height, self.height/2))
 		#self.surface.set_at((self.x, y), color)
 
 		avg = channel.getBufferAvg()
-		yAvg = int(self.map_value(avg, min, max, self.height, 0))
+		yAvg = int(self.map_value(avg, min, max, self.height, self.height/2))
 		self.surface.set_at((self.x, yAvg), color)
 
 		rng = channel.getRng()
-		yRng = int(self.map_value(rng, 0, 100, self.height, 0))
+		yRng = int(self.map_value(rng, 0, 100, self.height, self.height/2))
 		#self.surface.set_at((self.x, yRng), [x / 2 for x in color])
 
 	def map_value(self, value, in_min, in_max, out_min, out_max):

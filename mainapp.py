@@ -1,8 +1,11 @@
+import time
+import sys
 
-import time, pygame, sys
-from sensors import Sensor
+from display.display import Display
 from fakesensor import FakeSensor
-from graph import Graph
+from display.graph import Graph
+from display.clock import Clock
+
 
 class SleepApp:
 
@@ -10,7 +13,9 @@ class SleepApp:
 		self.quitting = False
 		#self.sensor = Sensor()
 		self.sensor = FakeSensor()
-		self.graph = Graph(1600, 900, self.sensor)
+		self.display = Display(320, 240)
+		self.graph = Graph(self.display, self.sensor)
+		self.clock = Clock(self.display)
 
 	def start(self):
 		lastTime = 0
@@ -22,7 +27,8 @@ class SleepApp:
 			if elapsed >= 0.001:
 				lastTime = now
 				self.sensor.readData()
-				#self.graph.render()
+				self.clock.render()
+				self.graph.render()
 				counter += 1
 				if (counter % 100) == 0:
 					print 100 / (time.time() - startTime)
@@ -31,7 +37,6 @@ class SleepApp:
 	def quit(self):
 		print "Quit..."
 		self.quitting = True
-		pygame.quit()
 		time.sleep(1)
 		sys.exit()
         
