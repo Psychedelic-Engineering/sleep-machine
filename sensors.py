@@ -24,22 +24,28 @@ class Sensor:
 		self.teensy.close()
 
 	def initSerial(self):
+
 		try:
 			for i in range(0, 5):
 				devName = "/dev/ttyACM%d" % i
 				if os.path.exists(devName):
 					self.teensy = Serial(devName, 115200, timeout=10)
 					return
-			"""
-			devName = "/dev/cu.usbmodem228731"
-			if os.path.exists(devName):
-				self.teensy = Serial(devName, 115200, timeout=0.1)
-				return
-			"""
 			else:
 				raise Exception("NoTeensy")
 		except:
 			raise Exception("NoTeensy")
+		"""
+		try:
+			devName = "/dev/cu.usbmodem228731"
+			if os.path.exists(devName):
+				self.teensy = Serial(devName, 115200, timeout=0.1)
+				return
+			else:
+				raise Exception("NoTeensy")
+		except:
+			raise Exception("NoTeensy")
+		"""
 
 	def checkTeensy(self):
 		self.teensy.write("i")
