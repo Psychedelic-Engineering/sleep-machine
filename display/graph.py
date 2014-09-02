@@ -39,8 +39,8 @@ class Graph():
 		self.renderChannel(self.sensor.channels[1], self.colors[2])
 		self.renderChannel(self.sensor.channels[2], self.colors[3])
 
-		self.display.screen.blit(self.surface, (0, self.display.height * 2 / 3))
-		pygame.display.flip()
+		#self.display.screen.blit(self.surface, (0, self.display.height * 2 / 3))
+		#pygame.display.flip()
 
 	def renderChannel(self, channel, color):
 		min = 0 #channel.min
@@ -71,6 +71,9 @@ class Graph():
 			self.x += 1
 
 	def drawBG(self):
+		self.display.screen.blit(self.surface, (0, self.display.height * 2 / 3))
+		pygame.display.flip()
+
 		self.surface.fill((0, 0, 0))
 		for i in range(10):
 			y = int(self.map_value(i * 50, -100, 600, self.height, 0))
