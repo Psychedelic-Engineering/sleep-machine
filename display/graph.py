@@ -45,8 +45,8 @@ class Graph():
 			pygame.display.flip()
 
 	def renderChannel(self, channel, color):
-		min = 1000 #channel.min
-		max = 2000 #channel.max
+		min = channel.min
+		max = channel.max
 
 		value = channel.getValue()
 		y = int(self.map_value(value, min, max, self.height, 0))

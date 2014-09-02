@@ -83,6 +83,7 @@ class Sensor:
 
 		try:
 			values = map(float, response.split(","))
+			print values
 			for i, v in enumerate(values):
 				self.channels[i].putValue(v)
 		except:
