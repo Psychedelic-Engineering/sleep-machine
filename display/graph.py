@@ -8,10 +8,9 @@ class Graph():
 		self.display = display
 		self.surface = self.display.screen
 		self.width = self.display.width
-		self.height = self.display.height
+		self.height = self.display.height / 3
 		self.sensor = sensor
-		#self.surface = pygame.Surface((width, height))
-		self.drawBG()
+		self.surface = pygame.Surface((self.width, self.height))
 
 		self.curX = 0
 		self.x = 0
@@ -33,6 +32,32 @@ class Graph():
 
 		#self.sensor.channels[1].onUpdate = self.updateBuffer
 
+	def render(self, channels=None):
+		self.checkBounds()
+
+		self.renderChannel(self.sensor.channels[0], self.colors[1])
+		self.renderChannel(self.sensor.channels[1], self.colors[2])
+		self.renderChannel(self.sensor.channels[2], self.colors[3])
+
+		self.display.screen.blit(self.surface, (0, self.display.height * 2 / 3))
+		pygame.display.flip()
+
+	def renderChannel(self, channel, color):
+		min = 0 #channel.min
+		max = 5000 #channel.max
+
+		value = channel.getValue()
+		y = int(self.map_value(value, min, max, self.height, 0))
+		#self.surface.set_at((self.x, y), color)
+
+		avg = channel.getBufferAvg()
+		yAvg = int(self.map_value(avg, min, max, self.height, 0))
+		self.surface.set_at((self.x, yAvg), color)
+
+		rng = channel.getRng()
+		yRng = int(self.map_value(rng, 0, 100, self.height, 0))
+		#self.surface.set_at((self.x, yRng), [x / 2 for x in color])
+
 	def checkBounds(self, scroll=False):
 		if self.x >= (self.width - 1):
 			if scroll:
@@ -41,11 +66,20 @@ class Graph():
 				self.x -= 1
 			else:
 				self.x = 0
-				#self.drawBG()
+				self.drawBG()
 		else:
 			self.x += 1
 
+	def drawBG(self):
+		self.surface.fill((0, 0, 0))
+		for i in range(10):
+			y = int(self.map_value(i * 50, -100, 600, self.height, 0))
+			pygame.draw.line(self.surface, (64, 64, 64), (0, y), (self.width, y))
 
+	def map_value(self, value, in_min, in_max, out_min, out_max):
+		return (value - in_min) * (out_max - out_min) / (in_max - in_min) + out_min
+
+	"""
 	def updateBuffer(self, channel):
 
 		min = 1200
@@ -65,11 +99,11 @@ class Graph():
 			value = buffer[i]
 			y = int(self.map_value(value, min, max, self.height, 0))
 			self.surface.set_at((self.x, y), self.colors[1])
-			"""
-			smooth = smoothed[i]
-			y = int(self.map_value(smooth, min, max, self.height, 0))
-			self.surface.set_at((self.x, y), self.colors[1])
-			"""
+
+			#smooth = smoothed[i]
+			#y = int(self.map_value(smooth, min, max, self.height, 0))
+			#self.surface.set_at((self.x, y), self.colors[1])
+
 			y = int(self.map_value(var, min, max, self.height, 0))
 			self.surface.set_at((self.x, y), self.colors[2])
 			y = int(self.map_value(std, min, max, self.height, 0))
@@ -79,12 +113,6 @@ class Graph():
 
 			self.x += 1
 		pygame.display.flip()
-
-	def drawBG(self):
-		self.surface.fill((0, 0, 0))
-		for i in range(10):
-			y = int(self.map_value(i * 50, -100, 600, self.height, 0))
-			pygame.draw.line(self.surface, (64, 64, 64), (0, y), (self.width, y))
 
 	def draw(self, channel):
 		pass
@@ -102,21 +130,6 @@ class Graph():
 		pygame.display.flip()
 		#self.surface.blit(self.surface, (0,0))
 
-	def renderChannel(self, channel, color):
-		min = -200 #channel.min
-		max = 1400 #channel.max
 
-		value = channel.getValue()
-		y = int(self.map_value(value, min, max, self.height, self.height/2))
-		#self.surface.set_at((self.x, y), color)
 
-		avg = channel.getBufferAvg()
-		yAvg = int(self.map_value(avg, min, max, self.height, self.height/2))
-		self.surface.set_at((self.x, yAvg), color)
-
-		rng = channel.getRng()
-		yRng = int(self.map_value(rng, 0, 100, self.height, self.height/2))
-		#self.surface.set_at((self.x, yRng), [x / 2 for x in color])
-
-	def map_value(self, value, in_min, in_max, out_min, out_max):
-		return (value - in_min) * (out_max - out_min) / (in_max - in_min) + out_min
+	"""
