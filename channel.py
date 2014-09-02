@@ -1,8 +1,8 @@
-
 from collections import deque
 import math
 import numpy as np
 from scipy import signal
+
 
 class Channel:
 
@@ -35,7 +35,6 @@ class Channel:
 		smoothed = signal.lfilter(fir_coeff, 1.0, self.npBuffer)
 		return smoothed
 
-
 	def putValue(self, value):
 		# deque buffer
 		if self.num >= self.size:
@@ -59,11 +58,9 @@ class Channel:
 				pass
 		self.npBuffer[self.npBufferPos] = value
 
-
 		# Auto Calibration
 		#if self.num % 100 == 0:
 		#	self.calibrate()
-
 
 	def getValue(self):
 		#if self.num > 0:

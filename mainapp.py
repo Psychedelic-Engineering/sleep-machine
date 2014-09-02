@@ -1,8 +1,8 @@
 import time
 import sys
-
 from display.display import Display
 from fakesensor import FakeSensor
+from sensors import Sensor
 from display.graph import Graph
 from display.clock import Clock
 
@@ -11,8 +11,8 @@ class SleepApp:
 
 	def __init__(self):
 		self.quitting = False
-		#self.sensor = Sensor()
-		self.sensor = FakeSensor()
+		self.sensor = Sensor()
+		#self.sensor = FakeSensor()
 		self.display = Display(320, 240)
 		self.graph = Graph(self.display, self.sensor)
 		self.clock = Clock(self.display)
@@ -39,5 +39,3 @@ class SleepApp:
 		self.quitting = True
 		time.sleep(1)
 		sys.exit()
-        
-        

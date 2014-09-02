@@ -6,8 +6,11 @@ from channel import Channel
 	Sensor Class
 	ToDo:
 	- ggf. abstrakte Klasse mit Sensor und Logfile als Unterklassen
+	- oder "FromFile" Parameter
+	- Logger integrieren?
 	- Teensy: Raspi- und Mac Unterschiede egalisieren
 	- ggf. Teensy in eigene klasse auslagern
+
 """
 class Sensor:
 
@@ -22,10 +25,17 @@ class Sensor:
 
 	def initSerial(self):
 		try:
+			for i in range(0, 5):
+				devName = "/dev/ttyACM%d" % i
+				if os.path.exists(devName):
+					self.teensy = Serial(devName, 115200, timeout=10)
+					return
+			"""
 			devName = "/dev/cu.usbmodem228731"
 			if os.path.exists(devName):
 				self.teensy = Serial(devName, 115200, timeout=0.1)
 				return
+			"""
 			else:
 				raise Exception("NoTeensy")
 		except:

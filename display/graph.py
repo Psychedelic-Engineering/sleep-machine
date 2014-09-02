@@ -35,9 +35,9 @@ class Graph():
 	def render(self, channels=None):
 		self.checkBounds()
 
-		self.renderChannel(self.sensor.channels[0], self.colors[1])
-		self.renderChannel(self.sensor.channels[1], self.colors[2])
-		self.renderChannel(self.sensor.channels[2], self.colors[3])
+		self.renderChannel(self.sensor.channels[1], self.colors[1])
+		self.renderChannel(self.sensor.channels[2], self.colors[2])
+		self.renderChannel(self.sensor.channels[3], self.colors[3])
 
 		if self.x % 10 == 0:
 			self.display.screen.blit(self.surface, (0, self.display.height * 2 / 3))
