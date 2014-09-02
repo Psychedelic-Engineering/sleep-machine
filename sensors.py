@@ -29,7 +29,7 @@ class Sensor:
 			for i in range(0, 5):
 				devName = "/dev/ttyACM%d" % i
 				if os.path.exists(devName):
-					self.teensy = Serial(devName, 115200, timeout=10)
+					self.teensy = Serial(devName, 115200, timeout=1)
 					return
 			else:
 				raise Exception("NoTeensy")
