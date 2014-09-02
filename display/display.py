@@ -1,10 +1,10 @@
-import pygame
-
+import os, pygame
 
 class Display:
 	def __init__(self, width, height):
 		self.width = width
 		self.height = height
+		os.environ["SDL_FBDEV"] = "/dev/fb1"
 		pygame.init()
 		pygame.font.init()
 		self.screen = pygame.display.set_mode((self.width, self.height))
