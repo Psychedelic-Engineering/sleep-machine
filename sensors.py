@@ -39,7 +39,7 @@ class Sensor:
 		try:
 			devName = "/dev/cu.usbmodem228731"
 			if os.path.exists(devName):
-				self.teensy = Serial(devName, 115200, timeout=0.1)
+				self.teensy = Serial(devName, 115200, timeout=1)
 				return
 			else:
 				raise Exception("NoTeensy")
