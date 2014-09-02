@@ -24,7 +24,7 @@ class SleepApp:
 		while True:
 			now = time.time()
 			elapsed = now - lastTime
-			if elapsed >= 0.0005:
+			if elapsed >= 0.1:
 				lastTime = now
 				self.sensor.readData()
 				self.clock.render()
