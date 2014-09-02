@@ -1,5 +1,13 @@
 import os, pygame
 
+"""
+	Display Klasse
+	- kapselt PyGame
+	- notwendig?
+	- wer verwaltet High-Level display (Layout, Umschaltung Zeit-Graph etc)
+"""
+
+
 class Display:
 	def __init__(self, width, height):
 		self.width = width
@@ -16,12 +24,3 @@ class Display:
 
 	def flip(self):
 		pygame.display.flip()
-
-	def misc(self):
-		pass
-	"""
-		#self.surface = pygame.Surface((width, height))
-        #self.screen.blit(surf, (320,540))
-		#self.surface = pygame.Surface((width, height))
-
-	"""
