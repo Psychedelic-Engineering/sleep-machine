@@ -20,7 +20,9 @@ class Peripherals:
 					teensy = Teensy(device)
 					try:
 						response = teensy.sendCommand("i", seperator="|")
-						cls.devices[response[0]] = teensy
+						deviceName = response[0]
+						if deviceName != "":
+							cls.devices[response[0]] = teensy
 					except:
 						print "Error sending data"
 						#raise
