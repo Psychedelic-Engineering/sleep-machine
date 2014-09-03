@@ -1,4 +1,4 @@
-import time
+import time, datetime
 import sys
 from display.display import Display
 from fakesensor import FakeSensor
@@ -14,8 +14,9 @@ class SleepApp:
 		self.quitting = False
 
 		Peripherals.init()
-
 		self.sensor = Sensor(Peripherals.devices["Pillow"])
+		self.sensor.startLogging()
+
 		#self.sensor = FakeSensor()
 		self.display = Display(320, 240)
 		self.graph = Graph(self.display, self.sensor)
