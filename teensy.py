@@ -51,6 +51,7 @@ class Teensy:
 			self.io.write(unicode(strCommand))
 			self.io.flush()
 			response = self.io.readline().strip()
+			print "Resp: ", response
 			if seperator is not None:
 				response = response.split(seperator)
 			return response
