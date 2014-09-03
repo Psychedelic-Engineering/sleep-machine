@@ -5,13 +5,17 @@ from fakesensor import FakeSensor
 from sensors import Sensor
 from display.graph import Graph
 from display.clock import Clock
+from teensy import Peripherals
 
 
 class SleepApp:
 
 	def __init__(self):
 		self.quitting = False
-		self.sensor = Sensor()
+
+		Peripherals.init()
+
+		self.sensor = Sensor(Peripherals.devices["Pillow"])
 		#self.sensor = FakeSensor()
 		self.display = Display(320, 240)
 		self.graph = Graph(self.display, self.sensor)
@@ -20,11 +24,11 @@ class SleepApp:
 	def start(self):
 		lastTime = 0
 		counter = 0
-		startTime = 0
+		startTime = time.time()
 		while True:
 			now = time.time()
 			elapsed = now - lastTime
-			if elapsed >= 0.05:
+			if elapsed >= 0.005:
 				lastTime = now
 				self.sensor.readData()
 				self.clock.render()
@@ -33,6 +37,7 @@ class SleepApp:
 				if (counter % 100) == 0:
 					print 100 / (time.time() - startTime)
 					startTime = time.time()
+					self.sensor.stats()
 
 	def quit(self):
 		print "Quit..."

@@ -29,7 +29,7 @@ class Peripherals:
 				except:
 					print "Error opening Serial"
 					#raise
-
+		print cls.devices
 
 
 class Teensy:
@@ -54,10 +54,9 @@ class Teensy:
 			self.serial.write((strCommand))
 			self.serial.flush()
 			response = self.serial.readline().strip()
-			print "Resp: ", response
 			if seperator is not None:
 				response = response.split(seperator)
 			return response
 		except:
-			raise
+			#raise
 			return None

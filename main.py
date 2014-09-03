@@ -1,5 +1,6 @@
-import signal, time
+import signal
 from mainapp import SleepApp
+
 
 def quitApp(p1, p2):
 	global app
@@ -8,15 +9,5 @@ def quitApp(p1, p2):
 signal.signal(signal.SIGINT, quitApp)
 signal.signal(signal.SIGTERM, quitApp)
 
-
-"""
 app = SleepApp()
 app.start()
-"""
-
-
-import teensy
-
-teensy.Peripherals.init()
-
-print teensy.Peripherals.devices

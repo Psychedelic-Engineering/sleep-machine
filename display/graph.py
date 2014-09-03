@@ -6,30 +6,19 @@ class Graph():
 
 	def __init__(self, display, sensor):
 		self.display = display
-		self.surface = self.display.screen
+		self.sensor = sensor
 		self.width = self.display.width
 		self.height = self.display.height / 3
-		self.sensor = sensor
-		self.surface = pygame.Surface((self.width, self.height))
-		self.drawBG()
-		self.curX = 0
 		self.x = 0
 		self.colors = (
-		(128, 128, 128),
-		(128, 0, 0),
-		(128, 128, 0),
-		(0, 128, 0),
-		(0, 128, 128),
-		(255, 255, 255),
-		(255, 255, 255),
-		(128, 255, 255),
-		(255, 128, 255),
-		(255, 255, 128),
-		(255, 255, 255),
-		(255, 255, 255),
-		(0, 128, 128)
-		)
+		(64, 64, 64),
+		(128, 0, 0),		(0, 128, 0),	(0, 0, 128),
+		(96, 96, 0),		(0, 96, 96),	(96, 0, 96),
+		(128, 96, 0),		(96, 128, 0),	(0, 96, 128),
+		(0, 128, 96))
 
+		self.surface = pygame.Surface((self.width, self.height))
+		self.drawBG()
 		#self.sensor.channels[1].onUpdate = self.updateBuffer
 
 	def render(self, channels=None):
@@ -37,35 +26,23 @@ class Graph():
 		for i, channel in enumerate(self.sensor.channels):
 			if channels is None or i in channels:
 				self.renderChannel(channel, self.colors[i])
-		#self.renderChannel(self.sensor.channels[1], self.colors[1])
-		#self.renderChannel(self.sensor.channels[2], self.colors[2])
-		#self.renderChannel(self.sensor.channels[3], self.colors[3])
 
 		if self.x % 10 == 0:
 			self.display.screen.blit(self.surface, (0, self.display.height * 2 / 3))
 			pygame.display.flip()
 
 	def renderChannel(self, channel, color):
-		min = channel.min
-		max = channel.max
-
-		value = channel.getValue()
-		y = int(self.map_value(value, min, max, self.height, 0))
+		#value = channel.getValue()
+		value = channel.getBufferAvg()
+		#value = channel.getRng()
+		y = int(self.map_value(value, channel.min, channel.max, self.height, 0))
 		self.surface.set_at((self.x, y), color)
-
-		avg = channel.getBufferAvg()
-		yAvg = int(self.map_value(avg, min, max, self.height, 0))
-		#self.surface.set_at((self.x, yAvg), color)
-
-		rng = channel.getRng()
-		yRng = int(self.map_value(rng, 0, 100, self.height, 0))
-		#self.surface.set_at((self.x, yRng), [x / 2 for x in color])
 
 	def checkBounds(self, scroll=False):
 		if self.x >= (self.width - 1):
 			if scroll:
-				self.surface.scroll(-1,0)
-				pygame.draw.rect(self.surface, (0,0,0), (self.width-1, 0, 2, self.height))
+				self.surface.scroll(-1, 0)
+				pygame.draw.rect(self.surface, (0, 0, 0), (self.width - 1, 0, 2, self.height))
 				self.x -= 1
 			else:
 				self.x = 0

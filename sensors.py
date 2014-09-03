@@ -1,5 +1,3 @@
-import os
-from serial import Serial, SerialException
 from channel import Channel
 
 """
@@ -8,62 +6,29 @@ from channel import Channel
 	- ggf. abstrakte Klasse mit Sensor und Logfile als Unterklassen
 	- oder "FromFile" Parameter
 	- Logger integrieren?
-	- Teensy: Raspi- und Mac Unterschiede egalisieren
-	- ggf. Teensy in eigene klasse auslagern
 
 	- Datasource: Init, getInfo, readData (Logfile, Teensy)
 	- Sensor: setDataSource, initChannels, readData, setLogging
-	- Teensy: Query Serial, getInfo, Sendcommand, ReceiveData
 """
+
+
 class Sensor:
 
-	def __init__(self):
+	def __init__(self, device):
 		self.initialized = False
-		self.initSerial()
+		self.device = device
 		self.initChannels()
+		self.minV = 100000
+		self.maxV = 0
 
-	def __del__(self):
-		print "Close Teensy"
-		self.teensy.close()
-
-	def initSerial(self):
-
-		try:
-			for i in range(0, 5):
-				devName = "/dev/ttyACM%d" % i
-				if os.path.exists(devName):
-					self.teensy = Serial(devName, 115200, timeout=1)
-					return
-			else:
-				raise Exception("NoTeensy")
-		except:
-			raise Exception("NoTeensy")
-		"""
-		try:
-			devName = "/dev/cu.usbmodem228731"
-			if os.path.exists(devName):
-				self.teensy = Serial(devName, 115200, timeout=1)
-				return
-			else:
-				raise Exception("NoTeensy")
-		except:
-			raise Exception("NoTeensy")
-		"""
-
-	def checkTeensy(self):
-		self.teensy.write("i")
-		response = self.teensy.readline().strip()
-		print "Init Teensy: %s" % response
-		return response == "ok"
+	def stats(self):
+		print "minmax: ", self.minV, self.maxV
 
 	def initChannels(self):
-		self.checkTeensy()
 		try:
 			self.channels = []
-			self.teensy.write("?")
-			response = self.teensy.readline().strip()
-			print "Teensy info: %s" % response
-			sensors = response.split(";")
+			sensors = self.device.sendCommand("?", ";")
+			print "initChannels: ", sensors
 
 			for sensor in sensors:
 				if sensor != "":
@@ -73,7 +38,6 @@ class Sensor:
 					min, max = float(min), float(max)
 					for i in range(num):
 						self.channels.append(Channel(name, min, max, 100))
-
 			self.initialized = True
 		except:
 			print "initChannels error"
@@ -82,13 +46,14 @@ class Sensor:
 	def readData(self):
 		if not self.initialized:
 			self.initChannels()
-		self.teensy.write("!")
-		response = self.teensy.readline().strip()
 
 		try:
-			values = map(float, response.split(","))
+			values = self.device.sendCommand("!", ",")
+			values = map(float, values)
 			for i, v in enumerate(values):
 				self.channels[i].putValue(v)
+				if i in (1,2,3):
+					self.minV = min(self.minV, v)
+					self.maxV = max(self.maxV, v)
 		except:
 			raise
-			self.initialized = False
