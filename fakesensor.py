@@ -9,7 +9,7 @@ class FakeSensor(Sensor):
 		self.initialized = False
 		self.initChannels()
 		self.line = 0
-		self.openCSV("sleep.csv")
+		self.openCSV("data/sleep.csv")
 
 	def openCSV(self, filename):
 		self.file = open(filename, 'r')

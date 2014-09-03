@@ -6,6 +6,7 @@ from sensors import Sensor
 from display.graph import Graph
 from display.clock import Clock
 from teensy import Peripherals
+from scheduler import Scheduler
 
 
 class SleepApp:
@@ -15,12 +16,16 @@ class SleepApp:
 
 		Peripherals.init()
 		self.sensor = Sensor(Peripherals.devices["Pillow"])
-		self.sensor.startLogging()
+		#self.sensor.startLogging()
 
 		#self.sensor = FakeSensor()
 		self.display = Display(320, 240)
 		self.graph = Graph(self.display, self.sensor)
 		self.clock = Clock(self.display)
+
+		self.scheduler = Scheduler()
+		print self.scheduler.getSunTimes()
+		self.quit()
 
 	def start(self):
 		lastTime = 0
@@ -34,6 +39,7 @@ class SleepApp:
 				self.sensor.readData()
 				self.clock.render()
 				self.graph.render((1,2,3))
+				#self.scheduler.check()
 				counter += 1
 				if (counter % 100) == 0:
 					print 100 / (time.time() - startTime)
