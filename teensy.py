@@ -17,9 +17,7 @@ class Peripherals:
 			if file.startswith(teensyBaseName):
 				device = devPath + file
 				try:
-					serial = Serial(device, 115200, timeout=1)
-					print serial.name
-					teensy = Teensy(serial)
+					teensy = Teensy(device)
 					try:
 						response = teensy.sendCommand("i", seperator="|")
 						cls.devices[response[0]] = teensy
@@ -35,9 +33,17 @@ class Peripherals:
 
 class Teensy:
 
-	def __init__(self, serial):
-		self.serial = serial
-		self.io = io.TextIOWrapper(io.BufferedRWPair(serial, serial))
+	def __init__(self, device):
+		self.initSerial(device)
+
+	def __del__(self):
+		if self.serial is not None:
+			self.serial.close()
+			print "Teensy close"
+
+	def initSerial(self, device):
+		self.serial = Serial(device, 115200, timeout=1)
+		self.io = io.TextIOWrapper(io.BufferedRWPair(self.serial, self.serial))
 
 	def sendCommand(self, strCommand, seperator=None):
 		try:
