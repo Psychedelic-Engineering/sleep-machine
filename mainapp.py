@@ -13,19 +13,15 @@ class SleepApp:
 
 	def __init__(self):
 		self.quitting = False
-
 		Peripherals.init()
 		self.sensor = Sensor(Peripherals.devices["Pillow"])
-		#self.sensor.startLogging()
-
 		#self.sensor = FakeSensor()
 		self.display = Display(320, 240)
 		self.graph = Graph(self.display, self.sensor)
 		self.clock = Clock(self.display)
-
 		self.scheduler = Scheduler()
-		print self.scheduler.getSunTimes()
-		self.quit()
+
+		#self.sensor.startLogging()
 
 	def start(self):
 		lastTime = 0

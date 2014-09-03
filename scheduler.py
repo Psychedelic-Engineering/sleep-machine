@@ -2,6 +2,13 @@ from astral import Location
 import datetime
 import pytz
 
+"""
+	Scheduler
+	- Events
+	- Phasen & States
+	- Aktionen (Logging, Processing,
+"""
+
 class Scheduler:
 
 	def getSunTimes(self):
