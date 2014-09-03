@@ -9,12 +9,12 @@ class Peripherals:
 	@classmethod
 	def init(cls):
 		devPath = "/dev/"
-		teensyBaseName = "tty.usbmodem"
-		teensyBaseName = "ttyACM"
+		teensyBaseMac = "tty.usbmodem"
+		teensyBaseRaspi = "ttyACM"
 
 		for file in os.listdir(devPath):
 
-			if file.startswith(teensyBaseName):
+			if file.startswith(teensyBaseMac) or file.startswith(teensyBaseRaspi):
 				device = devPath + file
 				try:
 					teensy = Teensy(device)
@@ -51,7 +51,7 @@ class Teensy:
 	def sendCommand(self, strCommand, seperator=None):
 		try:
 			self.serial.flush()
-			self.serial.write(unicode(strCommand))
+			self.serial.write((strCommand))
 			self.serial.flush()
 			response = self.serial.readline().strip()
 			print "Resp: ", response
@@ -59,4 +59,5 @@ class Teensy:
 				response = response.split(seperator)
 			return response
 		except:
+			raise
 			return None
