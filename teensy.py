@@ -43,11 +43,11 @@ class Teensy:
 	def initSerial(self, device):
 		self.serial = Serial(device, 115200, timeout=0.1)
 		self.io = io.TextIOWrapper(io.BufferedRWPair(self.serial, self.serial))
-		time.sleep(0.1)
+		self.io.flush()
+		time.sleep(0.2)
 
 	def sendCommand(self, strCommand, seperator=None):
 		try:
-			self.io.flush()
 			self.io.write(unicode(strCommand))
 			self.io.flush()
 			response = self.io.readline().strip()
