@@ -31,7 +31,7 @@ class SleepApp:
 			if elapsed >= 0.005:
 				lastTime = now
 				self.sensor.readData()
-				self.clock.render()
+				#self.clock.render()
 				#self.graph.render((1,2,3))
 				counter += 1
 				if (counter % 100) == 0:
