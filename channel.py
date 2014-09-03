@@ -44,7 +44,7 @@ class Channel:
 		self.buffer.append(newValue)
 		self.num += 1
 		self.sum += newValue
-
+		"""
 		# numpy buffer
 		self.npBufferPos += 1
 		if self.npBufferPos >= self.npBufferSize:
@@ -57,7 +57,7 @@ class Channel:
 				#raise
 				pass
 		self.npBuffer[self.npBufferPos] = value
-
+		"""
 		# Auto Calibration
 		#if self.num % 100 == 0:
 		#	self.calibrate()
