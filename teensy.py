@@ -1,33 +1,52 @@
-import os
+import os, io, time
 from serial import Serial, SerialException
+
+
+class Peripherals:
+
+	devices = {}
+
+	@classmethod
+	def init(cls):
+		devPath = "/dev/"
+		teensyBaseName = "tty.usbmodem"
+		teensyBaseName = "ttyACM"
+
+		for file in os.listdir(devPath):
+
+			if file.startswith(teensyBaseName):
+				device = devPath + file
+				try:
+					serial = Serial(device, 115200, timeout=1)
+					print serial.name
+					teensy = Teensy(serial)
+					try:
+						response = teensy.sendCommand("i", seperator="|")
+						cls.devices[response[0]] = teensy
+						time.sleep(1)
+					except:
+						print "Error sending data"
+						#raise
+				except:
+					print "Error opening Serial"
+					#raise
+
 
 
 class Teensy:
 
-	def __init__(self):
-		self.initialized = False
-		try:
-			self.initSerial()
-			self.initialized = True
-		except:
-			pass
+	def __init__(self, serial):
+		self.serial = serial
+		self.io = io.TextIOWrapper(io.BufferedRWPair(serial, serial))
 
-	def initSerial(self):
+	def sendCommand(self, strCommand, seperator=None):
 		try:
-			for i in range(0, 5):
-				devName = "/dev/ttyACM%d" % i
-				if os.path.exists(devName):
-					self.teensy = Serial(devName, 115200, timeout=10)
-					return
-			else:
-				raise Exception("NoTeensy")
-		except:
-			raise Exception("NoTeensy")
-
-	def write(self, strCommand):
-		try:
-			self.teensy.write(strCommand)
-			response = self.teensy.readline().strip()
+			self.io.flush()
+			self.io.write(unicode(strCommand))
+			self.io.flush()
+			response = self.io.readline().strip()
+			if seperator is not None:
+				response = response.split(seperator)
 			return response
 		except:
-			pass
+			return None

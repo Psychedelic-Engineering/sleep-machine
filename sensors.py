@@ -11,6 +11,9 @@ from channel import Channel
 	- Teensy: Raspi- und Mac Unterschiede egalisieren
 	- ggf. Teensy in eigene klasse auslagern
 
+	- Datasource: Init, getInfo, readData (Logfile, Teensy)
+	- Sensor: setDataSource, initChannels, readData, setLogging
+	- Teensy: Query Serial, getInfo, Sendcommand, ReceiveData
 """
 class Sensor:
 
