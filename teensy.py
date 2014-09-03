@@ -43,10 +43,10 @@ class Teensy:
 			print "Teensy close"
 
 	def initSerial(self, device):
-		self.serial = Serial(device, 115200, timeout=0.1)
+		self.serial = Serial(device, 115200, timeout=0.2)
 		self.io = io.TextIOWrapper(io.BufferedRWPair(self.serial, self.serial))
 		self.io.flush()
-		time.sleep(0.2)
+		time.sleep(0.5)
 
 	def sendCommand(self, strCommand, seperator=None):
 		try:
