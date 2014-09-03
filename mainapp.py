@@ -37,7 +37,6 @@ class SleepApp:
 				if (counter % 100) == 0:
 					print 100 / (time.time() - startTime)
 					startTime = time.time()
-					self.sensor.stats()
 
 	def quit(self):
 		print "Quit..."
