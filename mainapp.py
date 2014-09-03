@@ -28,11 +28,11 @@ class SleepApp:
 		while True:
 			now = time.time()
 			elapsed = now - lastTime
-			if elapsed >= 0.005:
+			if elapsed >= 0.001:
 				lastTime = now
 				self.sensor.readData()
-				#self.clock.render()
-				#self.graph.render((1,2,3))
+				self.clock.render()
+				self.graph.render((1,2,3))
 				counter += 1
 				if (counter % 100) == 0:
 					print 100 / (time.time() - startTime)
