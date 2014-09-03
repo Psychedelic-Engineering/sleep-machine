@@ -59,6 +59,7 @@ class Sensor:
 			self.channels = []
 			self.teensy.write("?")
 			response = self.teensy.readline().strip()
+			print "Teensy info: %s" % response
 			sensors = response.split(";")
 
 			for sensor in sensors:
