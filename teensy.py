@@ -45,14 +45,15 @@ class Teensy:
 	def initSerial(self, device):
 		self.serial = Serial(device, 115200, timeout=0.2)
 		self.io = io.TextIOWrapper(io.BufferedRWPair(self.serial, self.serial))
-		self.io.flush()
+		self.serial.flush()
 		time.sleep(0.5)
 
 	def sendCommand(self, strCommand, seperator=None):
 		try:
-			self.io.write(unicode(strCommand))
-			self.io.flush()
-			response = self.io.readline().strip()
+			self.serial.flush()
+			self.serial.write(unicode(strCommand))
+			self.serial.flush()
+			response = self.serial.readline().strip()
 			print "Resp: ", response
 			if seperator is not None:
 				response = response.split(seperator)
