@@ -21,7 +21,6 @@ class Peripherals:
 					try:
 						response = teensy.sendCommand("i", seperator="|")
 						cls.devices[response[0]] = teensy
-						time.sleep(1)
 					except:
 						print "Error sending data"
 						#raise
@@ -42,8 +41,9 @@ class Teensy:
 			print "Teensy close"
 
 	def initSerial(self, device):
-		self.serial = Serial(device, 115200, timeout=0.5)
+		self.serial = Serial(device, 115200, timeout=0.1)
 		self.io = io.TextIOWrapper(io.BufferedRWPair(self.serial, self.serial))
+		time.sleep(0.1)
 
 	def sendCommand(self, strCommand, seperator=None):
 		try:
