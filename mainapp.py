@@ -24,22 +24,12 @@ class SleepApp:
 		#self.sensor.startLogging()
 
 	def start(self):
-		lastTime = 0
-		counter = 0
-		startTime = time.time()
 		while True:
-			now = time.time()
-			elapsed = now - lastTime
-			if elapsed >= 0.001:
-				lastTime = now
+			if self.scheduler.elapsed(0.05):
 				self.sensor.readData()
 				self.clock.render()
 				self.graph.render((1,2,3))
 				#self.scheduler.check()
-				counter += 1
-				if (counter % 100) == 0:
-					print 100 / (time.time() - startTime)
-					startTime = time.time()
 
 	def quit(self):
 		print "Quit..."

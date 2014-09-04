@@ -1,5 +1,5 @@
 from astral import Location
-import datetime
+import datetime, time
 import pytz
 
 """
@@ -11,8 +11,34 @@ import pytz
 
 class Scheduler:
 
-	def getSunTimes(self):
+	def __init__(self):
+		self.lastTime = time.time()
+		self.startTime = self.lastTime
+		self.counter = 0
 
+	def check(self):
+		pass
+
+	def elapsed(self, seconds):
+		now = time.time()
+		elapsed = now - self.lastTime
+
+
+		if elapsed > seconds:
+			self.lastTime = now
+			self.getFPS(now)
+			return True
+		else:
+			return False
+
+	def getFPS(self, now):
+		self.counter += 1
+		if (self.counter % 100) == 0:
+			self.fps = 100 / (now - self.startTime)
+			self.startTime = now
+			print self.fps
+
+	def getSunTimes(self):
 		a = Location()
 		a.timezone = "Europe/Berlin"
 		tz = pytz.timezone(a.timezone)
