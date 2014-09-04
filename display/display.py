@@ -10,7 +10,6 @@ import os, pygame
 
 class Display:
 	def __init__(self, width, height):
-		print "Open Display"
 		self.width = width
 		self.height = height
 		os.environ["SDL_FBDEV"] = "/dev/fb1"
@@ -20,7 +19,6 @@ class Display:
 		pygame.mouse.set_visible(False)
 
 	def __del__(self):
-		print "Close Display"
 		pygame.quit()
 
 	def flip(self):

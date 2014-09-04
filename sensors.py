@@ -1,5 +1,5 @@
 from channel import Channel
-import os, time, datetime
+import os, time, datetime, logging
 
 """
 	Sensor Class
@@ -25,10 +25,10 @@ class Sensor:
 		try:
 			header = self.device.sendCommand("?")
 			header = header.split(";")
-			print "initChannels: ", header
+			logging.debug("Initsensor: %s", header)
 			self.initChannels(header)
 		except:
-			print "initChannels error"
+			logging.error("Initsensor error")
 
 	def initChannels(self, header):
 		self.channels = []
