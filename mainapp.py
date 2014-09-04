@@ -25,7 +25,7 @@ class SleepApp:
 
 	def start(self):
 		while True:
-			if self.scheduler.elapsed(0.1):
+			if self.scheduler.elapsed(0.02):
 				self.sensor.readData()
 				self.clock.render()
 				self.graph.render((1,2,3))
