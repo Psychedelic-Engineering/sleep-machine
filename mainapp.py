@@ -35,7 +35,7 @@ class SleepApp:
 				#self.sensor.readData()
 				#self.clock.render()
 				#self.graph.render()
-				self.scheduler.checkAlarm()
+				#self.scheduler.checkAlarm()
 				for event in pygame.event.get():
 					print event
 					if event.type == pygame.MOUSEBUTTONDOWN:
