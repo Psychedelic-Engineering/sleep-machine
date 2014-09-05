@@ -47,7 +47,7 @@ class Teensy:
 			logging.debug("Teensy close")
 
 	def initSerial(self, device):
-		self.serial = Serial(device, 115200, timeout=2)
+		self.serial = Serial(device, 115200, timeout=0.5)
 		self.io = io.TextIOWrapper(io.BufferedRWPair(self.serial, self.serial))
 		self.serial.flush()
 		self.serial.flushInput()

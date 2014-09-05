@@ -32,7 +32,7 @@ class SleepApp:
 		logging.debug("start app")
 		while True:
 			if self.scheduler.elapsed(0.00005):
-				#self.sensor.readData()
+				self.sensor.readData()
 				self.clock.render()
 				self.graph.render()
 				self.scheduler.checkAlarm()
