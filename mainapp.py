@@ -32,17 +32,17 @@ class SleepApp:
 		logging.debug("start app")
 		while True:
 			if self.scheduler.elapsed(0.00005):
-				#self.sensor.readData()
-				#self.clock.render()
-				#self.graph.render()
-				#self.scheduler.checkAlarm()
-				"""
+				self.sensor.readData()
+				self.clock.render()
+				self.graph.render()
+				self.scheduler.checkAlarm()
+
 				for event in pygame.event.get():
 					print event
 					if event.type == pygame.MOUSEBUTTONDOWN:
 						print "mouse"
 						self.sensor.calibrate()
-				"""
+
 
 	def quit(self):
 		logging.debug("Quit app")
