@@ -4,7 +4,6 @@ from serial import Serial, SerialException
 
 # Peripherie Factory
 class Peripherals:
-
 	devices = {}
 
 	@classmethod
@@ -53,6 +52,7 @@ class Teensy:
 		self.serial.flush()
 		self.serial.flushInput()
 		self.serial.flushOutput()
+		self.serial.readline()
 		time.sleep(0.5)
 
 	def sendCommand(self, strCommand, seperator=None):

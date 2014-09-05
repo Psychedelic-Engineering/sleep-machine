@@ -1,8 +1,6 @@
 import os, pygame
 
-"""
-	Display Klasse
-	- kapselt PyGame
+"""Display Klasse
 	- notwendig?
 	- wer verwaltet High-Level display (Layout, Umschaltung Zeit-Graph etc)
 """

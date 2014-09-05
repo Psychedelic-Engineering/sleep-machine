@@ -24,7 +24,7 @@ class SleepApp:
 		self.scheduler = Scheduler()
 		#self.sensor.startLogging()
 
-		self.scheduler.addAlarm("*", "*", "0,10,20,30,40,50", self.doAlarm)
+		self.scheduler.addAlarm("*", "*", "10,20,30,40,50,0", self.doAlarm)
 
 	def start(self):
 		logging.debug("start app")
@@ -47,6 +47,6 @@ class SleepApp:
 		for i in range(steps):
 			lum = float(i) / steps
 			cmd = "w %f c %f\n" % (lum, lum / 2)
-			self.led.sendQuick(cmd)
+			self.led.sendCommand(cmd)
 		#time.sleep(1)
 		self.led.sendCommand("c 0 w 0\n")
