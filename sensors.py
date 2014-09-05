@@ -1,5 +1,5 @@
 from channel import Channel
-import os, time, datetime, logging
+import os, time, datetime, logging, gzip
 
 """
 	Sensor Class
@@ -67,7 +67,7 @@ class Sensor:
 		if self.logging:
 			fileExists = os.path.isfile(self.logFile)
 			timestamp = time.time()
-			file = open(self.logFile, "a")
+			file = gzip.open(self.logFile, "a")
 			if not fileExists:
 				names = [c.name for c in self.channels]
 				file.write("time," + ','.join(names) + "\n")

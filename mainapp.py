@@ -31,10 +31,10 @@ class SleepApp:
 	def start(self):
 		logging.debug("start app")
 		while True:
-			if self.scheduler.elapsed(0.05):
-				self.sensor.readData()
-				self.clock.render()
-				self.graph.render()
+			if self.scheduler.elapsed(0.00005):
+				#self.sensor.readData()
+				#self.clock.render()
+				#self.graph.render()
 				self.scheduler.checkAlarm()
 				for event in pygame.event.get():
 					print event
