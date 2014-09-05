@@ -62,6 +62,9 @@ class Channel:
 		#if self.num % 100 == 0:
 		#	self.calibrate()
 
+	def calibrate(self):
+		self.offset = -self.buffer[-1]
+
 	def getValue(self):
 		#if self.num > 0:
 		return self.buffer[-1] + self.offset

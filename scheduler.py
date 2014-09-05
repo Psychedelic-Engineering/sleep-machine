@@ -37,10 +37,10 @@ class Scheduler:
 
 	def getFPS(self, now):
 		self.counter += 1
-		if (self.counter % 20) == 0:
-			self.fps = 20.0 / (now - self.startTime)
+		if (self.counter % 100) == 0:
+			self.fps = 100.0 / (now - self.startTime)
 			self.startTime = now
-			#logging.debug("%.2f fps", self.fps)
+			logging.debug("%.2f fps", self.fps)
 
 	def getSunTimes(self):
 		a = Location()

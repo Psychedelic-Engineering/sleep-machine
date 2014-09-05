@@ -5,10 +5,11 @@ import numpy as np
 class Graph():
 
 	def __init__(self, display, sensor):
+		self.heightPercent = 1.0 / 3
 		self.display = display
 		self.sensor = sensor
 		self.width = self.display.width
-		self.height = self.display.height / 3
+		self.height = self.display.height * self.heightPercent
 		self.x = 0
 		self.colors = (
 		(64, 64, 64),
@@ -28,12 +29,13 @@ class Graph():
 				self.renderChannel(channel, self.colors[i])
 
 		if self.x % 10 == 0:
-			self.display.screen.blit(self.surface, (0, self.display.height * 2 / 3))
+			self.display.screen.blit(self.surface, (0, self.display.height - self.height))
+			#self.display.screen.blit(self.surface, (0, 0))
 			pygame.display.flip()
 
 	def renderChannel(self, channel, color):
-		#value = channel.getValue()
-		value = channel.getBufferAvg()
+		value = channel.getValue()
+		#value = channel.getBufferAvg()
 		#value = channel.getRng()
 		y = int(self.map_value(value, channel.min, channel.max, self.height, 0))
 		self.surface.set_at((self.x, y), color)

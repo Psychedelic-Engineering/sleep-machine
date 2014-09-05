@@ -3,12 +3,8 @@ import os, time, datetime, logging
 
 """
 	Sensor Class
-	ToDo:
-	- ggf. abstrakte Klasse mit Sensor und Logfile als Unterklassen
-	- oder "FromFile" Parameter
-
-	- initChannels und readData ggf. mit String-Parameter
-		> kann von Sensor oder File-Reader kommen
+	- ggf. Logfile als Datasource per Parameter
+	- Logging ggf. in eigene Klasse
 """
 
 
@@ -54,6 +50,10 @@ class Sensor:
 		except:
 			raise
 
+	def calibrate(self):
+		for c in self.channels:
+			c.calibrate()
+
 	# logging, ggf. in eigene Klasse
 	def startLogging(self):
 		self.logging = True
@@ -71,7 +71,7 @@ class Sensor:
 			if not fileExists:
 				names = [c.name for c in self.channels]
 				file.write("time," + ','.join(names) + "\n")
-			file.write(str(timestamp) + "," + ','.join(map(str, values))+"\n")
+			file.write(str(timestamp) + "," + ','.join(map(str, values)) + "\n")
 			file.close()
 
 

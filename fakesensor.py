@@ -16,19 +16,26 @@ class FakeSensor(Sensor):
 		response = self.file.readline()
 		self.line += 1
 
-		skipLines = 20000
+		skipLines = 0
 		for i in range(skipLines):
 			self.line += 1
 			response = self.file.readline()
 
 	def initChannels(self):
 		try:
-			size = 20
+			size = 60
 			self.channels = []
-			self.channels.append(Channel("TouchA", -200, 600, size))
-			self.channels.append(Channel("TouchB", -200, 600, size))
-			self.channels.append(Channel("TouchC", -200, 600, size))
-
+			self.channels.append(Channel("Piezo", 0, 4096, size))
+			self.channels.append(Channel("TouchA", 800, 2000, size))
+			self.channels.append(Channel("TouchB", 800, 2000, size))
+			self.channels.append(Channel("TouchC", 800, 2000, size))
+			self.channels.append(Channel("AccelA", -5, 15, size))
+			self.channels.append(Channel("AccelB", -5, 15, size))
+			self.channels.append(Channel("AccelC", -5, 15, size))
+			self.channels.append(Channel("GyroA", -5, 5, size))
+			self.channels.append(Channel("GyroB", -5, 5, size))
+			self.channels.append(Channel("GyroC", -5, 5, size))
+			self.channels.append(Channel("Temp", 10, 30, size))
 			self.initialized = True
 		except:
 			print "initChannels error"
@@ -37,16 +44,14 @@ class FakeSensor(Sensor):
 	def readData(self):
 		if not self.initialized:
 			self.initChannels()
-		for i in range(50):
+		for i in range(1):
 			self.line += 1
 			response = self.file.readline()
-
 		try:
 			values = map(float, response.split(","))
-
-			self.channels[0].putValue(values[2])
-			self.channels[1].putValue(values[3])
-			self.channels[2].putValue(values[4])
+			values = values[1:]
+			for i, v in enumerate(values):
+				self.channels[i].putValue(v)
 		except:
-			raise
 			pass
+			#raise
