@@ -67,7 +67,7 @@ class Sensor:
 		if self.logging:
 			fileExists = os.path.isfile(self.logFile)
 			timestamp = time.time()
-			file = gzip.open(self.logFile, "a")
+			file = open(self.logFile, "a")
 			if not fileExists:
 				names = [c.name for c in self.channels]
 				file.write("time," + ','.join(names) + "\n")
