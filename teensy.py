@@ -58,7 +58,7 @@ class Teensy:
 	def sendCommand(self, strCommand, seperator=None):
 		# sende Kommando und liefere Ergebnis, besserer Name
 		try:
-			self.serial.flush()
+			#self.serial.flush()
 			self.serial.write(strCommand)
 			#self.serial.flush()
 			response = self.serial.readline().strip()
