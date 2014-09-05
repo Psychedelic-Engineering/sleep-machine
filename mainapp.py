@@ -24,7 +24,7 @@ class SleepApp:
 		self.graph = Graph(self.display, self.sensor)
 		self.clock = Clock(self.display)
 		self.scheduler = Scheduler()
-		#self.sensor.startLogging()
+		self.sensor.startLogging()
 
 		#self.scheduler.addAlarm("*", "*", "0,10,20,30,40,50", self.doAlarm)
 
