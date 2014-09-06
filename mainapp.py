@@ -61,15 +61,18 @@ class SleepApp:
 
 	def doAlarm(self):
 
-		off = 5.0
+		off = 2.0
 		on = 0.001
 		lum = 1.0
 		while off >= 0.1:
 			print off, on, lum
-			self.led.setLum(lum, lum)
-			time.sleep(on)
-			self.led.setLum(0, 0)
-			time.sleep(off)
+			for i in range(5):
+				self.led.setLum(lum, lum)
+				time.sleep(on)
+				self.led.setLum(0, 0)
+				time.sleep(off)
+				if self.quitting:
+					return
 			off -= 0.05
 			on += 0.001
 			#lum += 0.02
