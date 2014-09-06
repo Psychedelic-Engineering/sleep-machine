@@ -34,7 +34,7 @@ class SleepApp:
 		#self.scheduler.addAlarm("*", "*", "0,5,10,15,20,25,30,35,40,45,50,55", self.doAlarm)
 		self.scheduler.addAlarm("*", "21", "00", self.sensor.startLogging)
 		self.scheduler.addAlarm("*", "10", "22", self.sensor.stopLogging)
-		self.scheduler.addAlarm("*", "19", "0,5,10,15,20", self.doAlarm)
+		self.scheduler.addAlarm("*", "19", "0,25,30,35,20", self.doAlarm)
 		#self.doAlarm()
 		#self.quit()
 
