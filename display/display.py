@@ -11,6 +11,11 @@ class Display:
 		self.width = width
 		self.height = height
 		os.environ["SDL_FBDEV"] = "/dev/fb1"
+
+		os.environ['SDL_VIDEODRIVER'] = 'fbcon'
+		os.environ["SDL_MOUSEDEV"] = "/dev/input/touchscreen"
+		os.environ["SDL_MOUSEDRV"] = "TSLIB"
+
 		pygame.init()
 		pygame.font.init()
 		self.screen = pygame.display.set_mode((self.width, self.height))
