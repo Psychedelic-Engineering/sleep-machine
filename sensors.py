@@ -56,11 +56,13 @@ class Sensor:
 
 	# logging, ggf. in eigene Klasse
 	def startLogging(self):
+		logging.debug("startLogging")
 		self.logging = True
 		self.logDate = datetime.date.today()
-		self.logFile = self.logDate.strftime("%Y-%m-%d.csv")
+		self.logFile = self.logDate.strftime("data/%Y-%m-%d.csv")
 
 	def stopLogging(self):
+		logging.debug("stopLogging")
 		self.logging = False
 
 	def logData(self, values):

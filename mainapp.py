@@ -7,26 +7,36 @@ from display.clock import Clock
 from teensy import Peripherals
 from scheduler import Scheduler
 import pygame
+from basestation import LED
 
 
 class SleepApp:
 
 	def __init__(self):
+		self.isRaspberry = False
+		self.emulateSensor = False
 		logging.basicConfig(format='%(message)s', level=logging.DEBUG)
 		logging.debug("init app")
 		self.quitting = False
 		Peripherals.init()
 		screenMult = 1
-		self.sensor = Sensor(Peripherals.devices["Pillow"])
-		#self.sensor = FakeSensor()
-		self.led = Peripherals.devices["Basestation"]
-		self.display = Display(screenMult*320, screenMult*240)
+		if self.emulateSensor:
+			self.sensor = FakeSensor()
+		else:
+			self.sensor = Sensor(Peripherals.devices["Pillow"])
+		self.led = LED(Peripherals.devices["Basestation"])
+		self.display = Display(screenMult*320, screenMult*240, self.isRaspberry)
 		self.graph = Graph(self.display, self.sensor)
 		self.clock = Clock(self.display)
 		self.scheduler = Scheduler()
 		#self.sensor.startLogging()
 
-		self.scheduler.addAlarm("*", "*", "0,5,10,15,20,25,30,35,40,45,50,55", self.doAlarm)
+		#self.scheduler.addAlarm("*", "*", "0,5,10,15,20,25,30,35,40,45,50,55", self.doAlarm)
+		self.scheduler.addAlarm("*", "*", "21", self.sensor.startLogging)
+		self.scheduler.addAlarm("*", "*", "22", self.sensor.stopLogging)
+		self.scheduler.addAlarm("*", "*", "*", self.doAlarm)
+		#self.doAlarm()
+		#self.quit()
 
 	def start(self):
 		logging.debug("start app")
@@ -42,7 +52,6 @@ class SleepApp:
 						print event
 						pass
 
-
 	def quit(self):
 		logging.debug("Quit app")
 		Peripherals.close()
@@ -51,10 +60,31 @@ class SleepApp:
 		sys.exit()
 
 	def doAlarm(self):
-		steps = 1000
-		for i in range(steps):
-			lum = float(i) / steps
-			cmd = "w %f c %f\n" % (lum, lum / 2)
-			self.led.sendQuick(cmd)
-			time.sleep(0.01)
-		self.led.sendQuick("c 0 w 0\n")
+
+		off = 5.0
+		on = 0.001
+		lum = 1.0
+		while off >= 0.1:
+			print off, on, lum
+			self.led.setLum(lum, lum)
+			time.sleep(on)
+			self.led.setLum(0, 0)
+			time.sleep(off)
+			off -= 0.05
+			on += 0.001
+			#lum += 0.02
+		self.quit()
+
+		"""
+		maxLum = 0
+		while maxLum <= 1:
+			i = 0
+			while i <= maxLum:
+				self.led.setLum(i, i)
+				i += 0.01
+				time.sleep(0.5)
+			self.led.setLum(maxLum, maxLum)
+			time.sleep(2)
+			time.sleep(2)
+			maxLum += 0.1
+		"""
