@@ -61,7 +61,7 @@ class SleepApp:
 
 	def doAlarm(self):
 
-		off = 2.0
+		off = 1.0
 		on = 0.001
 		lum = 1.0
 		while off >= 0.1:
@@ -73,6 +73,8 @@ class SleepApp:
 				time.sleep(off)
 				if self.quitting:
 					return
+
+			time.sleep(2)
 			off -= 0.05
 			on += 0.001
 			#lum += 0.02
