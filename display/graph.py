@@ -1,4 +1,4 @@
-import pygame
+import pygame, math
 import numpy as np
 
 
@@ -12,7 +12,6 @@ class Graph():
 		self.height = self.display.height * self.heightPercent
 		self.x = 0
 		self.colors = (
-		(64, 64, 64),
 		(128, 0, 0),		(0, 128, 0),	(0, 0, 128),
 		(96, 96, 0),		(0, 96, 96),	(96, 0, 96),
 		(128, 96, 0),		(96, 128, 0),	(0, 96, 128),
@@ -34,9 +33,12 @@ class Graph():
 			pygame.display.flip()
 
 	def renderChannel(self, channel, color):
-		value = channel.getValue()
-		#value = channel.getBufferAvg()
+		# ggf. funktion, min, max und offset als parameter
+		#value = channel.getValue()
+		value = channel.getBufferAvg()
 		#value = channel.getRng()
+		#value = channel.getDiff()
+		#value = math.pow(20 * value, 4)
 		y = int(self.map_value(value, channel.min, channel.max, self.height, 0))
 		self.surface.set_at((self.x, y), color)
 

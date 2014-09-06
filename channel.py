@@ -21,6 +21,8 @@ class Channel:
 		self.npBufferPos = 0
 		self.npBuffer = np.zeros(self.npBufferSize)
 
+		self.lastVal = 0
+
 	def __repr__(self):
 		return "%s (%.1f-%.1f)" % (self.name, self.min, self.max)
 
@@ -109,3 +111,14 @@ class Channel:
 		dif = avg - val
 		#dif = 5 * math.pow(dif / 20, 6)             # differential
 		return dif
+
+	def getDiff(self):
+		avg = self.buffersum / min(self.size, self.num)
+		result = avg - self.lastVal
+		self.lastVal = avg
+		#return math.pow(result, 2)
+		if self.num>2:
+			result =  self.buffer[-1] - self.buffer[-2]
+		else:
+			result = 0
+		return math.pow(result, 4)

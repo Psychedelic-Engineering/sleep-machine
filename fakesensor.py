@@ -23,7 +23,7 @@ class FakeSensor(Sensor):
 
 	def initChannels(self):
 		try:
-			size = 60
+			size = 20
 			self.channels = []
 			self.channels.append(Channel("Piezo", 0, 4096, size))
 			self.channels.append(Channel("TouchA", 800, 2000, size))
@@ -44,7 +44,7 @@ class FakeSensor(Sensor):
 	def readData(self):
 		if not self.initialized:
 			self.initChannels()
-		for i in range(1):
+		for i in range(60):
 			self.line += 1
 			response = self.file.readline()
 		try:

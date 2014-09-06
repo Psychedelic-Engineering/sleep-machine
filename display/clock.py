@@ -52,17 +52,18 @@ class Clock():
 			self.surface.blit(surf, (x,self.height / 2))
 			self.lastTime = timeStr
 
+			"""
 			s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 			s.connect(("8.8.8.8",80))
 			addrStr = str(s.getsockname()[0])
 			s.close()
 
 			surf = self.addrFont.render(addrStr, True, (255,0,0))
-			#self.screen.blit(surf, (4,220))
+			self.screen.blit(surf, (4,220))
 			self.surface.blit(surf, (0,200))
 
-			#surf = self.addrFont.render("07:30", True, self.fontColor)
-			#self.surface.blit(surf, (160,220))
-			#self.surface.blit(surf, (320,540))
-
+			surf = self.addrFont.render("07:30", True, self.fontColor)
+			self.surface.blit(surf, (160,220))
+			self.surface.blit(surf, (320,540))
+			"""
 			pygame.display.flip()

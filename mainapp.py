@@ -26,22 +26,22 @@ class SleepApp:
 		self.scheduler = Scheduler()
 		#self.sensor.startLogging()
 
-		#self.scheduler.addAlarm("*", "*", "0,10,20,30,40,50", self.doAlarm)
+		self.scheduler.addAlarm("*", "*", "0,5,10,15,20,25,30,35,40,45,50,55", self.doAlarm)
 
 	def start(self):
 		logging.debug("start app")
 		while True:
-			if self.scheduler.elapsed(0.00005):
+			if self.scheduler.elapsed(0.1):
 				self.sensor.readData()
 				self.clock.render()
 				self.graph.render()
 				self.scheduler.checkAlarm()
-				"""
+
 				for event in pygame.event.get():
 					if event.type == pygame.MOUSEBUTTONDOWN:
-						print "mouse"
-						self.sensor.calibrate()
-				"""
+						print event
+						pass
+
 
 	def quit(self):
 		logging.debug("Quit app")
@@ -56,5 +56,5 @@ class SleepApp:
 			lum = float(i) / steps
 			cmd = "w %f c %f\n" % (lum, lum / 2)
 			self.led.sendQuick(cmd)
-		#time.sleep(1)
+			time.sleep(0.01)
 		self.led.sendQuick("c 0 w 0\n")

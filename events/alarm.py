@@ -32,8 +32,8 @@ class Alarm:
 		return False
 
 	def matchTime(self, dt):
-		return self.matchField(dt.minute, self.hours) and \
-		       self.matchField(dt.second, self.minutes) and \
+		return self.matchField(dt.hour, self.hours) and \
+		       self.matchField(dt.minute, self.minutes) and \
 		       self.matchField(dt.weekday(), self.weekdays)
 
 	def check(self, timeNow):
