@@ -13,7 +13,7 @@ from basestation import LED
 class SleepApp:
 
 	def __init__(self):
-		self.isRaspberry = False
+		self.isRaspberry = True
 		self.emulateSensor = False
 		logging.basicConfig(format='%(message)s', level=logging.DEBUG)
 		logging.debug("init app")
@@ -60,36 +60,47 @@ class SleepApp:
 		sys.exit()
 
 	def doAlarm(self):
+		import random
+		start = time.time()
 
-		off = 1.0
-		on = 0.001
-		lum = 1.0
-		while off >= 0.1:
-			print off, on, lum
-			for i in range(5):
-				self.led.setLum(lum, lum)
-				time.sleep(on)
-				self.led.setLum(0, 0)
-				time.sleep(off)
-				if self.quitting:
-					return
+		warm = 0.0
+		cold = 0.0
 
-			time.sleep(2)
-			off -= 0.05
-			on += 0.001
-			#lum += 0.02
-		self.quit()
+		while warm <= 0.4:
+			self.led.setLum(warm, cold)
+			time.sleep(0.1)
+			warm += 0.0005
+		print time.time() - start
 
-		"""
-		maxLum = 0
-		while maxLum <= 1:
-			i = 0
-			while i <= maxLum:
-				self.led.setLum(i, i)
-				i += 0.01
-				time.sleep(0.5)
-			self.led.setLum(maxLum, maxLum)
-			time.sleep(2)
-			time.sleep(2)
-			maxLum += 0.1
-		"""
+		while cold <= 0.2:
+			self.led.setLum(warm, cold)
+			time.sleep(0.1)
+			cold += 0.0005
+		print time.time() - start
+
+		print "Gewitter"
+		cnt = 0.01
+		len = 0.01
+
+		while time.time() < start+300:
+			if random.random() < cnt:
+				self.led.setLum(1, 1)
+				time.sleep(len)
+				if len <= 0.1:
+					len += 0.0005
+			self.led.setLum(warm, cold)
+			time.sleep(0.1)
+			if cnt <= 0.2:
+				cnt += 0.0002
+		print time.time() - start
+
+		t = 10
+		for i in range(10):
+			self.led.setLum(1, 1)
+			time.sleep(10-t)
+			self.led.setLum(0, 0)
+			time.sleep(t)
+			t -= 1
+		print time.time() - start
+
+		self.led.setLum(0, 0)

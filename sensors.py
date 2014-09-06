@@ -43,11 +43,13 @@ class Sensor:
 			self.initSensor()
 		try:
 			values = self.device.sendCommand("!", ",")
-			values = map(float, values)
-			self.logData(values)
-			for i, v in enumerate(values):
-				self.channels[i].putValue(v)
+			if values:
+				values = map(float, values)
+				self.logData(values)
+				for i, v in enumerate(values):
+					self.channels[i].putValue(v)
 		except:
+			print values
 			raise
 
 	def calibrate(self):
