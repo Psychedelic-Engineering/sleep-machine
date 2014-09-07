@@ -43,7 +43,7 @@ class SleepApp:
 			self.initialize()
 			while True:
 				if self.scheduler.elapsed(0.1):
-					# ToDo: Sensoren ggf. über Scheduler
+					# ToDo: Sensoren ggf. ueber Scheduler
 					self.sensor.readData()
 					# toDo: ggf. zentraler Display Manager
 					self.clock.render()
@@ -63,7 +63,7 @@ class SleepApp:
 		time.sleep(1)
 		sys.exit()
 
-	# ToDo: Aktionen auslagern, ggf. eigene klasse. Peripherie etc übergeben???
+	# ToDo: Aktionen auslagern, ggf. eigene klasse. Peripherie etc uebergeben???
 	def doAlarm(self):
 		import random
 		start = time.time()
