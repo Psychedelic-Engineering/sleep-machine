@@ -39,16 +39,11 @@ class Alarm:
 	def check(self, timeNow):
 		match = self.matchTime(timeNow)
 		if not match and self.active:
-			logging.debug("Deactivate")
 			self.active = False
 		if match and not self.active:
 			if self.thread is None:
 				self.active = True
 				self.thread = Thread(target=self.action)
 				self.thread.start()
-				logging.debug("Thread started")
-			else:
-				logging.debug("Thread already running")
 		if self.thread and not self.thread.is_alive():
-			logging.debug("Thread finished")
 			self.thread = None

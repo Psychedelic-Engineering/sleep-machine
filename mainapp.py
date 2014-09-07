@@ -15,7 +15,7 @@ class SleepApp:
 	def __init__(self):
 		self.isRaspberry = True
 		self.emulateSensor = False
-		logging.basicConfig(format='%(message)s', level=logging.DEBUG)
+		logging.basicConfig(format='%(message)s', level=logging.INFO)
 		logging.info("init app")
 		self.quitting = False
 		self.screenMult = 1
