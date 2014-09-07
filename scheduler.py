@@ -40,7 +40,7 @@ class Scheduler:
 		if (self.counter % 1000) == 0:
 			self.fps = 1000.0 / (now - self.startTime)
 			self.startTime = now
-			logging.debug("%.2f fps", self.fps)
+			logging.info("%.2f fps", self.fps)
 
 	def getSunTimes(self):
 		a = Location()

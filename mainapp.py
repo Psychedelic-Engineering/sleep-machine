@@ -31,9 +31,10 @@ class SleepApp:
 		self.graph = Graph(self.display, self.sensor)
 		self.clock = Clock(self.display)
 		self.scheduler = Scheduler()
+		# ToDo: Alarme in config File, periodisch auslesen
 		self.scheduler.addAlarm("*", "22", "00", self.sensor.startLogging)
 		self.scheduler.addAlarm("*", "10", "00", self.sensor.stopLogging)
-		self.scheduler.addAlarm("*", "20", "00", self.doAlarm)
+		self.scheduler.addAlarm("*", "15", "42", self.doAlarm)
 		self.scheduler.addAlarm("*", "8", "30", self.doAlarm)
 
 	def start(self):
@@ -42,7 +43,9 @@ class SleepApp:
 			self.initialize()
 			while True:
 				if self.scheduler.elapsed(0.1):
+					# ToDo: Sensoren ggf. über Scheduler
 					self.sensor.readData()
+					# toDo: ggf. zentraler Display Manager
 					self.clock.render()
 					self.graph.render()
 					self.scheduler.checkAlarm()
@@ -60,6 +63,7 @@ class SleepApp:
 		time.sleep(1)
 		sys.exit()
 
+	# ToDo: Aktionen auslagern, ggf. eigene klasse. Peripherie etc übergeben???
 	def doAlarm(self):
 		import random
 		start = time.time()
