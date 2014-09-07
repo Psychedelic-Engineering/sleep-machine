@@ -28,11 +28,15 @@ class GUI():
 			x,y = event.pos
 			if self.insideRect(event.pos, self.slider1):
 				self.lumWarm = self.sliderPos(x, self.slider1)
+				if self.lumWarm < 0.05:
+					self.lumWarm = 0
 				self.render()
 				self.onSetLight(self.lumWarm, self.lumCold)
 
 			if self.insideRect(event.pos, self.slider2):
 				self.lumCold = self.sliderPos(x, self.slider2)
+				if self.lumCold < 0.05:
+					self.lumCold = 0
 				self.render()
 				self.onSetLight(self.lumWarm, self.lumCold)
 
