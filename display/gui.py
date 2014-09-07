@@ -12,11 +12,12 @@ class GUI():
 		self.fontColor = (0,0,0)
 		self.guiFont = pygame.font.Font(self.fontname, 14)
 		self.surface = pygame.Surface((self.width, self.height))
-		self.slider1 = (20,50,280,50)
-		self.slider2 = (20,150,280,50)
+		self.slider1 = (20,100,280,30)
+		self.slider2 = (20,180,280,30)
 		self.close = (280,0,40,40)
 		self.lumWarm = 0
 		self.lumCold = 0
+		self.mouseVisible = False
 		self.drawBG()
 
 	def drawBG(self):
@@ -37,9 +38,14 @@ class GUI():
 
 		if event.type == pygame.MOUSEBUTTONDOWN:
 			if self.insideRect(event.pos, self.close):
+				self.mouseVisible = False
+				pygame.mouse.set_visible(False)
 				self.onClose()
 
 	def render(self):
+		if not self.mouseVisible:
+			pygame.mouse.set_visible(True)
+			self.mouseVisible = True
 		self.drawBG()
 		self.drawClose()
 		self.drawSlider(self.slider1, self.lumWarm)
