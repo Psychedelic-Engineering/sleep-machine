@@ -49,8 +49,8 @@ class SleepApp:
 		self.guiMode = False
 		self.clock.render(force=True)
 
-	def onSetLight(self, value):
-		self.led.setLum(value, value/2)
+	def onSetLight(self, warm, cold):
+		self.led.setLum(warm, cold)
 
 	def start(self):
 		try:
