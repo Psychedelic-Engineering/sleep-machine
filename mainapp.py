@@ -42,7 +42,7 @@ class SleepApp:
 		self.scheduler.addAlarm("*", "22", "00", self.sensor.startLogging)
 		self.scheduler.addAlarm("*", "10", "00", self.sensor.stopLogging)
 		self.scheduler.addAlarm("*", "16", "05", self.doAlarm)
-		self.scheduler.addAlarm("*", "8", "30", self.doAlarm)
+		self.scheduler.addAlarm("*", "7", "30", self.doAlarm)
 
 	def closeGUI(self):
 		print "CloseGUI"
@@ -94,40 +94,41 @@ class SleepApp:
 	# ToDo: Aktionen auslagern, ggf. eigene klasse. Peripherie etc uebergeben???
 	def doAlarm(self):
 		import random
-		start = time.time()
+		for i in range(5):
+			start = time.time()
 
-		warm = 0.0
-		cold = 0.0
+			warm = 0.0
+			cold = 0.0
 
-		while warm <= 0.4:
-			self.led.setLum(warm, cold)
-			time.sleep(0.1)
-			warm += 0.0005
+			while warm <= 0.4:
+				self.led.setLum(warm, cold)
+				time.sleep(0.1)
+				warm += 0.0005
 
-		while cold <= 0.2:
-			self.led.setLum(warm, cold)
-			time.sleep(0.1)
-			cold += 0.0005
-		cnt = 0.01
-		len = 0.01
+			while cold <= 0.2:
+				self.led.setLum(warm, cold)
+				time.sleep(0.1)
+				cold += 0.0005
+			cnt = 0.01
+			len = 0.01
 
-		while time.time() < start+300:
-			if random.random() < cnt:
+			while time.time() < start+300:
+				if random.random() < cnt:
+					self.led.setLum(1, 1)
+					time.sleep(len)
+					if len <= 0.1:
+						len += 0.0005
+				self.led.setLum(warm, cold)
+				time.sleep(0.1)
+				if cnt <= 0.2:
+					cnt += 0.0002
+
+			t = 10
+			for i in range(10):
 				self.led.setLum(1, 1)
-				time.sleep(len)
-				if len <= 0.1:
-					len += 0.0005
-			self.led.setLum(warm, cold)
-			time.sleep(0.1)
-			if cnt <= 0.2:
-				cnt += 0.0002
+				time.sleep(10-t)
+				self.led.setLum(0, 0)
+				time.sleep(t)
+				t -= 1
 
-		t = 10
-		for i in range(10):
-			self.led.setLum(1, 1)
-			time.sleep(10-t)
 			self.led.setLum(0, 0)
-			time.sleep(t)
-			t -= 1
-
-		self.led.setLum(0, 0)
