@@ -47,13 +47,16 @@ class Teensy:
 			logging.debug("Teensy close")
 
 	def initSerial(self, device):
-		self.serial = Serial(device, 115200, timeout=0.5)
-		self.io = io.TextIOWrapper(io.BufferedRWPair(self.serial, self.serial))
-		self.serial.flush()
-		self.serial.flushInput()
-		self.serial.flushOutput()
-		self.serial.readline()
-		time.sleep(0.5)
+		try:
+			self.serial = Serial(device, 115200, timeout=0.5)
+			self.io = io.TextIOWrapper(io.BufferedRWPair(self.serial, self.serial))
+			self.serial.flush()
+			self.serial.flushInput()
+			self.serial.flushOutput()
+			self.serial.readline()
+			time.sleep(0.5)
+		except:
+			raise
 
 	def sendCommand(self, strCommand, seperator=None):
 		# sende Kommando und liefere Ergebnis, besserer Name
@@ -66,8 +69,7 @@ class Teensy:
 				response = response.split(seperator)
 			return response
 		except:
-			#raise
-			return None
+			raise
 
 	def sendQuick(self, strCommand, seperator=None):
 		# sende Kommando, besserer Name
@@ -76,5 +78,4 @@ class Teensy:
 			self.serial.write(strCommand)
 			#self.serial.flush()
 		except:
-			#raise
-			pass
+			raise

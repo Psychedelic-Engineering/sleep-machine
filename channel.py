@@ -75,23 +75,20 @@ class Channel:
 		return self.sum / self.num + self.offset
 
 	def getBufferAvg(self):
-		try:
-			val = self.buffer[-1]                           # current value
-			avg = self.buffersum / min(self.size, self.num) # moving average
-			mix = 0.5 * val + 0.5 * avg                     # weighted average
-			dif = math.pow((val - avg) / 20, 5)             # differential
-			rng = 0
-			#for i in self.buffer:
-			#	rng = max(abs(avg-i), rng)
-			#return rng
+		val = self.buffer[-1]                           # current value
+		avg = self.buffersum / min(self.size, self.num) # moving average
+		mix = 0.5 * val + 0.5 * avg                     # weighted average
+		dif = math.pow((val - avg) / 20, 5)             # differential
+		rng = 0
+		#for i in self.buffer:
+		#	rng = max(abs(avg-i), rng)
+		#return rng
+		return avg + self.offset
+		if dif > 50:
+			#self.buffersum = val * self.size
+			return val + self.offset
+		else:
 			return avg + self.offset
-			if dif > 50:
-				#self.buffersum = val * self.size
-				return val + self.offset
-			else:
-				return avg + self.offset
-		except:
-			raise
 
 	def getRng(self):
 		rng = 0

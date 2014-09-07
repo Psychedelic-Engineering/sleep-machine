@@ -24,12 +24,12 @@ class Alarm:
 			pass
 		if self.thread:
 			if self.state == "active" and not self.thread.is_alive():
-				print "Thread finished"
+				#print "Thread finished"
 				self.state = "done"
 		return diff
 
 	def finished(self):
-		print "callback"
+		#print "callback"
 		if self.periodic and self.over:
 			self.over = False
 	"""

@@ -22,24 +22,20 @@ class FakeSensor(Sensor):
 			response = self.file.readline()
 
 	def initChannels(self):
-		try:
-			size = 20
-			self.channels = []
-			self.channels.append(Channel("Piezo", 0, 4096, size))
-			self.channels.append(Channel("TouchA", 800, 2000, size))
-			self.channels.append(Channel("TouchB", 800, 2000, size))
-			self.channels.append(Channel("TouchC", 800, 2000, size))
-			self.channels.append(Channel("AccelA", -5, 15, size))
-			self.channels.append(Channel("AccelB", -5, 15, size))
-			self.channels.append(Channel("AccelC", -5, 15, size))
-			self.channels.append(Channel("GyroA", -5, 5, size))
-			self.channels.append(Channel("GyroB", -5, 5, size))
-			self.channels.append(Channel("GyroC", -5, 5, size))
-			self.channels.append(Channel("Temp", 10, 30, size))
-			self.initialized = True
-		except:
-			logging.error("initChannels error")
-			self.initialized = False
+		size = 20
+		self.channels = []
+		self.channels.append(Channel("Piezo", 0, 4096, size))
+		self.channels.append(Channel("TouchA", 800, 2000, size))
+		self.channels.append(Channel("TouchB", 800, 2000, size))
+		self.channels.append(Channel("TouchC", 800, 2000, size))
+		self.channels.append(Channel("AccelA", -5, 15, size))
+		self.channels.append(Channel("AccelB", -5, 15, size))
+		self.channels.append(Channel("AccelC", -5, 15, size))
+		self.channels.append(Channel("GyroA", -5, 5, size))
+		self.channels.append(Channel("GyroB", -5, 5, size))
+		self.channels.append(Channel("GyroC", -5, 5, size))
+		self.channels.append(Channel("Temp", 10, 30, size))
+		self.initialized = True
 
 	def readData(self):
 		if not self.initialized:
@@ -47,11 +43,7 @@ class FakeSensor(Sensor):
 		for i in range(60):
 			self.line += 1
 			response = self.file.readline()
-		try:
-			values = map(float, response.split(","))
-			values = values[1:]
-			for i, v in enumerate(values):
-				self.channels[i].putValue(v)
-		except:
-			pass
-			#raise
+		values = map(float, response.split(","))
+		values = values[1:]
+		for i, v in enumerate(values):
+			self.channels[i].putValue(v)

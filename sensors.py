@@ -21,9 +21,10 @@ class Sensor:
 		try:
 			header = self.device.sendCommand("?")
 			header = header.split(";")
-			logging.debug("Initsensor: %s", header)
+			logging.info("Initsensor: %s", header)
 			self.initChannels(header)
 		except:
+			raise
 			logging.error("Initsensor error")
 
 	def initChannels(self, header):

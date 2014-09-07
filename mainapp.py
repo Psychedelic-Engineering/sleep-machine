@@ -20,6 +20,9 @@ class SleepApp:
 		self.quitting = False
 		self.screenMult = 1
 
+	def __del__(self):
+		self.quit()
+
 	def initialize(self):
 		Peripherals.init()
 		if self.emulateSensor:
@@ -57,8 +60,9 @@ class SleepApp:
 
 					"""
 
-
-		except:
+		except Exception as e:
+			raise
+			print(e)
 			self.quit()
 
 	def quit(self):

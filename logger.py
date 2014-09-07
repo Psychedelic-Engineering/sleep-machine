@@ -20,4 +20,4 @@ class Logger:
 		self.file.close()
 
 	def __del__(self):
-		print "EXIT"
+		pass
