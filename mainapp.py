@@ -47,7 +47,7 @@ class SleepApp:
 	def closeGUI(self):
 		print "CloseGUI"
 		self.guiMode = False
-		self.clock.render()
+		self.clock.render(force=True)
 
 	def onSetLight(self, value):
 		self.led.setLum(value, value/2)

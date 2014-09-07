@@ -24,10 +24,10 @@ class Clock():
 		loc= locale.setlocale(locale.LC_TIME,"de_DE.UTF-8")
 		self.lastTime = ""
 
-	def render(self):
+	def render(self, force = False):
 		timeStr = time.strftime("%H:%M")
 		#timeStr = "24:57"
-		if timeStr != self.lastTime:
+		if timeStr != self.lastTime or force:
 			self.surface.fill((0,0,0))
 			#self.surface.fill((200,120,70))
 			surf = self.timeFont.render(timeStr, True, (255,0,0))
