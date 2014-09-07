@@ -56,7 +56,14 @@ class SleepApp:
 
 					for event in pygame.event.get():
 						if event.type == pygame.MOUSEBUTTONDOWN:
-							print event
+							value = event.pos[0]
+							print value
+							if value > 30:
+								l = float(value-30) / 300
+							else:
+								l = 0
+							self.led.setLum(l, l/2)
+
 							pass
 
 
