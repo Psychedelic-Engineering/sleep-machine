@@ -41,6 +41,7 @@ class SleepApp:
 		try:
 			logging.info("start app")
 			self.initialize()
+			logging.info("entering mainloop")
 			while True:
 				if self.scheduler.elapsed(0.1):
 					# ToDo: Sensoren ggf. ueber Scheduler
@@ -49,10 +50,12 @@ class SleepApp:
 					self.clock.render()
 					self.graph.render()
 					self.scheduler.checkAlarm()
-
+					"""
 					for event in pygame.event.get():
 						if event.type == pygame.MOUSEBUTTONDOWN:
 							pass
+					"""
+
 		except:
 			self.quit()
 
