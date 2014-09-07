@@ -1,4 +1,4 @@
-
+import logging
 from sensors import Sensor
 from channel import Channel
 
@@ -38,7 +38,7 @@ class FakeSensor(Sensor):
 			self.channels.append(Channel("Temp", 10, 30, size))
 			self.initialized = True
 		except:
-			print "initChannels error"
+			logging.error("initChannels error")
 			self.initialized = False
 
 	def readData(self):

@@ -37,8 +37,8 @@ class Scheduler:
 
 	def getFPS(self, now):
 		self.counter += 1
-		if (self.counter % 100) == 0:
-			self.fps = 100.0 / (now - self.startTime)
+		if (self.counter % 1000) == 0:
+			self.fps = 1000.0 / (now - self.startTime)
 			self.startTime = now
 			logging.debug("%.2f fps", self.fps)
 

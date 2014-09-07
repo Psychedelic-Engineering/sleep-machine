@@ -49,7 +49,6 @@ class Sensor:
 				for i, v in enumerate(values):
 					self.channels[i].putValue(v)
 		except:
-			print values
 			raise
 
 	def calibrate(self):

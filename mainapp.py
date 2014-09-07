@@ -16,45 +16,45 @@ class SleepApp:
 		self.isRaspberry = True
 		self.emulateSensor = False
 		logging.basicConfig(format='%(message)s', level=logging.DEBUG)
-		logging.debug("init app")
+		logging.info("init app")
 		self.quitting = False
+		self.screenMult = 1
+
+	def initialize(self):
 		Peripherals.init()
-		screenMult = 1
 		if self.emulateSensor:
 			self.sensor = FakeSensor()
 		else:
 			self.sensor = Sensor(Peripherals.devices["Pillow"])
 		self.led = LED(Peripherals.devices["Basestation"])
-		self.display = Display(screenMult*320, screenMult*240, self.isRaspberry)
+		self.display = Display(self.screenMult*320, self.screenMult*240, self.isRaspberry)
 		self.graph = Graph(self.display, self.sensor)
 		self.clock = Clock(self.display)
 		self.scheduler = Scheduler()
-		#self.sensor.startLogging()
-
-		#self.scheduler.addAlarm("*", "*", "0,5,10,15,20,25,30,35,40,45,50,55", self.doAlarm)
 		self.scheduler.addAlarm("*", "22", "00", self.sensor.startLogging)
 		self.scheduler.addAlarm("*", "10", "00", self.sensor.stopLogging)
 		self.scheduler.addAlarm("*", "20", "00", self.doAlarm)
 		self.scheduler.addAlarm("*", "8", "30", self.doAlarm)
-		#self.doAlarm()
-		#self.quit()
 
 	def start(self):
-		logging.debug("start app")
-		while True:
-			if self.scheduler.elapsed(0.1):
-				self.sensor.readData()
-				self.clock.render()
-				self.graph.render()
-				self.scheduler.checkAlarm()
+		try:
+			logging.info("start app")
+			self.initialize()
+			while True:
+				if self.scheduler.elapsed(0.1):
+					self.sensor.readData()
+					self.clock.render()
+					self.graph.render()
+					self.scheduler.checkAlarm()
 
-				for event in pygame.event.get():
-					if event.type == pygame.MOUSEBUTTONDOWN:
-						print event
-						pass
+					for event in pygame.event.get():
+						if event.type == pygame.MOUSEBUTTONDOWN:
+							pass
+		except:
+			self.quit()
 
 	def quit(self):
-		logging.debug("Quit app")
+		logging.info("Quit app")
 		Peripherals.close()
 		self.quitting = True
 		time.sleep(1)
@@ -71,15 +71,11 @@ class SleepApp:
 			self.led.setLum(warm, cold)
 			time.sleep(0.1)
 			warm += 0.0005
-		print time.time() - start
 
 		while cold <= 0.2:
 			self.led.setLum(warm, cold)
 			time.sleep(0.1)
 			cold += 0.0005
-		print time.time() - start
-
-		print "Gewitter"
 		cnt = 0.01
 		len = 0.01
 
@@ -93,7 +89,6 @@ class SleepApp:
 			time.sleep(0.1)
 			if cnt <= 0.2:
 				cnt += 0.0002
-		print time.time() - start
 
 		t = 10
 		for i in range(10):
@@ -102,6 +97,5 @@ class SleepApp:
 			self.led.setLum(0, 0)
 			time.sleep(t)
 			t -= 1
-		print time.time() - start
 
 		self.led.setLum(0, 0)
