@@ -12,8 +12,8 @@ class GUI():
 		self.fontColor = (0,0,0)
 		self.guiFont = pygame.font.Font(self.fontname, 14)
 		self.surface = pygame.Surface((self.width, self.height))
-		self.slider1 = (20,100,280,30)
-		self.slider2 = (20,180,280,30)
+		self.slider1 = (40,100,240,30)
+		self.slider2 = (40,180,240,30)
 		self.close = (280,0,40,40)
 		self.lumWarm = 0
 		self.lumCold = 0
