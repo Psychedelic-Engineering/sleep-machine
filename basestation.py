@@ -4,6 +4,8 @@ class LED:
 	def __init__(self, device):
 		self.initialized = False
 		self.device = device
+		self.warmIdle = 0
+		self.coldIdle = 0
 
 	def cie1931(self, lum):
 		lum *= 100.0
@@ -18,3 +20,4 @@ class LED:
 
 	def setLum(self, warm, cold):
 		self.setLight(self.cie1931(warm), self.cie1931(cold))
+

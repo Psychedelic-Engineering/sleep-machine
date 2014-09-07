@@ -53,12 +53,13 @@ class SleepApp:
 					self.clock.render()
 					self.graph.render()
 					self.scheduler.checkAlarm()
-					"""
+
 					for event in pygame.event.get():
 						if event.type == pygame.MOUSEBUTTONDOWN:
+							print event
 							pass
 
-					"""
+
 
 		except Exception as e:
 			raise
