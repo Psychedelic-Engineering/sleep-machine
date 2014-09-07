@@ -4,6 +4,7 @@ from fakesensor import FakeSensor
 from sensors import Sensor
 from display.graph import Graph
 from display.clock import Clock
+from display.gui import GUI
 from teensy import Peripherals
 from scheduler import Scheduler
 import pygame
@@ -33,6 +34,9 @@ class SleepApp:
 		self.display = Display(self.screenMult*320, self.screenMult*240, self.isRaspberry)
 		self.graph = Graph(self.display, self.sensor)
 		self.clock = Clock(self.display)
+		self.gui = GUI(self.display)
+		self.gui.onClose = self.closeGUI
+		self.gui.onSetLight = self.onSetLight
 		self.scheduler = Scheduler()
 		# ToDo: Alarme in config File, periodisch auslesen
 		self.scheduler.addAlarm("*", "22", "00", self.sensor.startLogging)
@@ -40,31 +44,38 @@ class SleepApp:
 		self.scheduler.addAlarm("*", "16", "05", self.doAlarm)
 		self.scheduler.addAlarm("*", "8", "30", self.doAlarm)
 
+	def closeGUI(self):
+		print "CloseGUI"
+		self.guiMode = False
+		self.clock.render()
+
+	def onSetLight(self, value):
+		self.led.setLum(value, value/2)
+
 	def start(self):
 		try:
 			logging.info("start app")
 			self.initialize()
 			logging.info("entering mainloop")
+			self.guiMode = False
 			while True:
 				if self.scheduler.elapsed(0.1):
 					# ToDo: Sensoren ggf. ueber Scheduler
 					self.sensor.readData()
-					# toDo: ggf. zentraler Display Manager
-					self.clock.render()
-					self.graph.render()
 					self.scheduler.checkAlarm()
+					# toDo: ggf. zentraler Display Manager
+					if self.guiMode:
+						self.gui.render()
+					else:
+						self.clock.render()
+						self.graph.render()
 
 					for event in pygame.event.get():
-						if event.type == pygame.MOUSEBUTTONDOWN:
-							value = event.pos[0]
-							print value
-							if value > 30:
-								l = float(value-30) / 300
-							else:
-								l = 0
-							self.led.setLum(l, l/2)
-
-							pass
+						if not self.guiMode:
+							if event.type == pygame.MOUSEBUTTONDOWN:
+								self.guiMode = True
+						else:
+							self.gui.handleEvent(event)
 
 
 
