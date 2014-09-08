@@ -26,7 +26,7 @@ class Settings(GUI):
 
 		buttonQuit = Widget(self, nextX, nextX, self.gridW, self.gridH, name="quit", label="Quit")
 		nextX += self.gridW + self.margin
-		button2 = Widget(self, nextX, nextY, self.gridW, self.gridH)
+		buttonReboot = Widget(self, nextX, nextY, self.gridW, self.gridH, name="reboot", label="Reboot")
 		nextX += self.gridW + self.margin
 		button3 = Widget(self, nextX, nextY, self.gridW, self.gridH)
 		nextX += self.gridW + self.margin
@@ -41,12 +41,12 @@ class Settings(GUI):
 		sliderWarm.onChange = self.changeLight
 		sliderCold.onChange = self.changeLight
 		buttonQuit.onClick = self.clickButton
-		button2.onClick = self.clickButton
+		buttonReboot.onClick = self.clickButton
 		button3.onClick = self.clickButton
 		buttonClose.onClick = self.clickButton
 
 		self.addWidget(buttonQuit)
-		self.addWidget(button2)
+		self.addWidget(buttonReboot)
 		self.addWidget(button3)
 		self.addWidget(buttonClose)
 		self.addWidget(sliderWarm)

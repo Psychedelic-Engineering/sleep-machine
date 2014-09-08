@@ -1,4 +1,4 @@
-import time, logging, sys
+import time, logging, sys, os
 from display.display import Display
 from fakesensor import FakeSensor
 from sensors import Sensor
@@ -50,6 +50,8 @@ class SleepApp:
 			self.clock.render(force=True)
 		elif action == "quit":
 			self.quit()
+		elif action == "reboot":
+			os.system("/sbin/reboot")
 
 	def onSetLight(self, warm, cold):
 		self.led.setLum(warm, cold)
