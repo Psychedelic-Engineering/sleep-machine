@@ -1,7 +1,6 @@
 import pygame
 
 """GUI-Handling
-	- GUI, Widgets und Anwendungscode trennen
 	- Event-System fuer ganze GUI
 	- Panels mit Activate und deactivate
 	- Hierarchien, Container: Display, Screens, Panels
@@ -31,7 +30,7 @@ class GUI():
 		self.widgets.append(widget)
 
 	def drawBG(self):
-		self.surface.fill((64, 64, 64))
+		self.surface.fill((32, 32, 32))
 
 	def handleEvent(self, event):
 		for w in self.widgets:
@@ -64,7 +63,7 @@ class Widget:
 
 	def setLabel(self, text=""):
 		self.text = text
-		self.label = self.gui.guiFont.render(text, True, (255,255,255))
+		self.label = self.gui.guiFont.render(text, True, (160,160,160))
 
 	def setPos(self, left, top):
 		self.rect.left = left
@@ -88,6 +87,7 @@ class Widget:
 		else:
 			color = (48,48,48)
 		pygame.draw.rect(self.surface, color, rect)
+		pygame.draw.rect(self.surface, (16,16,16), rect, 1)
 		self.drawLabel()
 
 	def drawLabel(self):
@@ -126,6 +126,7 @@ class Slider(Widget):
 		rect = self.rect.copy()
 		rect.topleft = (0,0)
 		pygame.draw.rect(self.surface, (48,48,48), rect)
+		pygame.draw.rect(self.surface, (16,16,16), rect, 1)
 		rect.inflate_ip(-4, -4)
 		rect.width = int(float(rect.width) * self.value)
 		pygame.draw.rect(self.surface, (128,64,0), rect)

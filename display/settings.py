@@ -7,26 +7,50 @@ class Settings(GUI):
 
 	def __init__(self, display):
 		GUI.__init__(self, display)
+
+		self.onClose = None
+		self.onSetLight = None
 		self.lumWarm = 0
 		self.lumCold = 0
 
-		size = 36
+		self.margin = 8
 
-		buttonClose = Widget(self, 2,2,size*2,size, name="close", label="CLOSE")
-		sliderWarm = Slider(self, 2,42,316,size, name="warm", label="WARM")
-		sliderCold = Slider(self, 2,82,316,size, name="cold", label="COLD")
+		self.cellsX = 4
+		self.cellsY = 3
+
+		self.gridW = (self.width - self.margin * (self.cellsX + 1)) / self.cellsX
+		self.gridH = (self.height - self.margin * (self.cellsY + 1)) / self.cellsY
+
+		nextX = self.margin
+		nextY = self.margin
+
+		buttonQuit = Widget(self, nextX, nextX, self.gridW, self.gridH, name="quit", label="Quit")
+		nextX += self.gridW + self.margin
+		button2 = Widget(self, nextX, nextY, self.gridW, self.gridH)
+		nextX += self.gridW + self.margin
+		button3 = Widget(self, nextX, nextY, self.gridW, self.gridH)
+		nextX += self.gridW + self.margin
+		buttonClose = Widget(self, nextX, nextY, self.gridW, self.gridH, name="close", label="CLOSE")
+		sliderWidth = self.gridW * 4 + 3 * self.margin
+		nextX = self.margin
+		nextY  += self.gridH + self.margin
+		sliderWarm = Slider(self, nextX, nextY, sliderWidth, self.gridH, name="warm", label="WARM")
+		nextY  += self.gridH + self.margin
+		sliderCold = Slider(self, nextX, nextY, sliderWidth, self.gridH, name="cold", label="COLD")
 
 		sliderWarm.onChange = self.changeLight
 		sliderCold.onChange = self.changeLight
-		buttonClose.onClick = self.close
+		buttonQuit.onClick = self.clickButton
+		button2.onClick = self.clickButton
+		button3.onClick = self.clickButton
+		buttonClose.onClick = self.clickButton
 
+		self.addWidget(buttonQuit)
+		self.addWidget(button2)
+		self.addWidget(button3)
 		self.addWidget(buttonClose)
 		self.addWidget(sliderWarm)
 		self.addWidget(sliderCold)
-
-		self.addWidget(Widget(self, 82,2,size*2,size))
-		self.addWidget(Widget(self, 162,2,size*2,size))
-		self.addWidget(Widget(self, 242,2,size*2,size))
 
 		self.drawBG()
 
@@ -35,14 +59,9 @@ class Settings(GUI):
 			self.lumWarm = value
 		elif slider.name == "cold":
 			self.lumCold = value
-		try:
+		if self.onSetLight:
 			self.onSetLight(self.lumWarm, self.lumCold)
-		except:
-			pass
 
-	def close(self, button):
-		print "Click:"
-		try:
-			self.onClose()
-		except:
-			pass
+	def clickButton(self, button):
+		if self.onButton:
+			self.onButton(button.name)

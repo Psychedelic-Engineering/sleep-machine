@@ -14,8 +14,8 @@ from basestation import LED
 class SleepApp:
 
 	def __init__(self):
-		self.isRaspberry = False
-		self.emulateSensor = True
+		self.isRaspberry = True
+		self.emulateSensor = False
 		logging.basicConfig(format='%(message)s', level=logging.INFO)
 		logging.info("init app")
 		self.quitting = False
@@ -30,24 +30,27 @@ class SleepApp:
 			self.sensor = FakeSensor()
 		else:
 			self.sensor = Sensor(Peripherals.devices["Pillow"])
-		#self.led = LED(Peripherals.devices["Basestation"])
+		self.led = LED(Peripherals.devices["Basestation"])
 		self.display = Display(self.screenMult*320, self.screenMult*240, self.isRaspberry)
 		self.graph = Graph(self.display, self.sensor)
 		self.clock = Clock(self.display)
 		self.settings = Settings(self.display)
-		self.settings.onClose = self.closeGUI
+		self.settings.onButton = self.onButton
 		self.settings.onSetLight = self.onSetLight
 		self.scheduler = Scheduler()
 		# ToDo: Alarme in config File, periodisch auslesen
 		self.scheduler.addAlarm("*", "22", "00", self.sensor.startLogging)
 		self.scheduler.addAlarm("*", "10", "00", self.sensor.stopLogging)
-		self.scheduler.addAlarm("*", "16", "05", self.doAlarm)
+		self.scheduler.addAlarm("*", "20", "50", self.doAlarm)
 		self.scheduler.addAlarm("*", "7", "30", self.doAlarm)
 
-	def closeGUI(self):
-		print "CloseGUI"
-		self.guiMode = False
-		self.clock.render(force=True)
+	def onButton(self, action):
+		print "onButton: ", action
+		if action == "close":
+			self.guiMode = False
+			self.clock.render(force=True)
+		elif action == "quit":
+			self.quit()
 
 	def onSetLight(self, warm, cold):
 		print "onSetLight", warm, cold
@@ -60,6 +63,8 @@ class SleepApp:
 			logging.info("entering mainloop")
 			self.guiMode = False
 			while True:
+				if self.quitting:
+					break
 				if self.scheduler.elapsed(0.1):
 					# ToDo: Sensoren ggf. ueber Scheduler
 					self.sensor.readData()
@@ -78,17 +83,16 @@ class SleepApp:
 						else:
 							self.settings.handleEvent(event)
 
-
-
 		except Exception as e:
 			raise
-			print(e)
-			self.quit()
+		finally:
+			pass
+			#self.quit()
 
 	def quit(self):
+		self.quitting = True
 		logging.info("Quit app")
 		Peripherals.close()
-		self.quitting = True
 		time.sleep(1)
 		sys.exit()
 

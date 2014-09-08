@@ -1,4 +1,4 @@
-import os, pygame
+import os, pygame, logging
 
 """Display Klasse
 	- notwendig?
@@ -23,6 +23,7 @@ class Display:
 		#pygame.mouse.set_visible(False)
 
 	def __del__(self):
+		logging.debug("pygame.quit")
 		pygame.quit()
 
 	def flip(self):
