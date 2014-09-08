@@ -1,4 +1,15 @@
-import pygame, time, math, os, datetime, socket, locale
+import pygame
+
+"""GUI-Handling
+	- GUI, Widgets und Anwendungscode trennen
+	- Event-System fuer ganze GUI
+	- Panels mit Activate und deactivate
+	- Hierarchien, Container: Display, Screens, Panels
+	- Styles (Farben, Fonts, Rahmen)
+	- Layout-Raster (Margin, Grid, Float)
+	- Invalidate Mechanik
+"""
+
 
 class GUI():
 
@@ -10,67 +21,126 @@ class GUI():
 		self.width = self.display.width
 		self.height = self.display.height
 		self.fontColor = (0,0,0)
-		self.guiFont = pygame.font.Font(self.fontname, 14)
+		self.guiFont = pygame.font.Font(self.fontname, 20)
 		self.surface = pygame.Surface((self.width, self.height))
-		self.slider1 = (40,100,240,30)
-		self.slider2 = (40,180,240,30)
-		self.close = (280,0,40,40)
-		self.lumWarm = 0
-		self.lumCold = 0
 		self.mouseVisible = False
-		self.drawBG()
+		self.widgets = []
+		self.render()
+
+	def addWidget(self, widget):
+		self.widgets.append(widget)
 
 	def drawBG(self):
 		self.surface.fill((64, 64, 64))
 
 	def handleEvent(self, event):
-		if event.type == pygame.MOUSEMOTION:
-			x,y = event.pos
-			if self.insideRect(event.pos, self.slider1):
-				self.lumWarm = self.sliderPos(x, self.slider1)
-				if self.lumWarm < 0.05:
-					self.lumWarm = 0
-				self.render()
-				self.onSetLight(self.lumWarm, self.lumCold)
-
-			if self.insideRect(event.pos, self.slider2):
-				self.lumCold = self.sliderPos(x, self.slider2)
-				if self.lumCold < 0.05:
-					self.lumCold = 0
-				self.render()
-				self.onSetLight(self.lumWarm, self.lumCold)
-
-		if event.type == pygame.MOUSEBUTTONDOWN:
-			if self.insideRect(event.pos, self.close):
-				self.mouseVisible = False
-				pygame.mouse.set_visible(False)
-				self.onClose()
+		for w in self.widgets:
+			w.handleEvent(event)
 
 	def render(self):
 		if not self.mouseVisible:
 			pygame.mouse.set_visible(True)
 			self.mouseVisible = True
 		self.drawBG()
-		self.drawClose()
-		self.drawSlider(self.slider1, self.lumWarm)
-		self.drawSlider(self.slider2, self.lumCold)
+		for w in self.widgets:
+			w.render(self.surface)
 		self.display.screen.blit(self.surface, (0, 0))
 		pygame.display.flip()
 
-	def drawClose(self):
-		pygame.draw.rect(self.surface, (255,0,0), self.close, 2)
 
-	def drawSlider(self, slider, value):
-		l, t, w, h = slider
-		pygame.draw.rect(self.surface, (255,0,0), slider, 2)
-		w = int(float(w) * value)
-		pygame.draw.rect(self.surface, (255,255,0), [l, t, w, h])
+class Widget:
 
-	def insideRect(self, pos, rect):
+	mouseEvents = (pygame.MOUSEMOTION, pygame.MOUSEBUTTONUP, pygame.MOUSEBUTTONDOWN)
+
+	def __init__(self, gui, left, top, width, height, name=None, label=None):
+		self.gui = gui
+		self.label = None
+		self.setLabel(label)
+		self.name = name
+		self.clicked = False
+		self.rect = pygame.Rect(left, top, width, height)
+		self.setPos(left, top)
+		self.setSize(width, height)
+
+	def setLabel(self, text=""):
+		self.text = text
+		self.label = self.gui.guiFont.render(text, True, (255,255,255))
+
+	def setPos(self, left, top):
+		self.rect.left = left
+		self.rect.top = top
+
+	def setSize(self, width, height):
+		self.rect.width = width
+		self.rect.height = height
+		self.surface = pygame.Surface((self.rect.width, self.rect.height))
+		self.draw()
+
+	def posInside(self, pos):
 		x, y = pos
-		l,t,w,h = rect
-		return l < x < (l+w) and t < y < (t+h)
+		return self.rect.collidepoint(x, y)
 
-	def sliderPos(self, x, rect):
-		l,t,w,h = rect
-		return float(x - l) / w
+	def draw(self):
+		rect = self.rect.copy()
+		rect.topleft = (0,0)
+		if self.clicked:
+			color = (128,64,0)
+		else:
+			color = (48,48,48)
+		pygame.draw.rect(self.surface, color, rect)
+		self.drawLabel()
+
+	def drawLabel(self):
+		if self.label is not None:
+			lw, lh = self.label.get_size()
+			x = (self.rect.width-lw) / 2
+			y = (self.rect.height-lh) / 2
+			self.surface.blit(self.label, (x,y))
+
+	def render(self, surface):
+		self.draw()
+		surface.blit(self.surface, self.rect.topleft)
+
+	def handleEvent(self, event):
+		if event.type == pygame.MOUSEBUTTONDOWN:
+			if self.posInside(event.pos):
+				self.clicked = True
+				self.clickPos = event.pos
+				self.draw()
+				try:
+					self.onClick(self)
+				except:
+					pass
+		if event.type == pygame.MOUSEBUTTONUP:
+			if self.clicked:
+				self.clicked = False
+				self.draw()
+
+
+class Slider(Widget):
+	def __init__(self, gui, left, top, width, height, name=None, label=None):
+		self.value = 0.5
+		Widget.__init__(self, gui, left, top, width, height, name, label)
+
+	def draw(self):
+		rect = self.rect.copy()
+		rect.topleft = (0,0)
+		pygame.draw.rect(self.surface, (48,48,48), rect)
+		rect.inflate_ip(-4, -4)
+		rect.width = int(float(rect.width) * self.value)
+		pygame.draw.rect(self.surface, (128,64,0), rect)
+		self.drawLabel()
+
+
+	def handleEvent(self, event):
+		Widget.handleEvent(self, event)
+		if self.clicked:
+			if event.type in (pygame.MOUSEMOTION, pygame.MOUSEBUTTONDOWN):
+				x,y = event.pos
+				self.value = float(x-self.rect.left) / self.rect.width
+				self.value = max(min(self.value, 1.0), 0.0)
+				try:
+					self.onChange(self, self.value)
+				except:
+					pass
+				self.draw()

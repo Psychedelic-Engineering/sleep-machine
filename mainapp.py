@@ -4,7 +4,7 @@ from fakesensor import FakeSensor
 from sensors import Sensor
 from display.graph import Graph
 from display.clock import Clock
-from display.gui import GUI
+from display.settings import Settings
 from teensy import Peripherals
 from scheduler import Scheduler
 import pygame
@@ -14,8 +14,8 @@ from basestation import LED
 class SleepApp:
 
 	def __init__(self):
-		self.isRaspberry = True
-		self.emulateSensor = False
+		self.isRaspberry = False
+		self.emulateSensor = True
 		logging.basicConfig(format='%(message)s', level=logging.INFO)
 		logging.info("init app")
 		self.quitting = False
@@ -30,13 +30,13 @@ class SleepApp:
 			self.sensor = FakeSensor()
 		else:
 			self.sensor = Sensor(Peripherals.devices["Pillow"])
-		self.led = LED(Peripherals.devices["Basestation"])
+		#self.led = LED(Peripherals.devices["Basestation"])
 		self.display = Display(self.screenMult*320, self.screenMult*240, self.isRaspberry)
 		self.graph = Graph(self.display, self.sensor)
 		self.clock = Clock(self.display)
-		self.gui = GUI(self.display)
-		self.gui.onClose = self.closeGUI
-		self.gui.onSetLight = self.onSetLight
+		self.settings = Settings(self.display)
+		self.settings.onClose = self.closeGUI
+		self.settings.onSetLight = self.onSetLight
 		self.scheduler = Scheduler()
 		# ToDo: Alarme in config File, periodisch auslesen
 		self.scheduler.addAlarm("*", "22", "00", self.sensor.startLogging)
@@ -50,7 +50,8 @@ class SleepApp:
 		self.clock.render(force=True)
 
 	def onSetLight(self, warm, cold):
-		self.led.setLum(warm, cold)
+		print "onSetLight", warm, cold
+		#self.led.setLum(warm, cold)
 
 	def start(self):
 		try:
@@ -65,7 +66,7 @@ class SleepApp:
 					self.scheduler.checkAlarm()
 					# toDo: ggf. zentraler Display Manager
 					if self.guiMode:
-						self.gui.render()
+						self.settings.render()
 					else:
 						self.clock.render()
 						self.graph.render()
@@ -75,7 +76,7 @@ class SleepApp:
 							if event.type == pygame.MOUSEBUTTONDOWN:
 								self.guiMode = True
 						else:
-							self.gui.handleEvent(event)
+							self.settings.handleEvent(event)
 
 
 
