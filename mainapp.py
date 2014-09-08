@@ -45,7 +45,6 @@ class SleepApp:
 		self.scheduler.addAlarm("*", "7", "30", self.doAlarm)
 
 	def onButton(self, action):
-		print "onButton: ", action
 		if action == "close":
 			self.guiMode = False
 			self.clock.render(force=True)
@@ -53,8 +52,7 @@ class SleepApp:
 			self.quit()
 
 	def onSetLight(self, warm, cold):
-		print "onSetLight", warm, cold
-		#self.led.setLum(warm, cold)
+		self.led.setLum(warm, cold)
 
 	def start(self):
 		try:
