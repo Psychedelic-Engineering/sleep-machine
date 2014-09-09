@@ -90,8 +90,8 @@ class Widget:
 		#RoundRect(self.surface, rect, (64,64,64), 0.2)
 		#RoundRect2(self.surface,(128,64,64), rect, 0, 10, 10)
 		#RoundRect2(self.surface,(255,255,255), rect, 1, 10, 10)
-		#RoundRect3(self.surface,(255,255,255),(128,64,64),rect,1,10)
-		round_rect(self.surface, rect, (255,255,255), 30, 1, color)
+		RoundRect3(self.surface,(255,255,255),(128,64,64),rect,1,20)
+		#round_rect(self.surface, rect, (255,255,255), 30, 1, color)
 		self.drawLabel()
 
 	def drawLabel(self):
