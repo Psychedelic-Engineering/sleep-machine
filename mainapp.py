@@ -15,7 +15,7 @@ class SleepApp:
 
 	def __init__(self):
 		pygame.mixer.pre_init(44100, -16, 2, 4096)
-		self.isRaspberry = False
+		self.isRaspberry = True
 		self.emulateSensor = True
 		logging.basicConfig(format='%(message)s', level=logging.INFO)
 		logging.info("init app")
