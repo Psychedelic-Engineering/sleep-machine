@@ -14,8 +14,8 @@ from basestation import LED
 class SleepApp:
 
 	def __init__(self):
-		self.isRaspberry = True
-		self.emulateSensor = False
+		self.isRaspberry = False
+		self.emulateSensor = True
 		logging.basicConfig(format='%(message)s', level=logging.INFO)
 		logging.info("init app")
 		self.quitting = False
@@ -30,13 +30,15 @@ class SleepApp:
 			self.sensor = FakeSensor()
 		else:
 			self.sensor = Sensor(Peripherals.devices["Pillow"])
-		self.led = LED(Peripherals.devices["Basestation"])
+		#self.led = LED(Peripherals.devices["Basestation"])
 		self.display = Display(self.screenMult*320, self.screenMult*240, self.isRaspberry)
+		# toDo: ggf. zentraler Display Manager
 		self.graph = Graph(self.display, self.sensor)
 		self.clock = Clock(self.display)
 		self.settings = Settings(self.display)
 		self.settings.onButton = self.onButton
 		self.settings.onSetLight = self.onSetLight
+
 		self.scheduler = Scheduler()
 		# ToDo: Alarme in config File, periodisch auslesen
 		self.scheduler.addAlarm("*", "22", "00", self.sensor.startLogging)
@@ -75,7 +77,7 @@ class SleepApp:
 					else:
 						self.clock.render()
 						self.graph.render()
-
+					# ToDo: Eventhandling in GUI
 					for event in pygame.event.get():
 						if not self.guiMode:
 							if event.type == pygame.MOUSEBUTTONDOWN:
@@ -90,6 +92,7 @@ class SleepApp:
 			#self.quit()
 
 	def quit(self):
+		#ToDo: Saubere Deinitialisierung und Threadsynchronisation
 		self.quitting = True
 		logging.info("Quit app")
 		Peripherals.close()
