@@ -108,7 +108,6 @@ class Widget:
 		surface.blit(self.surface, self.rect.topleft)
 
 	def handleEvent(self, event):
-		event.pos = (event.pos[0]+10, event.pos[1])
 		if event.type == pygame.MOUSEBUTTONDOWN:
 			if self.posInside(event.pos):
 				self.clicked = True
@@ -144,7 +143,7 @@ class Slider(Widget):
 		if self.clicked:
 			if event.type in (pygame.MOUSEMOTION, pygame.MOUSEBUTTONDOWN):
 				x,y = event.pos
-				self.value = float(x-self.rect.left) / self.rect.width
+				self.value = float(x-self.rect.left+10) / self.rect.width
 				self.value = max(min(self.value, 1.0), 0.0)
 				try:
 					self.onChange(self, self.value)
