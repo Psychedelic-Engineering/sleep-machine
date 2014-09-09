@@ -30,7 +30,7 @@ class Clock():
 		if timeStr != self.lastTime or force:
 			self.surface.fill((0,0,0))
 			#self.surface.fill((200,120,70))
-			surf = self.timeFont.render(timeStr, True, (255,0,0))
+			surf = self.timeFont.render(timeStr, True, (128,64,0))
 			#self.surface.blit(surf, (2,0))
 			size = surf.get_size()
 			x = (self.width - size[0]) / 2
@@ -38,7 +38,7 @@ class Clock():
 
 			dateStr = datetime.datetime.now().strftime("%A %d.%B")
 			#dateStr = "Donnerstag, 22. September"
-			surf = self.dateFont.render(dateStr, True, (255,0,0))
+			surf = self.dateFont.render(dateStr, True, (128,64,0))
 			size = surf.get_size()
 			x = (self.width - size[0]) / 2
 			self.surface.blit(surf, (x,self.height / 2))

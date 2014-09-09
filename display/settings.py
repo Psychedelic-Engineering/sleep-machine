@@ -1,4 +1,4 @@
-from gui import GUI, Widget, Slider
+from gui import GUI, Button, Slider
 
 
 class Settings(GUI):
@@ -24,13 +24,13 @@ class Settings(GUI):
 		nextX = self.margin
 		nextY = self.margin
 
-		buttonQuit = Widget(self, nextX, nextX, self.gridW, self.gridH, name="quit", label="Quit")
+		buttonQuit = Button(self, nextX, nextX, self.gridW, self.gridH, name="quit", label="Quit")
 		nextX += self.gridW + self.margin
-		buttonReboot = Widget(self, nextX, nextY, self.gridW, self.gridH, name="reboot", label="Reboot")
+		buttonReboot = Button(self, nextX, nextY, self.gridW, self.gridH, name="reboot", label="Reboot")
 		nextX += self.gridW + self.margin
-		button3 = Widget(self, nextX, nextY, self.gridW, self.gridH)
+		button3 = Button(self, nextX, nextY, self.gridW, self.gridH)
 		nextX += self.gridW + self.margin
-		buttonClose = Widget(self, nextX, nextY, self.gridW, self.gridH, name="close", label="CLOSE")
+		buttonClose = Button(self, nextX, nextY, self.gridW, self.gridH, name="close", label="CLOSE")
 		sliderWidth = self.gridW * 4 + 3 * self.margin
 		nextX = self.margin
 		nextY  += self.gridH + self.margin

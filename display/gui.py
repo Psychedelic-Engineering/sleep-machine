@@ -21,7 +21,6 @@ class GUI():
 		self.fontColor = (0,0,0)
 		self.guiFont = pygame.font.Font(self.fontname, 20)
 		self.surface = pygame.Surface((self.width, self.height))
-		self.mouseVisible = False
 		self.widgets = []
 		self.render()
 
@@ -36,9 +35,6 @@ class GUI():
 			w.handleEvent(event)
 
 	def render(self):
-		if not self.mouseVisible:
-			pygame.mouse.set_visible(True)
-			self.mouseVisible = True
 		self.drawBG()
 		for w in self.widgets:
 			w.render(self.surface)
@@ -55,7 +51,6 @@ class Widget:
 		self.label = None
 		self.setLabel(label)
 		self.name = name
-		self.clicked = False
 		self.rect = pygame.Rect(left, top, width, height)
 		self.setPos(left, top)
 		self.setSize(width, height)
@@ -74,10 +69,6 @@ class Widget:
 		self.surface = pygame.Surface((self.rect.width, self.rect.height))
 		self.surface.set_colorkey((0,0,0))
 		self.draw()
-
-	def posInside(self, pos):
-		x, y = pos
-		return self.rect.collidepoint(x, y)
 
 	def drawRect(self, rect, fillcolor, lineColor=None):
 		#pygame.draw.rect(self.surface, fillcolor, rect)
@@ -107,6 +98,16 @@ class Widget:
 		self.draw()
 		surface.blit(self.surface, self.rect.topleft)
 
+
+class Control(Widget):
+	def __init__(self, gui, left, top, width, height, name=None, label=None):
+		self.clicked = False
+		Widget.__init__(self, gui, left, top, width, height, name, label)
+
+	def posInside(self, pos):
+		x, y = pos
+		return self.rect.collidepoint(x, y)
+
 	def handleEvent(self, event):
 		if event.type == pygame.MOUSEBUTTONDOWN:
 			if self.posInside(event.pos):
@@ -123,10 +124,25 @@ class Widget:
 				self.draw()
 
 
-class Slider(Widget):
+class Button(Control):
+	def __init__(self, gui, left, top, width, height, name=None, label=None):
+		Control.__init__(self, gui, left, top, width, height, name, label)
+
+	def draw(self):
+		rect = self.rect.copy()
+		rect.topleft = (0,0)
+		if self.clicked:
+			color = (128,64,0)
+		else:
+			color = (16, 16, 16)
+		self.drawRect(rect, color, (128,64,0))
+		self.drawLabel()
+
+
+class Slider(Control):
 	def __init__(self, gui, left, top, width, height, name=None, label=None):
 		self.value = 0.5
-		Widget.__init__(self, gui, left, top, width, height, name, label)
+		Control.__init__(self, gui, left, top, width, height, name, label)
 
 	def draw(self):
 		rect = self.rect.copy()
@@ -137,9 +153,12 @@ class Slider(Widget):
 		self.drawRect(rect, (128,64,0), (64,32,0))
 		self.drawLabel()
 
+	def setValue(self, value):
+		self.value = value
+		self.draw()
 
 	def handleEvent(self, event):
-		Widget.handleEvent(self, event)
+		Control.handleEvent(self, event)
 		if self.clicked:
 			if event.type in (pygame.MOUSEMOTION, pygame.MOUSEBUTTONDOWN):
 				x,y = event.pos
