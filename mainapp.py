@@ -16,7 +16,7 @@ class SleepApp:
 	def __init__(self):
 		pygame.mixer.pre_init(44100, -16, 2, 4096)
 		self.isRaspberry = True
-		self.emulateSensor = True
+		self.emulateSensor = False
 		logging.basicConfig(format='%(message)s', level=logging.INFO)
 		logging.info("init app")
 		self.quitting = False
@@ -31,7 +31,7 @@ class SleepApp:
 			self.sensor = FakeSensor()
 		else:
 			self.sensor = Sensor(Peripherals.devices["Pillow"])
-		#self.led = LED(Peripherals.devices["Basestation"])
+		self.led = LED(Peripherals.devices["Basestation"])
 		self.display = Display(self.screenMult*320, self.screenMult*240, self.isRaspberry)
 		# toDo: ggf. zentraler Display Manager
 		self.graph = Graph(self.display, self.sensor)
@@ -44,7 +44,7 @@ class SleepApp:
 		# ToDo: Alarme in config File, periodisch auslesen
 		self.scheduler.addAlarm("*", "22", "00", self.sensor.startLogging)
 		self.scheduler.addAlarm("*", "10", "00", self.sensor.stopLogging)
-		self.scheduler.addAlarm("*", "21", "00", self.doAlarm)
+		self.scheduler.addAlarm("*", "20", "05", self.doAlarm)
 		self.scheduler.addAlarm("*", "7", "30", self.doAlarm)
 
 	def onButton(self, action):
@@ -54,10 +54,7 @@ class SleepApp:
 		elif action == "quit":
 			self.quit()
 		elif action == "reboot":
-			pygame.mixer.init()
-			pygame.mixer.music.load('Anhalter.mp3')
-			pygame.mixer.music.play()
-			#os.system("/sbin/reboot")
+			os.system("/sbin/reboot")
 
 	def onSetLight(self, warm, cold):
 		self.led.setLum(warm, cold)
@@ -114,31 +111,31 @@ class SleepApp:
 
 			while warm <= 0.4:
 				self.led.setLum(warm, cold)
-				time.sleep(0.1)
+				time.sleep(0.3)
 				warm += 0.0005
 
 			while cold <= 0.2:
 				self.led.setLum(warm, cold)
-				time.sleep(0.1)
+				time.sleep(0.3)
 				cold += 0.0005
 			cnt = 0.01
 			len = 0.01
 
-			while time.time() < start+300:
+			while time.time() < start + 400:
 				if random.random() < cnt:
 					self.led.setLum(1, 1)
 					time.sleep(len)
 					if len <= 0.1:
 						len += 0.0005
-				self.led.setLum(warm, cold)
+					self.led.setLum(warm, cold)
 				time.sleep(0.1)
-				if cnt <= 0.2:
+				if cnt <= 0.15:
 					cnt += 0.0002
 
-			t = 10
-			for i in range(10):
+			t = 20
+			while t >= 0:
 				self.led.setLum(1, 1)
-				time.sleep(10-t)
+				time.sleep(20-t)
 				self.led.setLum(0, 0)
 				time.sleep(t)
 				t -= 1
