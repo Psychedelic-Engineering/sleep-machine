@@ -14,7 +14,8 @@ from basestation import LED
 class SleepApp:
 
 	def __init__(self):
-		self.isRaspberry = True
+		pygame.mixer.pre_init(44100, -16, 2, 4096)
+		self.isRaspberry = False
 		self.emulateSensor = True
 		logging.basicConfig(format='%(message)s', level=logging.INFO)
 		logging.info("init app")
@@ -53,7 +54,10 @@ class SleepApp:
 		elif action == "quit":
 			self.quit()
 		elif action == "reboot":
-			os.system("/sbin/reboot")
+			pygame.mixer.init()
+			pygame.mixer.music.load('Anhalter.mp3')
+			pygame.mixer.music.play()
+			#os.system("/sbin/reboot")
 
 	def onSetLight(self, warm, cold):
 		self.led.setLum(warm, cold)

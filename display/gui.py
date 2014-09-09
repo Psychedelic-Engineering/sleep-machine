@@ -57,7 +57,7 @@ class Widget:
 
 	def setLabel(self, text=""):
 		self.text = text
-		self.label = self.gui.guiFont.render(text, True, (160,160,160))
+		self.label = self.gui.guiFont.render(text, True, (255,255,255))
 
 	def setPos(self, left, top):
 		self.rect.left = left
@@ -75,7 +75,7 @@ class Widget:
 		RoundRect2(self.surface, fillcolor, rect, 0, 8, 8)
 		if lineColor:
 			#pygame.draw.rect(self.surface, lineColor, rect, 1)
-			RoundRect2(self.surface, lineColor, rect, 1, 8, 8)
+			RoundRect2(self.surface, lineColor, rect, 2, 8, 8)
 
 	def draw(self):
 		rect = self.rect.copy()
@@ -102,6 +102,7 @@ class Widget:
 class Control(Widget):
 	def __init__(self, gui, left, top, width, height, name=None, label=None):
 		self.clicked = False
+		self.onClick = None
 		Widget.__init__(self, gui, left, top, width, height, name, label)
 
 	def posInside(self, pos):
@@ -114,10 +115,8 @@ class Control(Widget):
 				self.clicked = True
 				self.clickPos = event.pos
 				self.draw()
-				try:
+				if self.onClick:
 					self.onClick(self)
-				except:
-					pass
 		if event.type == pygame.MOUSEBUTTONUP:
 			if self.clicked:
 				self.clicked = False
@@ -132,10 +131,10 @@ class Button(Control):
 		rect = self.rect.copy()
 		rect.topleft = (0,0)
 		if self.clicked:
-			color = (128,64,0)
+			color = (255,128,0)
 		else:
 			color = (16, 16, 16)
-		self.drawRect(rect, color, (128,64,0))
+		self.drawRect(rect, color, (255,96,0))
 		self.drawLabel()
 
 
@@ -150,7 +149,7 @@ class Slider(Control):
 		self.drawRect(rect, (48,48,48), (16,16,16))
 		rect.inflate_ip(-4, -4)
 		rect.width = int(float(rect.width) * self.value)
-		self.drawRect(rect, (128,64,0), (64,32,0))
+		self.drawRect(rect, (255,96,0), (64,32,0))
 		self.drawLabel()
 
 	def setValue(self, value):

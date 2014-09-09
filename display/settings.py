@@ -15,7 +15,7 @@ class Settings(GUI):
 
 		self.margin = 16
 
-		self.cellsX = 4
+		self.cellsX = 3
 		self.cellsY = 4
 
 		self.gridW = (self.width - self.margin * (self.cellsX + 1)) / self.cellsX
@@ -27,11 +27,11 @@ class Settings(GUI):
 		buttonQuit = Button(self, nextX, nextX, self.gridW, self.gridH, name="quit", label="Quit")
 		nextX += self.gridW + self.margin
 		buttonReboot = Button(self, nextX, nextY, self.gridW, self.gridH, name="reboot", label="Reboot")
-		nextX += self.gridW + self.margin
-		button3 = Button(self, nextX, nextY, self.gridW, self.gridH)
+		#nextX += self.gridW + self.margin
+		#button3 = Button(self, nextX, nextY, self.gridW, self.gridH)
 		nextX += self.gridW + self.margin
 		buttonClose = Button(self, nextX, nextY, self.gridW, self.gridH, name="close", label="CLOSE")
-		sliderWidth = self.gridW * 4 + 3 * self.margin
+		sliderWidth = self.gridW * self.cellsX + (self.cellsX-1) * self.margin
 		nextX = self.margin
 		nextY  += self.gridH + self.margin
 		sliderWarm = Slider(self, nextX, nextY, sliderWidth, self.gridH, name="warm", label="WARM")
@@ -42,12 +42,12 @@ class Settings(GUI):
 		sliderCold.onChange = self.changeLight
 		buttonQuit.onClick = self.clickButton
 		buttonReboot.onClick = self.clickButton
-		button3.onClick = self.clickButton
+		#button3.onClick = self.clickButton
 		buttonClose.onClick = self.clickButton
 
 		self.addWidget(buttonQuit)
 		self.addWidget(buttonReboot)
-		self.addWidget(button3)
+		#self.addWidget(button3)
 		self.addWidget(buttonClose)
 		self.addWidget(sliderWarm)
 		self.addWidget(sliderCold)
