@@ -14,7 +14,7 @@ from basestation import LED
 class SleepApp:
 
 	def __init__(self):
-		self.isRaspberry = False
+		self.isRaspberry = True
 		self.emulateSensor = True
 		logging.basicConfig(format='%(message)s', level=logging.INFO)
 		logging.info("init app")
