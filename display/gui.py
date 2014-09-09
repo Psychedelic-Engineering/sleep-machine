@@ -108,7 +108,7 @@ class Widget:
 		surface.blit(self.surface, self.rect.topleft)
 
 	def handleEvent(self, event):
-		event.pos.x += 10
+		event.pos[0] += 10
 		if event.type == pygame.MOUSEBUTTONDOWN:
 			if self.posInside(event.pos):
 				self.clicked = True
