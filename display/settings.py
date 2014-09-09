@@ -13,7 +13,7 @@ class Settings(GUI):
 		self.lumWarm = 0
 		self.lumCold = 0
 
-		self.margin = 8
+		self.margin = 16
 
 		self.cellsX = 4
 		self.cellsY = 4
