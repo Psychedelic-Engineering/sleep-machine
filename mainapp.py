@@ -103,7 +103,7 @@ class SleepApp:
 	# ToDo: Aktionen auslagern, ggf. eigene klasse. Peripherie etc uebergeben???
 	def doAlarm(self):
 		import random
-		for i in range(5):
+		for i in range(1):
 			start = time.time()
 
 			warm = 0.0
@@ -140,4 +140,4 @@ class SleepApp:
 				time.sleep(t)
 				t -= 1
 
-			self.led.setLum(0, 0)
+		self.led.setLum(0, 0)
