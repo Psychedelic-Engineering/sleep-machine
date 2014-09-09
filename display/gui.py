@@ -72,11 +72,19 @@ class Widget:
 		self.rect.width = width
 		self.rect.height = height
 		self.surface = pygame.Surface((self.rect.width, self.rect.height))
+		self.surface.set_colorkey((0,0,0))
 		self.draw()
 
 	def posInside(self, pos):
 		x, y = pos
 		return self.rect.collidepoint(x, y)
+
+	def drawRect(self, rect, fillcolor, lineColor=None):
+		#pygame.draw.rect(self.surface, fillcolor, rect)
+		RoundRect2(self.surface, fillcolor, rect, 0, 8, 8)
+		if lineColor:
+			#pygame.draw.rect(self.surface, lineColor, rect, 1)
+			RoundRect2(self.surface, lineColor, rect, 1, 8, 8)
 
 	def draw(self):
 		rect = self.rect.copy()
@@ -85,13 +93,7 @@ class Widget:
 			color = (128,64,0)
 		else:
 			color = (48,48,48)
-		#pygame.draw.rect(self.surface, color, rect)
-		#pygame.draw.rect(self.surface, (16,16,16), rect, 1)
-		#RoundRect(self.surface, rect, (64,64,64), 0.2)
-		#RoundRect2(self.surface,(128,64,64), rect, 0, 10, 10)
-		RoundRect2(self.surface,(255,255,255), rect, 1, 20, 20)
-		#RoundRect3(self.surface,(255,255,255),(128,64,64),rect,1,20)
-		#round_rect(self.surface, rect, (255,255,255), 30, 1, color)
+		self.drawRect(rect, color, (16,16,16))
 		self.drawLabel()
 
 	def drawLabel(self):
@@ -128,12 +130,11 @@ class Slider(Widget):
 
 	def draw(self):
 		rect = self.rect.copy()
-		rect.topleft = (0,0)
-		pygame.draw.rect(self.surface, (48,48,48), rect)
-		pygame.draw.rect(self.surface, (16,16,16), rect, 1)
+		rect.topleft = (0, 0)
+		self.drawRect(rect, (48,48,48), (16,16,16))
 		rect.inflate_ip(-4, -4)
 		rect.width = int(float(rect.width) * self.value)
-		pygame.draw.rect(self.surface, (128,64,0), rect)
+		self.drawRect(rect, (128,64,0), (64,32,0))
 		self.drawLabel()
 
 
@@ -151,134 +152,19 @@ class Slider(Widget):
 				self.draw()
 
 
-def RoundRect(surface, rect, color, radius=0.4):
-
-	rect         = pygame.Rect(rect)
-	color        = pygame.Color(*color)
-	alpha        = color.a
-	color.a      = 0
-	pos          = rect.topleft
-	rect.topleft = 0,0
-	rectangle    = pygame.Surface(rect.size,pygame.SRCALPHA)
-
-	circle       = pygame.Surface([min(rect.size)*3]*2,pygame.SRCALPHA)
-	pygame.draw.ellipse(circle,(0,0,0),circle.get_rect(),0)
-	circle       = pygame.transform.smoothscale(circle,[int(min(rect.size)*radius)]*2)
-
-	radius              = rectangle.blit(circle,(0,0))
-	radius.bottomright  = rect.bottomright
-	rectangle.blit(circle,radius)
-	radius.topright     = rect.topright
-	rectangle.blit(circle,radius)
-	radius.bottomleft   = rect.bottomleft
-	rectangle.blit(circle,radius)
-
-	rectangle.fill((0,0,0),rect.inflate(-radius.w,0))
-	rectangle.fill((0,0,0),rect.inflate(0,-radius.h))
-
-	rectangle.fill(color,special_flags=pygame.BLEND_RGBA_MAX)
-	rectangle.fill((255,255,255,alpha),special_flags=pygame.BLEND_RGBA_MIN)
-
-	return surface.blit(rectangle,pos)
-
 
 def RoundRect2(surface, color, rect, width, xr, yr):
 	clip = surface.get_clip()
-
-	# left and right
 	surface.set_clip(clip.clip(rect.inflate(0, -yr*2)))
 	pygame.draw.rect(surface, color, rect.inflate(1-width,0), width)
-
-	# top and bottom
 	surface.set_clip(clip.clip(rect.inflate(-xr*2, 0)))
 	pygame.draw.rect(surface, color, rect.inflate(0,1-width), width)
-
-	# top left corner
 	surface.set_clip(clip.clip(rect.left, rect.top, xr, yr))
 	pygame.draw.ellipse(surface, color, pygame.Rect(rect.left, rect.top, 2*xr, 2*yr), width)
-
-	# top right corner
 	surface.set_clip(clip.clip(rect.right-xr, rect.top, xr, yr))
 	pygame.draw.ellipse(surface, color, pygame.Rect(rect.right-2*xr, rect.top, 2*xr, 2*yr), width)
-
-	# bottom left
 	surface.set_clip(clip.clip(rect.left, rect.bottom-yr, xr, yr))
 	pygame.draw.ellipse(surface, color, pygame.Rect(rect.left, rect.bottom-2*yr, 2*xr, 2*yr), width)
-
-	# bottom right
 	surface.set_clip(clip.clip(rect.right-xr, rect.bottom-yr, xr, yr))
 	pygame.draw.ellipse(surface, color, pygame.Rect(rect.right-2*xr, rect.bottom-2*yr, 2*xr, 2*yr), width)
-
 	surface.set_clip(clip)
-
-def RoundRect3(surface,BorderColor,FillColor,(posx,posy,dimensionx,dimensiony),width,roundedness):
-	for x in xrange(roundedness,0-1,-1):
-		y = math.sqrt((roundedness**2)-(x**2))
-		rect = (posx+(roundedness-x),
-		        posy+(roundedness-y),
-		        dimensionx-(2*(roundedness-x)),
-		        dimensiony-(2*(roundedness-y)))
-		pygame.draw.rect(surface,BorderColor,rect,0)
-	for x in xrange(roundedness-width,0-1,-1):
-		y = math.sqrt(((roundedness-width)**2)-(x**2))
-		rect = (posx+(roundedness-x),
-		        posy+(roundedness-y),
-		        dimensionx-(2*(roundedness-x)),
-		        dimensiony-(2*(roundedness-y)))
-		pygame.draw.rect(surface,FillColor,rect,0)
-
-
-from pygame import gfxdraw
-
-
-def round_rect(surface, rect, color, rad=20, border=0, inside=(0,0,0,0)):
-	"""
-	Draw a rect with rounded corners to surface.  Argument rad can be specified
-	to adjust curvature of edges (given in pixels).  An optional border
-	width can also be supplied; if not provided the rect will be filled.
-	Both the color and optional interior color (the inside argument) support
-	alpha.
-	"""
-	rect = pygame.Rect(rect)
-	zeroed_rect = rect.copy()
-	zeroed_rect.topleft = 0,0
-	image = pygame.Surface(rect.size).convert_alpha()
-	image.fill((0,0,0,0))
-	_render_region(image, zeroed_rect, color, rad)
-	if border:
-		zeroed_rect.inflate_ip(-2*border, -2*border)
-		_render_region(image, zeroed_rect, inside, rad)
-	surface.blit(image, rect)
-
-
-def _render_region(image, rect, color, rad):
-	"""Helper function for round_rect."""
-	corners = rect.inflate(-2*rad, -2*rad)
-	for attribute in ("topleft", "topright", "bottomleft", "bottomright"):
-		pygame.draw.circle(image, color, getattr(corners,attribute), rad)
-	image.fill(color, rect.inflate(-2*rad,0))
-	image.fill(color, rect.inflate(0,-2*rad))
-
-
-def aa_round_rect(surface, rect, color, rad=20, border=0, inside=(0,0,0)):
-	"""
-	Draw an antialiased rounded rect on the target surface.  Alpha is not
-	supported in this implementation but other than that usage is identical to
-	round_rect.
-	"""
-	rect = pygame.Rect(rect)
-	_aa_render_region(surface, rect, color, rad)
-	if border:
-		rect.inflate_ip(-2*border, -2*border)
-		_aa_render_region(surface, rect, inside, rad)
-
-
-def _aa_render_region(image, rect, color, rad):
-	"""Helper function for aa_round_rect."""
-	corners = rect.inflate(-2*rad-1, -2*rad-1)
-	for attribute in ("topleft", "topright", "bottomleft", "bottomright"):
-		x, y = getattr(corners, attribute)
-		gfxdraw.aacircle(image, x, y, rad, color)
-		gfxdraw.filled_circle(image, x, y, rad, color)
-	image.fill(color, rect.inflate(-2*rad,0))
-	image.fill(color, rect.inflate(0,-2*rad))
