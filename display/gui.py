@@ -79,21 +79,6 @@ class Widget:
 		x, y = pos
 		return self.rect.collidepoint(x, y)
 
-	def bench(self):
-		lineColor = (255,0,0)
-		rect = pygame.Rect(0,0,300,200)
-		start = time.time()
-		for i in range(10000):
-			pygame.draw.rect(self.surface, lineColor, rect, 1)
-		print "rect:", time.time() - start
-
-		start = time.time()
-		for i in range(10000):
-			RoundRect2(self.surface, lineColor, rect, 1, 8, 8)
-		print "Round: ", time.time() - start
-
-
-
 	def drawRect(self, rect, fillcolor, lineColor=None):
 		#pygame.draw.rect(self.surface, fillcolor, rect)
 		RoundRect2(self.surface, fillcolor, rect, 0, 8, 8)
@@ -129,10 +114,8 @@ class Widget:
 				self.clickPos = event.pos
 				self.draw()
 				try:
-					self.bench()
-					#self.onClick(self)
+					self.onClick(self)
 				except:
-					raise
 					pass
 		if event.type == pygame.MOUSEBUTTONUP:
 			if self.clicked:
