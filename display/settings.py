@@ -16,7 +16,7 @@ class Settings(GUI):
 		self.margin = 8
 
 		self.cellsX = 4
-		self.cellsY = 3
+		self.cellsY = 4
 
 		self.gridW = (self.width - self.margin * (self.cellsX + 1)) / self.cellsX
 		self.gridH = (self.height - self.margin * (self.cellsY + 1)) / self.cellsY
