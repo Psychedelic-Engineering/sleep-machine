@@ -32,6 +32,7 @@ class SleepApp:
 		else:
 			self.sensor = Sensor(Peripherals.devices["Pillow"])
 		self.led = LED(Peripherals.devices["Basestation"])
+		self.led.setLum(0, 0)
 		self.display = Display(self.screenMult*320, self.screenMult*240, self.isRaspberry)
 		# toDo: ggf. zentraler Display Manager
 		self.graph = Graph(self.display, self.sensor)
