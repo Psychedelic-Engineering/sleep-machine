@@ -1,5 +1,5 @@
 import signal
-from mainapp import SleepApp
+from sleepapp import SleepApp
 
 
 def quitApp(p1, p2):
