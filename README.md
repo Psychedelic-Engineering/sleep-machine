@@ -12,7 +12,20 @@ My approach is rather experimental, pragmatic and playfull than scientific.
 
 The first incarnation consists of:
 
-A pillow with sensors, a pair of speakers and vibration motors and a base station with a display, some strong leds (warm and cold white, later RGB) for wake-up lighing.
+A basestation next to the bed (like an conventional alarm clock) with
+a touch-screen display
+some strong leds for wake-up lighing (200 watt, cold and warm)
+a PIR motion sensor
+a RaspberryPi
+
+A pillow with
+acceleration and touchg sensors
+a pair of speakers
+some vibration motors
+
+a third component will be a Raspberry Airplay client with
+USB-Audio
+Relais for switching on the hifi-system
 
 Pragmatic & unscientific
 explorative
