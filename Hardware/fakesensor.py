@@ -1,6 +1,5 @@
-import logging
-from sensors import Sensor
-from channel import Channel
+from Hardware.sensors import Sensor
+from Hardware.channel import Channel
 
 
 class FakeSensor(Sensor):
@@ -40,7 +39,7 @@ class FakeSensor(Sensor):
 	def readData(self):
 		if not self.initialized:
 			self.initChannels()
-		for i in range(60):
+		for i in range(1):
 			self.line += 1
 			response = self.file.readline()
 		values = map(float, response.split(","))

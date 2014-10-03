@@ -21,7 +21,7 @@ class Clock():
 		self.timeFont = pygame.font.Font(self.fontname, 64)
 		self.dateFont = pygame.font.Font(self.fontname, 19)
 		self.addrFont = pygame.font.Font(self.fontname, 12)
-		loc= locale.setlocale(locale.LC_TIME,"de_DE.UTF-8")
+		loc = locale.setlocale(locale.LC_TIME, "de_DE.UTF-8")
 		self.lastTime = ""
 
 	def render(self, force = False):
@@ -34,7 +34,7 @@ class Clock():
 			#self.surface.blit(surf, (2,0))
 			size = surf.get_size()
 			x = (self.width - size[0]) / 2
-			self.surface.blit(surf, (x,-30))
+			self.surface.blit(surf, (x, -30))
 
 			dateStr = datetime.datetime.now().strftime("%A %d.%B")
 			#dateStr = "Donnerstag, 22. September"

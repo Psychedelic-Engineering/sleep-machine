@@ -1,10 +1,15 @@
-from channel import Channel
-import os, time, datetime, logging, gzip
+import os
+import time
+import datetime
+import logging
+
+from Hardware.channel import Channel
+
 
 """
 	Sensor Class
 	- ggf. Logfile als Datasource per Parameter
-	- Logging ggf. in eigene Klasse
+	- Logging in eigene Klasse oder Scheduler
 """
 
 
@@ -42,15 +47,16 @@ class Sensor:
 	def readData(self):
 		if not self.initialized:
 			self.initSensor()
+		values = None
 		try:
 			values = self.device.sendCommand("!", ",")
-			if values:
+			if values and len(values) == len(self.channels):
 				values = map(float, values)
 				self.logData(values)
 				for i, v in enumerate(values):
 					self.channels[i].putValue(v)
 		except:
-			raise
+			pass
 
 	def calibrate(self):
 		for c in self.channels:

@@ -1,26 +1,30 @@
-import time, logging, sys, os
+import time
+import logging
+import sys
+import os
+
+import pygame
+
 from display.display import Display
-from fakesensor import FakeSensor
-from sensors import Sensor
+from Hardware.fakesensor import FakeSensor
+from Hardware.sensors import Sensor
 from display.graph import Graph
 from display.clock import Clock
 from display.settings import Settings
-from teensy import Peripherals
-from scheduler import Scheduler
-import pygame
-from basestation import LED
+from Hardware.teensy import Peripherals
+from events.scheduler import Scheduler
 
 
 class SleepApp:
 
 	def __init__(self):
 		pygame.mixer.pre_init(44100, -16, 2, 4096)
-		self.isRaspberry = True
+		self.isRaspberry = False
 		self.emulateSensor = False
 		logging.basicConfig(format='%(message)s', level=logging.INFO)
 		logging.info("init app")
 		self.quitting = False
-		self.screenMult = 1
+		self.screenMult = 4
 
 	def __del__(self):
 		self.quit()
@@ -31,8 +35,8 @@ class SleepApp:
 			self.sensor = FakeSensor()
 		else:
 			self.sensor = Sensor(Peripherals.devices["Pillow"])
-		self.led = LED(Peripherals.devices["Basestation"])
-		self.led.setLum(0, 0)
+		#self.led = LED(Peripherals.devices["Basestation"])
+		#self.led.setLum(0, 0)
 		self.display = Display(self.screenMult*320, self.screenMult*240, self.isRaspberry)
 		# toDo: ggf. zentraler Display Manager
 		self.graph = Graph(self.display, self.sensor)
@@ -69,7 +73,7 @@ class SleepApp:
 			while True:
 				if self.quitting:
 					break
-				if self.scheduler.elapsed(0.1):
+				if self.scheduler.elapsed(0.05):
 					# ToDo: Sensoren ggf. ueber Scheduler
 					self.sensor.readData()
 					self.scheduler.checkAlarm()
@@ -86,7 +90,6 @@ class SleepApp:
 								self.guiMode = True
 						else:
 							self.settings.handleEvent(event)
-
 		except Exception as e:
 			raise
 		finally:

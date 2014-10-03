@@ -5,14 +5,14 @@ import numpy as np
 class Graph():
 
 	def __init__(self, display, sensor):
-		self.heightPercent = 1.0 / 3
+		self.heightPercent = 1.0 / 1
 		self.display = display
 		self.sensor = sensor
 		self.width = self.display.width
 		self.height = self.display.height * self.heightPercent
 		self.x = 0
 		self.colors = (
-		(128, 0, 0),		(0, 128, 0),	(0, 0, 128),
+		(128, 0, 0),		(0, 255, 0),	(0, 128, 255),
 		(96, 96, 0),		(0, 96, 96),	(96, 0, 96),
 		(128, 96, 0),		(96, 128, 0),	(0, 96, 128),
 		(0, 128, 96),       (0, 128, 96))
@@ -34,8 +34,8 @@ class Graph():
 
 	def renderChannel(self, channel, color):
 		# ggf. funktion, min, max und offset als parameter
-		#value = channel.getValue()
-		value = channel.getBufferAvg()
+		value = channel.getValue()
+		#value = channel.getBufferAvg()
 		#value = channel.getRng()
 		#value = channel.getDiff()
 		#value = math.pow(20 * value, 4)
