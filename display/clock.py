@@ -7,10 +7,11 @@ Simple Digital Clock
 - Set lightness
 """
 
+
+
 class Clock():
 
-	fontname = 'display/fonts/Zapfino.ttf'
-
+	fontname = 'Display/fonts/Zapfino.ttf'
 
 	def __init__(self, display):
 		self.display = display
