@@ -2,7 +2,6 @@ import time
 import logging
 import sys
 import os
-
 import pygame
 
 from Display.display import Display
@@ -13,18 +12,17 @@ from Display.clock import Clock
 from Display.settings import Settings
 from Hardware.teensy import Peripherals
 from events.scheduler import Scheduler
+import actions
 
 
 class SleepApp:
 
 	def __init__(self):
-		pygame.mixer.pre_init(44100, -16, 2, 4096)
-		self.isRaspberry = False
+		self.isRaspberry = True
 		self.emulateSensor = False
 		logging.basicConfig(format='%(message)s', level=logging.INFO)
 		logging.info("init app")
 		self.quitting = False
-		self.screenMult = 4
 
 	def __del__(self):
 		self.quit()
@@ -37,8 +35,10 @@ class SleepApp:
 			self.sensor = Sensor(Peripherals.devices["Pillow"])
 		#self.led = LED(Peripherals.devices["Basestation"])
 		#self.led.setLum(0, 0)
-		self.display = Display(self.screenMult*320, self.screenMult*240, self.isRaspberry)
+
 		# toDo: ggf. zentraler Display Manager
+		self.screenMult = 4
+		self.display = Display(self.screenMult*320, self.screenMult*240, self.isRaspberry)
 		self.graph = Graph(self.display, self.sensor)
 		self.clock = Clock(self.display)
 		self.settings = Settings(self.display)
@@ -47,10 +47,10 @@ class SleepApp:
 
 		self.scheduler = Scheduler()
 		# ToDo: Alarme in config File, periodisch auslesen
-		self.scheduler.addAlarm("*", "22", "00", self.sensor.startLogging)
-		self.scheduler.addAlarm("*", "10", "00", self.sensor.stopLogging)
-		self.scheduler.addAlarm("*", "20", "10", self.doAlarm)
-		self.scheduler.addAlarm("*", "7", "30", self.doAlarm)
+		#self.scheduler.addAlarm("*", "22", "00", self.sensor.startLogging)
+		#self.scheduler.addAlarm("*", "10", "00", self.sensor.stopLogging)
+		self.scheduler.addAlarm("*", "23", "22", actions.doAlarm)
+		self.scheduler.addAlarm("*", "23", "23", actions.doAlarm)
 
 	def onButton(self, action):
 		if action == "close":
@@ -103,45 +103,3 @@ class SleepApp:
 		Peripherals.close()
 		time.sleep(1)
 		sys.exit()
-
-	# ToDo: Aktionen auslagern, ggf. eigene klasse. Peripherie etc uebergeben???
-	def doAlarm(self):
-		import random
-		for i in range(1):
-			start = time.time()
-
-			warm = 0.0
-			cold = 0.0
-
-			while warm <= 0.4:
-				self.led.setLum(warm, cold)
-				time.sleep(0.3)
-				warm += 0.0005
-
-			while cold <= 0.2:
-				self.led.setLum(warm, cold)
-				time.sleep(0.3)
-				cold += 0.0005
-			cnt = 0.01
-			len = 0.01
-
-			while time.time() < start + 400:
-				if random.random() < cnt:
-					self.led.setLum(1, 1)
-					time.sleep(len)
-					if len <= 0.1:
-						len += 0.0005
-					self.led.setLum(warm, cold)
-				time.sleep(0.1)
-				if cnt <= 0.15:
-					cnt += 0.0002
-
-			t = 20
-			while t >= 0:
-				self.led.setLum(1, 1)
-				time.sleep(20-t)
-				self.led.setLum(0, 0)
-				time.sleep(t)
-				t -= 1
-
-		self.led.setLum(0, 0)
