@@ -9,7 +9,6 @@ import pygame, math, time
 """
 
 
-
 class GUI():
 
 	fontname = 'display/fonts/digital-7.ttf'

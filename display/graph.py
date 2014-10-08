@@ -2,7 +2,6 @@ import pygame, math
 import numpy as np
 
 
-
 class Graph():
 
 	def __init__(self, display, sensor):
