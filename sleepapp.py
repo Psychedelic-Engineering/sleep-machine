@@ -50,7 +50,7 @@ class SleepApp:
 		#self.scheduler.addAlarm("*", "22", "00", self.sensor.startLogging)
 		#self.scheduler.addAlarm("*", "10", "00", self.sensor.stopLogging)
 		self.scheduler.addAlarm("*", "23", "22", actions.doAlarm)
-		self.scheduler.addAlarm("*", "23", "23", actions.doAlarm)
+		self.scheduler.addAlarm("*", "0", "30", actions.doAlarm)
 
 	def onButton(self, action):
 		if action == "close":
