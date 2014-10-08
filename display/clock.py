@@ -10,7 +10,7 @@ Simple Digital Clock
 
 class Clock():
 
-	fontname = 'Display/fonts/Zapfino.ttf'
+	fontname = 'display/fonts/Zapfino.ttf'
 
 	def __init__(self, display):
 		self.display = display
