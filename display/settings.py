@@ -1,6 +1,7 @@
 from gui import GUI, Button, Slider
 
 
+
 class Settings(GUI):
 
 	fontname = 'display/fonts/digital-7.ttf'

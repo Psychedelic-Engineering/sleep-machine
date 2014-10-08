@@ -6,6 +6,7 @@ import os, pygame, logging
 """
 
 
+
 class Display:
 	def __init__(self, width, height, isRaspberry=False):
 		self.width = width
