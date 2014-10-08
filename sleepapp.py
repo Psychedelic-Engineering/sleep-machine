@@ -37,7 +37,7 @@ class SleepApp:
 		#self.led.setLum(0, 0)
 
 		# toDo: ggf. zentraler Display Manager
-		self.screenMult = 4
+		self.screenMult = 1
 		self.display = Display(self.screenMult*320, self.screenMult*240, self.isRaspberry)
 		self.graph = Graph(self.display, self.sensor)
 		self.clock = Clock(self.display)
