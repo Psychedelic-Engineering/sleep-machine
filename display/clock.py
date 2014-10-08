@@ -8,6 +8,7 @@ Simple Digital Clock
 """
 
 
+
 class Clock():
 
 	fontname = 'Display/fonts/Zapfino.ttf'
