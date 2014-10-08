@@ -1,4 +1,5 @@
 import time
+from audio
 
 
 def doAlarm(sleepApp):
@@ -41,3 +42,22 @@ def doAlarm(sleepApp):
 			t -= 1
 
 	sleepApp.led.setLum(0, 0)
+
+
+def fallasleep(sleepApp):
+	soundTrack = PlaylistSoundCloud()
+	#soundTrack.loadPlaylistByTags(("morning",))
+	soundTrack.loadPlaylistByName("Own")
+	soundTrack.printPlaylist()
+
+	soundTrack.setVolume(0)
+
+	soundTrack.play()
+
+	while soundTrack.playing:
+		print "playing", soundTrack.player.progress
+		time.sleep(10)
+
+
+
+	soundTrack.stop()
