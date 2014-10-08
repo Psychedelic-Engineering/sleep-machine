@@ -75,14 +75,14 @@ class SleepApp:
 					break
 				if self.scheduler.elapsed(0.05):
 					# ToDo: Sensoren ggf. ueber Scheduler
-					self.sensor.readData()
+					#self.sensor.readData()
 					self.scheduler.checkAlarm()
 					# toDo: ggf. zentraler Display Manager
 					if self.guiMode:
 						self.settings.render()
 					else:
 						self.clock.render()
-						self.graph.render()
+						#self.graph.render()
 					# ToDo: Eventhandling in GUI
 					for event in pygame.event.get():
 						if not self.guiMode:
