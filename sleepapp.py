@@ -5,12 +5,12 @@ import os
 import pygame
 
 from display.display import Display
-from Hardware.fakesensor import FakeSensor
-from Hardware.sensors import Sensor
+from hardware.fakesensor import FakeSensor
+from hardware.sensors import Sensor
 from display.graph import Graph
 from display.clock import Clock
 from display.settings import Settings
-from Hardware.teensy import Peripherals
+from hardware.teensy import Peripherals
 from events.scheduler import Scheduler
 import actions
 
@@ -18,7 +18,7 @@ import actions
 class SleepApp:
 
 	def __init__(self):
-		self.isRaspberry = True
+		self.isRaspberry = False
 		self.emulateSensor = False
 		logging.basicConfig(format='%(message)s', level=logging.INFO)
 		logging.info("init app")
