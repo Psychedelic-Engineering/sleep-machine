@@ -5,12 +5,12 @@ import os
 import pygame
 
 from display.display import Display
-from hardware.fakesensor import FakeSensor
-from hardware.sensors import Sensor
+from Hardware.fakesensor import FakeSensor
+from Hardware.sensors import Sensor
 from display.graph import Graph
 from display.clock import Clock
 from display.settings import Settings
-from hardware.teensy import Peripherals
+from Hardware.teensy import Peripherals
 from events.scheduler import Scheduler
 import actions
 

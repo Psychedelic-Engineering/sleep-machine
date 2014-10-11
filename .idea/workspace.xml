@@ -1,0 +1,1294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list id="fb73a798-6776-4ef0-9aeb-04954e62c150" name="Default" comment="" />
+    <list id="cc49115f-27d9-42f7-b27d-92d1561216d5" name="Failed commit: Default" comment="Updated readme" />
+    <list id="4ccba5c5-68a6-412d-9095-580a69f02126" name="Failed commit: Default (2)" comment="Updated readme" />
+    <list default="true" id="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" name="New changelist" comment="New changelist">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/Python.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/other.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/testrunner.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Hardware/__init__.py" afterPath="$PROJECT_DIR$/Hardware/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Hardware/basestation.py" afterPath="$PROJECT_DIR$/Hardware/basestation.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Hardware/channel.py" afterPath="$PROJECT_DIR$/Hardware/channel.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Hardware/fakesensor.py" afterPath="$PROJECT_DIR$/Hardware/fakesensor.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Hardware/sensors.py" afterPath="$PROJECT_DIR$/Hardware/sensors.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sleepapp.py" afterPath="$PROJECT_DIR$/sleepapp.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Hardware/teensy.py" afterPath="$PROJECT_DIR$/Hardware/teensy.py" />
+    </list>
+    <ignored path="Python.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <file path="/Dummy.txt" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1413022601300" ignored="false" />
+    <file path="/fakesensor.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410534481652" ignored="false" />
+    <file path="/graph.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410534560764" ignored="false" />
+    <file path="/mainapp.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1411149983998" ignored="false" />
+    <file path="/sensors.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1412339377155" ignored="false" />
+    <file path="/channel.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1409937535029" ignored="false" />
+    <file path="/display.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410201293249" ignored="false" />
+    <file path="/clock.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1412806506406" ignored="false" />
+    <file path="/teensy.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410709867448" ignored="false" />
+    <file path="/main.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1412343319591" ignored="false" />
+    <file path="/scheduler.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410097126680" ignored="false" />
+    <file path="/alarm.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410086044071" ignored="false" />
+    <file path="/LightController.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410005589536" ignored="false" />
+    <file path="/a.dummy" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410098346878" ignored="false" />
+    <file path="/logger.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410098291630" ignored="false" />
+    <file path="/timeevent.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410098322426" ignored="false" />
+    <file path="/basestation.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410102636142" ignored="false" />
+    <file path="/gui.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410268628746" ignored="false" />
+    <file path="/settings.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410265694006" ignored="false" />
+    <file path="/sertest.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410618556045" ignored="false" />
+    <file path="/README.md" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1412343105690" ignored="false" />
+    <file path="/sleepapp.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1413022368975" ignored="false" />
+    <file path="/actions.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1412807149797" ignored="false" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="sleepapp.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sleepapp.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="31" selection-start="209" selection-end="209" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="actions.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/actions.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="0" selection-start="167" selection-end="167" vertical-scroll-proportion="0.2740864">
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gstplayer.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/audio/gstplayer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="0" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/Display/__init__.py" />
+        <option value="$PROJECT_DIR$/Display/display.py" />
+        <option value="$PROJECT_DIR$/Display/graph.py" />
+        <option value="$PROJECT_DIR$/Display/gui.py" />
+        <option value="$PROJECT_DIR$/Display/settings.py" />
+        <option value="$PROJECT_DIR$/display/display.py" />
+        <option value="$PROJECT_DIR$/display/graph.py" />
+        <option value="$PROJECT_DIR$/display/gui.py" />
+        <option value="$PROJECT_DIR$/display/settings.py" />
+        <option value="$PROJECT_DIR$/display/__init__.py" />
+        <option value="$PROJECT_DIR$/display/clock.py" />
+        <option value="$PROJECT_DIR$/audio/scloud.py" />
+        <option value="$PROJECT_DIR$/audio/gstplayer.py" />
+        <option value="$PROJECT_DIR$/audio/playlist.py" />
+        <option value="$PROJECT_DIR$/actions.py" />
+        <option value="$PROJECT_DIR$/sleepapp.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-1910" />
+    <option name="y" value="31" />
+    <option name="width" value="1680" />
+    <option name="height" value="977" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="2" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Python" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Python" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Python" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Python" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Python" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utilities" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Python" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Python" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="events" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Python" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Python" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="display" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Python" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Python" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Python" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Python" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="audio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Python" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Python" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Hardware" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="271" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="272" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="271" />
+    <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Radwende-Drawbot" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="277" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1070" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1070" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="277" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="272" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FullScreen" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PythonSdkConfigurable" />
+    <property name="restartRequiresConfirmation" value="true" />
+    <property name="options.searchVisible" value="true" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <PyConsoleSettings />
+    </option>
+    <option name="myDjangoConsoleState">
+      <PyConsoleSettings />
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/utilities" />
+      <recent name="$PROJECT_DIR$/events" />
+      <recent name="$PROJECT_DIR$/display/fonts" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/events" />
+      <recent name="$PROJECT_DIR$/Hardware" />
+      <recent name="$PROJECT_DIR$/data" />
+      <recent name="$PROJECT_DIR$/display/fonts" />
+      <recent name="$PROJECT_DIR$/display" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.main">
+    <configuration default="false" name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <module name="Python" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PyDebugRunner" />
+      <RunnerSettings RunnerId="PythonCover" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PyDebugRunner" />
+      <ConfigurationWrapper RunnerId="PythonCover" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <module name="Python" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <module name="Python" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <module name="Python" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unnamed" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/Library/Frameworks/Python.framework/Versions/2.7/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <module name="Python" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sertest.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Python.Unnamed" />
+      <item index="1" class="java.lang.String" itemvalue="Python.main" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Python.main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="DETECT_NESTED_COPIES" value="true" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fb73a798-6776-4ef0-9aeb-04954e62c150" name="Default" comment="" />
+      <changelist id="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" name="New changelist" comment="" />
+      <created>1409491336221</created>
+      <updated>1409491336221</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Still Chaos&#10;">
+      <created>1409492069009</created>
+      <updated>1409492069009</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Start Cleanup">
+      <created>1409505413746</created>
+      <updated>1409505413746</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Start Cleanup, NumPy Smooth">
+      <created>1409514333410</created>
+      <updated>1409514333410</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Start Cleanup, NumPy Smooth">
+      <created>1409600646384</created>
+      <updated>1409600646384</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Start Cleanup, NumPy Smooth">
+      <created>1409680402149</created>
+      <updated>1409680402149</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Start Cleanup, NumPy Smooth">
+      <created>1409680551629</created>
+      <updated>1409680551629</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Start Cleanup, NumPy Smooth">
+      <created>1409681366065</created>
+      <updated>1409681366065</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Start Cleanup, NumPy Smooth">
+      <created>1409681487318</created>
+      <updated>1409681487318</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Start Cleanup, NumPy Smooth">
+      <created>1409681543124</created>
+      <updated>1409681543124</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Start Cleanup, NumPy Smooth">
+      <created>1409681674490</created>
+      <updated>1409681674490</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Start Cleanup, NumPy Smooth">
+      <created>1409682168618</created>
+      <updated>1409682168619</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Start Cleanup, NumPy Smooth">
+      <created>1409682349994</created>
+      <updated>1409682349994</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Start Cleanup, NumPy Smooth">
+      <created>1409682481009</created>
+      <updated>1409682481009</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Start Cleanup, NumPy Smooth">
+      <created>1409682581538</created>
+      <updated>1409682581538</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Start Cleanup, NumPy Smooth">
+      <created>1409682626596</created>
+      <updated>1409682626596</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Start Cleanup, NumPy Smooth">
+      <created>1409682959377</created>
+      <updated>1409682959378</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Start Cleanup, NumPy Smooth">
+      <created>1409683013347</created>
+      <updated>1409683013347</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Start Cleanup, NumPy Smooth">
+      <created>1409683024396</created>
+      <updated>1409683024396</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Start Cleanup, NumPy Smooth">
+      <created>1409683502005</created>
+      <updated>1409683502005</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Start Cleanup, NumPy Smooth">
+      <created>1409683622453</created>
+      <updated>1409683622453</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Start Cleanup, NumPy Smooth">
+      <created>1409683755159</created>
+      <updated>1409683755159</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Start Cleanup, NumPy Smooth">
+      <created>1409683872327</created>
+      <updated>1409683872327</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Start Cleanup, NumPy Smooth">
+      <created>1409683952766</created>
+      <updated>1409683952766</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Start Cleanup, NumPy Smooth">
+      <created>1409684026168</created>
+      <updated>1409684026168</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Start Cleanup, NumPy Smooth">
+      <created>1409684215927</created>
+      <updated>1409684215927</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Start Cleanup, NumPy Smooth">
+      <created>1409684402657</created>
+      <updated>1409684402657</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Start Cleanup, NumPy Smooth">
+      <created>1409684557682</created>
+      <updated>1409684557682</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Start Cleanup, NumPy Smooth">
+      <created>1409684620622</created>
+      <updated>1409684620622</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Start Cleanup, NumPy Smooth">
+      <created>1409684854234</created>
+      <updated>1409684854234</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Start Cleanup, NumPy Smooth">
+      <created>1409684956518</created>
+      <updated>1409684956518</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Start Cleanup, NumPy Smooth">
+      <created>1409686189939</created>
+      <updated>1409686189939</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Start Cleanup, NumPy Smooth">
+      <created>1409686266565</created>
+      <updated>1409686266565</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Start Cleanup, NumPy Smooth">
+      <created>1409736771912</created>
+      <updated>1409736771912</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Start Cleanup, NumPy Smooth">
+      <created>1409745570772</created>
+      <updated>1409745570772</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Start Cleanup, NumPy Smooth">
+      <created>1409746675124</created>
+      <updated>1409746675124</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Start Cleanup, NumPy Smooth">
+      <created>1409746794919</created>
+      <updated>1409746794919</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Start Cleanup, NumPy Smooth">
+      <created>1409746848741</created>
+      <updated>1409746848741</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Start Cleanup, NumPy Smooth">
+      <created>1409747064435</created>
+      <updated>1409747064435</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Start Cleanup, NumPy Smooth">
+      <created>1409747108961</created>
+      <updated>1409747108961</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Start Cleanup, NumPy Smooth">
+      <created>1409747194872</created>
+      <updated>1409747194872</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Start Cleanup, NumPy Smooth">
+      <created>1409747402692</created>
+      <updated>1409747402692</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Start Cleanup, NumPy Smooth">
+      <created>1409747514650</created>
+      <updated>1409747514650</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Peripherals">
+      <created>1409747591353</created>
+      <updated>1409747591353</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Peripherals">
+      <created>1409747736614</created>
+      <updated>1409747736614</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Peripherals">
+      <created>1409748419739</created>
+      <updated>1409748419739</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Peripherals">
+      <created>1409751999393</created>
+      <updated>1409751999393</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Peripherals">
+      <created>1409760881798</created>
+      <updated>1409760881798</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Peripherals">
+      <created>1409761051980</created>
+      <updated>1409761051980</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Peripherals">
+      <created>1409761115806</created>
+      <updated>1409761115806</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Peripherals">
+      <created>1409761156845</created>
+      <updated>1409761156845</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Peripherals">
+      <created>1409762710493</created>
+      <updated>1409762710493</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Peripherals">
+      <created>1409762919835</created>
+      <updated>1409762919836</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Peripherals">
+      <created>1409767141106</created>
+      <updated>1409767141106</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Peripherals">
+      <created>1409775175691</created>
+      <updated>1409775175691</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Beginn Scheduler">
+      <created>1409775354649</created>
+      <updated>1409775354649</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Beginn Scheduler">
+      <created>1409776896188</created>
+      <updated>1409776896188</updated>
+    </task>
+    <task id="LOCAL-00057" summary="Beginn Scheduler">
+      <created>1409822689836</created>
+      <updated>1409822689836</updated>
+    </task>
+    <task id="LOCAL-00058" summary="Beginn Scheduler">
+      <created>1409822867869</created>
+      <updated>1409822867870</updated>
+    </task>
+    <task id="LOCAL-00059" summary="Beginn Scheduler">
+      <created>1409823395280</created>
+      <updated>1409823395280</updated>
+    </task>
+    <task id="LOCAL-00060" summary="Beginn Scheduler">
+      <created>1409824639868</created>
+      <updated>1409824639868</updated>
+    </task>
+    <task id="LOCAL-00061" summary="Beginn Scheduler">
+      <created>1409825069168</created>
+      <updated>1409825069168</updated>
+    </task>
+    <task id="LOCAL-00062" summary="Beginn Scheduler">
+      <created>1409825785095</created>
+      <updated>1409825785095</updated>
+    </task>
+    <task id="LOCAL-00063" summary="Beginn Scheduler">
+      <created>1409827869358</created>
+      <updated>1409827869358</updated>
+    </task>
+    <task id="LOCAL-00064" summary="Beginn Scheduler">
+      <created>1409827907950</created>
+      <updated>1409827907950</updated>
+    </task>
+    <task id="LOCAL-00065" summary="Beginn Scheduler">
+      <created>1409827948284</created>
+      <updated>1409827948284</updated>
+    </task>
+    <task id="LOCAL-00066" summary="Beginn Scheduler">
+      <created>1409828003318</created>
+      <updated>1409828003318</updated>
+    </task>
+    <task id="LOCAL-00067" summary="Beginn Scheduler">
+      <created>1409858422650</created>
+      <updated>1409858422651</updated>
+    </task>
+    <task id="LOCAL-00068" summary="Beginn Scheduler">
+      <created>1409907341992</created>
+      <updated>1409907341992</updated>
+    </task>
+    <task id="LOCAL-00069" summary="Basic Alarm">
+      <created>1409933458507</created>
+      <updated>1409933458507</updated>
+    </task>
+    <task id="LOCAL-00070" summary="Basic Alarm">
+      <created>1409934109024</created>
+      <updated>1409934109024</updated>
+    </task>
+    <task id="LOCAL-00071" summary="Basic Alarm">
+      <created>1409934128370</created>
+      <updated>1409934128370</updated>
+    </task>
+    <task id="LOCAL-00072" summary="Basic Alarm">
+      <created>1409934191779</created>
+      <updated>1409934191779</updated>
+    </task>
+    <task id="LOCAL-00073" summary="Basic Alarm">
+      <created>1409934526968</created>
+      <updated>1409934526969</updated>
+    </task>
+    <task id="LOCAL-00074" summary="Basic Alarm">
+      <created>1409934593866</created>
+      <updated>1409934593866</updated>
+    </task>
+    <task id="LOCAL-00075" summary="Basic Alarm">
+      <created>1409934637734</created>
+      <updated>1409934637734</updated>
+    </task>
+    <task id="LOCAL-00076" summary="Basic Alarm">
+      <created>1409934697387</created>
+      <updated>1409934697387</updated>
+    </task>
+    <task id="LOCAL-00077" summary="Basic Alarm">
+      <created>1409934756886</created>
+      <updated>1409934756886</updated>
+    </task>
+    <task id="LOCAL-00078" summary="Basic Alarm">
+      <created>1409934824523</created>
+      <updated>1409934824523</updated>
+    </task>
+    <task id="LOCAL-00079" summary="Basic Alarm">
+      <created>1409934959324</created>
+      <updated>1409934959325</updated>
+    </task>
+    <task id="LOCAL-00080" summary="Basic Alarm">
+      <created>1409935006747</created>
+      <updated>1409935006747</updated>
+    </task>
+    <task id="LOCAL-00081" summary="Basic Alarm">
+      <created>1409935073172</created>
+      <updated>1409935073173</updated>
+    </task>
+    <task id="LOCAL-00082" summary="Basic Alarm">
+      <created>1409994331455</created>
+      <updated>1409994331455</updated>
+    </task>
+    <task id="LOCAL-00083" summary="Basic Alarm">
+      <created>1409997165354</created>
+      <updated>1409997165354</updated>
+    </task>
+    <task id="LOCAL-00084" summary="Basic Alarm">
+      <created>1410007603602</created>
+      <updated>1410007603602</updated>
+    </task>
+    <task id="LOCAL-00085" summary="Basic Alarm">
+      <created>1410008412895</created>
+      <updated>1410008412895</updated>
+    </task>
+    <task id="LOCAL-00086" summary="Basic Alarm">
+      <created>1410008482491</created>
+      <updated>1410008482492</updated>
+    </task>
+    <task id="LOCAL-00087" summary="Basic Alarm">
+      <created>1410020738092</created>
+      <updated>1410020738093</updated>
+    </task>
+    <task id="LOCAL-00088" summary="Basic Alarm">
+      <created>1410020784636</created>
+      <updated>1410020784637</updated>
+    </task>
+    <task id="LOCAL-00089" summary="Basic Alarm">
+      <created>1410022143707</created>
+      <updated>1410022143708</updated>
+    </task>
+    <task id="LOCAL-00090" summary="Basic Alarm">
+      <created>1410022562380</created>
+      <updated>1410022562380</updated>
+    </task>
+    <task id="LOCAL-00091" summary="Basic Alarm">
+      <created>1410024185490</created>
+      <updated>1410024185491</updated>
+    </task>
+    <task id="LOCAL-00092" summary="Basic Alarm">
+      <created>1410024843567</created>
+      <updated>1410024843567</updated>
+    </task>
+    <task id="LOCAL-00093" summary="Basic Alarm">
+      <created>1410024890763</created>
+      <updated>1410024890763</updated>
+    </task>
+    <task id="LOCAL-00094" summary="Basic Alarm">
+      <created>1410086175787</created>
+      <updated>1410086175787</updated>
+    </task>
+    <task id="LOCAL-00095" summary="Basic Alarm">
+      <created>1410087766373</created>
+      <updated>1410087766373</updated>
+    </task>
+    <task id="LOCAL-00096" summary="Basic Alarm">
+      <created>1410097139457</created>
+      <updated>1410097139457</updated>
+    </task>
+    <task id="LOCAL-00097" summary="Basic Alarm">
+      <created>1410097237396</created>
+      <updated>1410097237397</updated>
+    </task>
+    <task id="LOCAL-00098" summary="Basic Alarm">
+      <created>1410097411788</created>
+      <updated>1410097411789</updated>
+    </task>
+    <task id="LOCAL-00099" summary="Basic Alarm">
+      <created>1410097449021</created>
+      <updated>1410097449022</updated>
+    </task>
+    <task id="LOCAL-00100" summary="Basic Alarm">
+      <created>1410098485466</created>
+      <updated>1410098485466</updated>
+    </task>
+    <task id="LOCAL-00101" summary="Basic Alarm">
+      <created>1410098534724</created>
+      <updated>1410098534724</updated>
+    </task>
+    <task id="LOCAL-00102" summary="Alpha">
+      <created>1410102687217</created>
+      <updated>1410102687217</updated>
+    </task>
+    <task id="LOCAL-00103" summary="Alpha">
+      <created>1410103016819</created>
+      <updated>1410103016819</updated>
+    </task>
+    <task id="LOCAL-00104" summary="Alpha">
+      <created>1410107584355</created>
+      <updated>1410107584356</updated>
+    </task>
+    <task id="LOCAL-00105" summary="Alpha">
+      <created>1410107748094</created>
+      <updated>1410107748094</updated>
+    </task>
+    <task id="LOCAL-00106" summary="Alpha">
+      <created>1410108311557</created>
+      <updated>1410108311558</updated>
+    </task>
+    <task id="LOCAL-00107" summary="Alpha">
+      <created>1410108385692</created>
+      <updated>1410108385693</updated>
+    </task>
+    <task id="LOCAL-00108" summary="Alpha">
+      <created>1410108646123</created>
+      <updated>1410108646123</updated>
+    </task>
+    <task id="LOCAL-00109" summary="Alpha">
+      <created>1410109002876</created>
+      <updated>1410109002876</updated>
+    </task>
+    <task id="LOCAL-00110" summary="Alpha">
+      <created>1410128009095</created>
+      <updated>1410128009095</updated>
+    </task>
+    <task id="LOCAL-00111" summary="Alpha">
+      <created>1410132418896</created>
+      <updated>1410132418896</updated>
+    </task>
+    <task id="LOCAL-00112" summary="Alpha">
+      <created>1410191477097</created>
+      <updated>1410191477097</updated>
+    </task>
+    <task id="LOCAL-00113" summary="Alpha">
+      <created>1410201679067</created>
+      <updated>1410201679067</updated>
+    </task>
+    <task id="LOCAL-00114" summary="Simple GUI">
+      <created>1410201803717</created>
+      <updated>1410201803717</updated>
+    </task>
+    <task id="LOCAL-00115" summary="Simple GUI">
+      <created>1410202129070</created>
+      <updated>1410202129070</updated>
+    </task>
+    <task id="LOCAL-00116" summary="Simple GUI">
+      <created>1410202424309</created>
+      <updated>1410202424309</updated>
+    </task>
+    <task id="LOCAL-00117" summary="Simple GUI">
+      <created>1410250729673</created>
+      <updated>1410250729673</updated>
+    </task>
+    <task id="LOCAL-00118" summary="Simple GUI">
+      <created>1410251081629</created>
+      <updated>1410251081629</updated>
+    </task>
+    <task id="LOCAL-00119" summary="Simple GUI">
+      <created>1410251525923</created>
+      <updated>1410251525923</updated>
+    </task>
+    <task id="LOCAL-00120" summary="Simple GUI">
+      <created>1410251571528</created>
+      <updated>1410251571528</updated>
+    </task>
+    <task id="LOCAL-00121" summary="Simple GUI">
+      <created>1410251612849</created>
+      <updated>1410251612850</updated>
+    </task>
+    <task id="LOCAL-00122" summary="Simple GUI">
+      <created>1410254644989</created>
+      <updated>1410254644989</updated>
+    </task>
+    <task id="LOCAL-00123" summary="Simple GUI">
+      <created>1410261747629</created>
+      <updated>1410261747629</updated>
+    </task>
+    <task id="LOCAL-00124" summary="Simple GUI">
+      <created>1410261898446</created>
+      <updated>1410261898446</updated>
+    </task>
+    <task id="LOCAL-00125" summary="Simple GUI">
+      <created>1410261998330</created>
+      <updated>1410261998330</updated>
+    </task>
+    <task id="LOCAL-00126" summary="Simple GUI">
+      <created>1410262126776</created>
+      <updated>1410262126776</updated>
+    </task>
+    <task id="LOCAL-00127" summary="Simple GUI">
+      <created>1410262176220</created>
+      <updated>1410262176220</updated>
+    </task>
+    <task id="LOCAL-00128" summary="Simple GUI">
+      <created>1410262223398</created>
+      <updated>1410262223398</updated>
+    </task>
+    <task id="LOCAL-00129" summary="Simple GUI">
+      <created>1410262283974</created>
+      <updated>1410262283974</updated>
+    </task>
+    <task id="LOCAL-00130" summary="Simple GUI">
+      <created>1410262335360</created>
+      <updated>1410262335360</updated>
+    </task>
+    <task id="LOCAL-00131" summary="Simple GUI">
+      <created>1410262406325</created>
+      <updated>1410262406325</updated>
+    </task>
+    <task id="LOCAL-00132" summary="Simple GUI">
+      <created>1410265322064</created>
+      <updated>1410265322064</updated>
+    </task>
+    <task id="LOCAL-00133" summary="Simple GUI">
+      <created>1410269651525</created>
+      <updated>1410269651525</updated>
+    </task>
+    <task id="LOCAL-00134" summary="Simple GUI">
+      <created>1410269749399</created>
+      <updated>1410269749399</updated>
+    </task>
+    <task id="LOCAL-00135" summary="Simple GUI">
+      <created>1410285663893</created>
+      <updated>1410285663893</updated>
+    </task>
+    <task id="LOCAL-00136" summary="Simple GUI">
+      <created>1410286137289</created>
+      <updated>1410286137290</updated>
+    </task>
+    <task id="LOCAL-00137" summary="Simple GUI">
+      <created>1410287110487</created>
+      <updated>1410287110487</updated>
+    </task>
+    <task id="LOCAL-00138" summary="Simple GUI">
+      <created>1410287196661</created>
+      <updated>1410287196661</updated>
+    </task>
+    <task id="LOCAL-00139" summary="Small Cleanup">
+      <created>1412342574770</created>
+      <updated>1412342574770</updated>
+    </task>
+    <task id="LOCAL-00140" summary="Small Cleanup">
+      <created>1412342925077</created>
+      <updated>1412342925078</updated>
+    </task>
+    <task id="LOCAL-00141" summary="Updated readme">
+      <created>1412343118392</created>
+      <updated>1412343118392</updated>
+    </task>
+    <task id="LOCAL-00142" summary="Updated readme">
+      <created>1412343218886</created>
+      <updated>1412343218886</updated>
+    </task>
+    <task id="LOCAL-00143" summary="Updated readme">
+      <created>1412343333999</created>
+      <updated>1412343333999</updated>
+    </task>
+    <task id="LOCAL-00144" summary="Updated readme">
+      <created>1412803290098</created>
+      <updated>1412803290098</updated>
+    </task>
+    <task id="LOCAL-00145" summary="Updated readme">
+      <created>1412803672225</created>
+      <updated>1412803672225</updated>
+    </task>
+    <task id="LOCAL-00146" summary="Updated readme">
+      <created>1412805101230</created>
+      <updated>1412805101230</updated>
+    </task>
+    <task id="LOCAL-00147" summary="Updated readme">
+      <created>1412805125590</created>
+      <updated>1412805125590</updated>
+    </task>
+    <task id="LOCAL-00148" summary="Updated readme">
+      <created>1412805213018</created>
+      <updated>1412805213018</updated>
+    </task>
+    <task id="LOCAL-00149" summary="Updated readme">
+      <created>1412805644662</created>
+      <updated>1412805644662</updated>
+    </task>
+    <task id="LOCAL-00150" summary="Updated readme">
+      <created>1412806113679</created>
+      <updated>1412806113679</updated>
+    </task>
+    <task id="LOCAL-00151" summary="Updated readme">
+      <created>1412806134037</created>
+      <updated>1412806134038</updated>
+    </task>
+    <task id="LOCAL-00152" summary="Updated readme">
+      <created>1412806206759</created>
+      <updated>1412806206759</updated>
+    </task>
+    <task id="LOCAL-00153" summary="New changelist">
+      <created>1412806482764</created>
+      <updated>1412806482764</updated>
+    </task>
+    <task id="LOCAL-00154" summary="New changelist">
+      <created>1412806512127</created>
+      <updated>1412806512127</updated>
+    </task>
+    <task id="LOCAL-00155" summary="New changelist">
+      <created>1412807048528</created>
+      <updated>1412807048528</updated>
+    </task>
+    <task id="LOCAL-00156" summary="New changelist">
+      <created>1412807166224</created>
+      <updated>1412807166224</updated>
+    </task>
+    <task id="LOCAL-00157" summary="New changelist">
+      <created>1412807239623</created>
+      <updated>1412807239624</updated>
+    </task>
+    <task id="LOCAL-00158" summary="New changelist">
+      <created>1412807325873</created>
+      <updated>1412807325873</updated>
+    </task>
+    <task id="LOCAL-00159" summary="New changelist">
+      <created>1413022606662</created>
+      <updated>1413022606662</updated>
+    </task>
+    <option name="localTasksCounter" value="160" />
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-1910" y="31" width="1680" height="977" extended-state="0" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928178" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928178" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13095239" sideWeight="0.6961326" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39963832" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24267782" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3038674" sideWeight="0.9890625" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2674033" sideWeight="0.9994794" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <option name="myTodoPanelSettings">
+      <value>
+        <are-packages-shown value="false" />
+        <are-modules-shown value="false" />
+        <flatten-packages value="false" />
+        <is-autoscroll-to-source value="false" />
+      </value>
+    </option>
+    <option name="PERFORM_UPDATE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_COMMIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_CHECKOUT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
+    <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="false" />
+    <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
+    <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
+    <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
+    <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
+    <option name="SHORT_DIFF_HORISONTALLY" value="true" />
+    <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
+    <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
+    <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
+    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+    <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
+    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
+    <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
+    <option name="LIMIT_HISTORY" value="true" />
+    <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
+    <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
+    <option name="LAST_COMMIT_MESSAGE" value="New changelist" />
+    <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
+    <option name="FILE_HISTORY_DIALOG_COMMENTS_SPLITTER_PROPORTION" value="0.8" />
+    <option name="FILE_HISTORY_DIALOG_SPLITTER_PROPORTION" value="0.5" />
+    <option name="ACTIVE_VCS_NAME" />
+    <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
+    <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
+    <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
+    <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
+    <MESSAGE value="Still Chaos&#10;" />
+    <MESSAGE value="Start Cleanup" />
+    <MESSAGE value="Start Cleanup, NumPy Smooth" />
+    <MESSAGE value="Peripherals" />
+    <MESSAGE value="Beginn Scheduler" />
+    <MESSAGE value="Basic Alarm" />
+    <MESSAGE value="Alpha" />
+    <MESSAGE value="Simple GUI" />
+    <MESSAGE value="Small Cleanup" />
+    <MESSAGE value="Updated readme" />
+    <MESSAGE value="New changelist" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Hardware/basestation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="0" selection-start="445" selection-end="445" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Hardware/teensy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="73" selection-end="73" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="199" selection-end="199" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/display/display.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="137" selection-end="137" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/display/graph.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="39" selection-end="39" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/display/gui.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="228" selection-end="228" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/display/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="37" selection-end="37" vertical-scroll-proportion="0.017103763">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/display/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/display/clock.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="55" selection-start="601" selection-end="601" vertical-scroll-proportion="0.24743444">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/audio/scloud.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="21" selection-start="880" selection-end="880" vertical-scroll-proportion="0.4618016">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/audio/playlist.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="24" selection-start="290" selection-end="308" vertical-scroll-proportion="0.017103763">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/audio/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/events/scheduler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="0" selection-start="446" selection-end="446" vertical-scroll-proportion="0.35917902">
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/audio/gstplayer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sleepapp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="31" selection-start="209" selection-end="209" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/actions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="167" selection-end="167" vertical-scroll-proportion="0.2740864">
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+
