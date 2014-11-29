@@ -1,5 +1,5 @@
-from Hardware.sensors import Sensor
-from Hardware.channel import Channel
+from hardware.sensors import Sensor
+from hardware.channel import Channel
 
 
 class FakeSensor(Sensor):

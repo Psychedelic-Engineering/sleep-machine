@@ -3,7 +3,7 @@ import time
 import datetime
 import logging
 
-from Hardware.channel import Channel
+from hardware.channel import Channel
 
 
 """
