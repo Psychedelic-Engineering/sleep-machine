@@ -40,7 +40,7 @@ class SleepApp:
 		self.screenMult = 4
 		#self.display = Display(self.screenMult*320, self.screenMult*240, self.isRaspberry)
 		self.display = Display(1024, 600, self.isRaspberry)
-		self.graph = Graph(self.display, self.sensor)
+		#self.graph = Graph(self.display, self.sensor)
 		self.clock = Clock(self.display)
 		self.settings = Settings(self.display)
 		self.settings.onButton = self.onButton
@@ -83,7 +83,7 @@ class SleepApp:
 						self.settings.render()
 					else:
 						self.clock.render()
-						self.graph.render()
+						#self.graph.render()
 					# ToDo: Eventhandling in GUI
 					for event in pygame.event.get():
 						if not self.guiMode:
