@@ -1,4 +1,4 @@
-import pygame, math, time
+import pygame, math, time, logging
 
 """GUI-Handling
 	- Event-System fuer ganze GUI
@@ -161,6 +161,7 @@ class Slider(Control):
 		if self.clicked:
 			if event.type in (pygame.MOUSEMOTION, pygame.MOUSEBUTTONDOWN):
 				x,y = event.pos
+				logging.info(event.pos)
 				self.value = float(x-self.rect.left) / self.rect.width
 				self.value = max(min(self.value, 1.0), 0.0)
 				try:
