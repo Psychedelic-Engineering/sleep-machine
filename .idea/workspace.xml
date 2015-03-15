@@ -1,27 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list id="fb73a798-6776-4ef0-9aeb-04954e62c150" name="Default" comment="" />
-    <list id="cc49115f-27d9-42f7-b27d-92d1561216d5" name="Failed commit: Default" comment="Updated readme" />
+    <list id="fb73a798-6776-4ef0-9aeb-04954e62c150" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <list id="4ccba5c5-68a6-412d-9095-580a69f02126" name="Failed commit: Default (2)" comment="Updated readme" />
     <list default="true" id="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" name="New changelist" comment="New changelist">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hardware/__init__.py" afterPath="$PROJECT_DIR$/hardware/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hardware/basestation.py" afterPath="$PROJECT_DIR$/hardware/basestation.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hardware/channel.py" afterPath="$PROJECT_DIR$/hardware/channel.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hardware/fakesensor.py" afterPath="$PROJECT_DIR$/hardware/fakesensor.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hardware/sensors.py" afterPath="$PROJECT_DIR$/hardware/sensors.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hardware/teensy.py" afterPath="$PROJECT_DIR$/hardware/teensy.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/actions.py" afterPath="$PROJECT_DIR$/actions.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/display/display.py" afterPath="$PROJECT_DIR$/display/display.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sleepapp.py" afterPath="$PROJECT_DIR$/sleepapp.py" />
     </list>
     <ignored path="Python.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1413112323716" ignored="false" />
-    <file path="/fakesensor.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410534481652" ignored="false" />
+    <file path="/Dummy.txt" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1426451732104" ignored="false" />
+    <file path="/fakesensor.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1413451706385" ignored="false" />
     <file path="/graph.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410534560764" ignored="false" />
     <file path="/mainapp.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1411149983998" ignored="false" />
-    <file path="/sensors.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1412339377155" ignored="false" />
-    <file path="/channel.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1409937535029" ignored="false" />
-    <file path="/display.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410201293249" ignored="false" />
+    <file path="/sensors.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1413451715097" ignored="false" />
+    <file path="/channel.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1414073908901" ignored="false" />
+    <file path="/display.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1426450022639" ignored="false" />
     <file path="/clock.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1412806506406" ignored="false" />
     <file path="/teensy.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410709867448" ignored="false" />
     <file path="/main.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1412343319591" ignored="false" />
@@ -32,12 +29,19 @@
     <file path="/logger.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410098291630" ignored="false" />
     <file path="/timeevent.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410098322426" ignored="false" />
     <file path="/basestation.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410102636142" ignored="false" />
-    <file path="/gui.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410268628746" ignored="false" />
+    <file path="/gui.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1426451052319" ignored="false" />
     <file path="/settings.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410265694006" ignored="false" />
     <file path="/sertest.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410618556045" ignored="false" />
     <file path="/README.md" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1412343105690" ignored="false" />
-    <file path="/sleepapp.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1413022368975" ignored="false" />
-    <file path="/actions.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1412807149797" ignored="false" />
+    <file path="/sleepapp.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1426437777107" ignored="false" />
+    <file path="/actions.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1426453157145" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Radwende-Drawbot/Python/mainapp.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1413556126735" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Radwende-Drawbot/Python/bikemap.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1413205859143" ignored="false" />
+    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1417289282984" ignored="false" />
+    <file path="$USER_HOME$/Desktop/CurrentWorks/TeensyTest/Teensy.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1420627830346" ignored="false" />
+    <file path="/Teensy.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1420627829924" ignored="false" />
+    <file path="$USER_HOME$/Desktop/CurrentWorks/BLETest/RFDuino.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1426350848791" ignored="false" />
+    <file path="$USER_HOME$/Desktop/CurrentWorks/BLETest/RFduinoEcho.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1426350877040" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,19 +58,28 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="sleepapp.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sleepapp.py">
+      <file leaf-file-name="main.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="31" selection-start="209" selection-end="209" vertical-scroll-proportion="0.13145083">
+            <state line="13" column="0" selection-start="199" selection-end="199" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="actions.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/actions.py">
+      <file leaf-file-name="display.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/display/display.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="0" selection-start="167" selection-end="167" vertical-scroll-proportion="0.0">
+            <state line="17" column="12" selection-start="452" selection-end="452" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sleepapp.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sleepapp.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="49" column="58" selection-start="1360" selection-end="1360" vertical-scroll-proportion="0.7613169">
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -74,10 +87,68 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gstplayer.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/audio/gstplayer.py">
+      <file leaf-file-name="actions.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/actions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0">
+            <state line="5" column="16" selection-start="88" selection-end="100" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/display/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gui.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/display/gui.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="0" selection-start="237" selection-end="237" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="basestation.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hardware/basestation.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hardware/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sensors.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hardware/sensors.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="teensy.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hardware/teensy.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="44" selection-start="169" selection-end="169" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -101,30 +172,30 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/Display/__init__.py" />
-        <option value="$PROJECT_DIR$/Display/display.py" />
-        <option value="$PROJECT_DIR$/Display/graph.py" />
         <option value="$PROJECT_DIR$/Display/gui.py" />
         <option value="$PROJECT_DIR$/Display/settings.py" />
-        <option value="$PROJECT_DIR$/display/display.py" />
         <option value="$PROJECT_DIR$/display/graph.py" />
-        <option value="$PROJECT_DIR$/display/gui.py" />
         <option value="$PROJECT_DIR$/display/settings.py" />
         <option value="$PROJECT_DIR$/display/__init__.py" />
         <option value="$PROJECT_DIR$/display/clock.py" />
         <option value="$PROJECT_DIR$/audio/scloud.py" />
         <option value="$PROJECT_DIR$/audio/gstplayer.py" />
         <option value="$PROJECT_DIR$/audio/playlist.py" />
+        <option value="$PROJECT_DIR$/hardware/fakesensor.py" />
+        <option value="$PROJECT_DIR$/hardware/sensors.py" />
+        <option value="$PROJECT_DIR$/hardware/channel.py" />
+        <option value="$PROJECT_DIR$/display/gui.py" />
+        <option value="$PROJECT_DIR$/display/display.py" />
         <option value="$PROJECT_DIR$/actions.py" />
         <option value="$PROJECT_DIR$/sleepapp.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1528" />
-    <option name="y" value="22" />
-    <option name="width" value="1516" />
-    <option name="height" value="1127" />
+    <option name="x" value="59" />
+    <option name="y" value="31" />
+    <option name="width" value="1680" />
+    <option name="height" value="1102" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -260,19 +331,19 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="271" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="272" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="237" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="238" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="271" />
     <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="237" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Radwende-Drawbot" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="277" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1070" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1070" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="277" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="272" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/CurrentWorks" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="243" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="932" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="932" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="243" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="238" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
@@ -1081,28 +1152,104 @@
       <created>1413029967910</created>
       <updated>1413029967910</updated>
     </task>
-    <option name="localTasksCounter" value="162" />
+    <task id="LOCAL-00162" summary="New changelist">
+      <created>1413115109288</created>
+      <updated>1413115109288</updated>
+    </task>
+    <task id="LOCAL-00163" summary="New changelist">
+      <created>1417288968223</created>
+      <updated>1417288968223</updated>
+    </task>
+    <task id="LOCAL-00164" summary="New changelist">
+      <created>1426428620775</created>
+      <updated>1426428620775</updated>
+    </task>
+    <task id="LOCAL-00165" summary="New changelist">
+      <created>1426429053833</created>
+      <updated>1426429053833</updated>
+    </task>
+    <task id="LOCAL-00166" summary="New changelist">
+      <created>1426429092758</created>
+      <updated>1426429092758</updated>
+    </task>
+    <task id="LOCAL-00167" summary="New changelist">
+      <created>1426429140147</created>
+      <updated>1426429140147</updated>
+    </task>
+    <task id="LOCAL-00168" summary="New changelist">
+      <created>1426430514218</created>
+      <updated>1426430514218</updated>
+    </task>
+    <task id="LOCAL-00169" summary="New changelist">
+      <created>1426436911729</created>
+      <updated>1426436911729</updated>
+    </task>
+    <task id="LOCAL-00170" summary="New changelist">
+      <created>1426437798624</created>
+      <updated>1426437798625</updated>
+    </task>
+    <task id="LOCAL-00171" summary="Updated readme">
+      <created>1426441607231</created>
+      <updated>1426441607231</updated>
+    </task>
+    <task id="LOCAL-00172" summary="New changelist">
+      <created>1426441655110</created>
+      <updated>1426441655110</updated>
+    </task>
+    <task id="LOCAL-00173" summary="Updated readme">
+      <created>1426449903841</created>
+      <updated>1426449903841</updated>
+    </task>
+    <task id="LOCAL-00174" summary="New changelist">
+      <created>1426449916489</created>
+      <updated>1426449916489</updated>
+    </task>
+    <task id="LOCAL-00175" summary="New changelist">
+      <created>1426449979237</created>
+      <updated>1426449979237</updated>
+    </task>
+    <task id="LOCAL-00176" summary="New changelist">
+      <created>1426450031914</created>
+      <updated>1426450031914</updated>
+    </task>
+    <task id="LOCAL-00177" summary="New changelist">
+      <created>1426450067190</created>
+      <updated>1426450067190</updated>
+    </task>
+    <task id="LOCAL-00178" summary="New changelist">
+      <created>1426451063964</created>
+      <updated>1426451063964</updated>
+    </task>
+    <task id="LOCAL-00179" summary="New changelist">
+      <created>1426451151892</created>
+      <updated>1426451151892</updated>
+    </task>
+    <task id="LOCAL-00180" summary="New changelist">
+      <created>1426451733362</created>
+      <updated>1426451733362</updated>
+    </task>
+    <option name="localTasksCounter" value="181" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1528" y="22" width="1516" height="1127" extended-state="0" />
+    <frame x="59" y="31" width="1680" height="1102" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928178" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32821077" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890996" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14511873" sideWeight="0.99336493" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13988096" sideWeight="0.73495144" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39963832" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24267782" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3038674" sideWeight="0.9890625" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2674033" sideWeight="0.9994794" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24188481" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26504853" sideWeight="0.9765625" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26454446" sideWeight="0.9994794" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928178" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1175,100 +1322,135 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/actions.py">
+    <entry file="file://$PROJECT_DIR$/hardware/channel.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="167" selection-end="167" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
+        <state line="38" column="0" selection-start="829" selection-end="829" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/events/timeevent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/audio/playlist.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/audio/gstplayer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0">
+        <state line="88" column="20" selection-start="2990" selection-end="2990" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/events/alarm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/events/scheduler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="0" selection-start="737" selection-end="737" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hardware/basestation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hardware/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hardware/sensors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hardware/teensy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="44" selection-start="169" selection-end="169" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/display/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/display/gui.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="237" selection-end="237" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="199" selection-end="199" vertical-scroll-proportion="0.0" />
+        <state line="13" column="0" selection-start="199" selection-end="199" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/display/display.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="137" selection-end="137" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/display/graph.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="39" selection-end="39" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/display/gui.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="228" selection-end="228" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/display/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="37" selection-end="37" vertical-scroll-proportion="0.017103763" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/display/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/display/clock.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="55" selection-start="601" selection-end="601" vertical-scroll-proportion="0.24743444" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/audio/scloud.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="21" selection-start="880" selection-end="880" vertical-scroll-proportion="0.4618016" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/audio/playlist.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="24" selection-start="290" selection-end="308" vertical-scroll-proportion="0.017103763" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/audio/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/events/scheduler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="446" selection-end="446" vertical-scroll-proportion="0.35917902" />
+        <state line="17" column="12" selection-start="452" selection-end="452" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/actions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="167" selection-end="167" vertical-scroll-proportion="0.0">
+        <state line="5" column="16" selection-start="88" selection-end="100" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/audio/gstplayer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sleepapp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="31" selection-start="209" selection-end="209" vertical-scroll-proportion="0.13145083">
-          <folding />
+        <state line="49" column="58" selection-start="1360" selection-end="1360" vertical-scroll-proportion="0.7613169">
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
 
