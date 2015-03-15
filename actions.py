@@ -1,5 +1,12 @@
 import time
+import RPi.GPIO as GPIO
 from audio.playlist import PlaylistSoundCloud
+
+
+def switchRelais():
+	GPIO.setmode(GPIO.BOARD)
+	GPIO.setup(11, GPIO.OUT)
+	GPIO.output(11, GPIO.HIGH)
 
 
 def doAlarm(sleepApp):
