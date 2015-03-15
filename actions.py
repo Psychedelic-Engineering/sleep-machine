@@ -7,7 +7,7 @@ def switchRelais():
 	logging.info("Alarm")
 	GPIO.setmode(GPIO.BOARD)
 	GPIO.setup(11, GPIO.OUT)
-	GPIO.output(11, GPIO.HIGH)
+	GPIO.output(11, GPIO.LOW)
 
 
 def doAlarm(sleepApp):
