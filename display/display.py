@@ -21,6 +21,9 @@ class Display:
 		pygame.font.init()
 		self.screen = pygame.display.set_mode((self.width, self.height))
 		#pygame.mouse.set_visible(False)
+		logging.info(pygame.display.get_driver())
+		logging.info(pygame.display.get_wm_info())
+		logging.info(pygame.display.Info())
 
 	def __del__(self):
 		logging.debug("pygame.quit")
