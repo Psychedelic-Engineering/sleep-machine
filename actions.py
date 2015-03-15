@@ -1,9 +1,10 @@
-import time
+import time, logging
 import RPi.GPIO as GPIO
 from audio.playlist import PlaylistSoundCloud
 
 
 def switchRelais():
+	logging.info("Alarm")
 	GPIO.setmode(GPIO.BOARD)
 	GPIO.setup(11, GPIO.OUT)
 	GPIO.output(11, GPIO.HIGH)
