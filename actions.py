@@ -1,17 +1,19 @@
 import time, logging
-import RPi.GPIO as GPIO
 from audio.playlist import PlaylistSoundCloud
+from hardware.Adafruit_MCP230xx import Adafruit_MCP230XX
 
-GPIO.setmode(GPIO.BOARD)
-GPIO.setup(11, GPIO.OUT)
-GPIO.output(11, GPIO.HIGH)
+mcp = Adafruit_MCP230XX(busnum = 1, address = 0x20, num_gpios = 16)
+mcp.config(0, mcp.OUTPUT)
+mcp.config(1, mcp.OUTPUT)
 
 
 def switchRelais():
 	logging.info("Alarm")
-	GPIO.output(11, GPIO.LOW)
+	mcp.output(0, 1)
+	mcp.output(1, 1)
 	time.sleep(5)
-	GPIO.output(11, GPIO.HIGH)
+	mcp.output(0, 0)
+	mcp.output(1, 0)
 
 
 def doAlarm(sleepApp):
