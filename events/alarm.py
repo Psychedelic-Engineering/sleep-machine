@@ -51,4 +51,4 @@ class Alarm:
 				self.thread.start()
 		if self.thread and not self.thread.is_alive():
 			self.thread = None
-			self.active = False
+			#self.active = False

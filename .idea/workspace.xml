@@ -3,12 +3,13 @@
   <component name="ChangeListManager">
     <list id="4ccba5c5-68a6-412d-9095-580a69f02126" name="Failed commit: Default (2)" comment="Updated readme" />
     <list default="true" id="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" name="New changelist" comment="New changelist">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/events/alarm.py" afterPath="$PROJECT_DIR$/events/alarm.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sleepapp.py" afterPath="$PROJECT_DIR$/sleepapp.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Python.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1426534595434" ignored="false" />
+    <file path="/Dummy.txt" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1426534730676" ignored="false" />
     <file path="/fakesensor.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1413451706385" ignored="false" />
     <file path="/graph.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410534560764" ignored="false" />
     <file path="/mainapp.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1411149983998" ignored="false" />
@@ -19,7 +20,7 @@
     <file path="/teensy.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410709867448" ignored="false" />
     <file path="/main.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1412343319591" ignored="false" />
     <file path="/scheduler.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410097126680" ignored="false" />
-    <file path="/alarm.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1426534304392" ignored="false" />
+    <file path="/alarm.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1426534844424" ignored="false" />
     <file path="/LightController.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410005589536" ignored="false" />
     <file path="/a.dummy" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410098346878" ignored="false" />
     <file path="/logger.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410098291630" ignored="false" />
@@ -91,10 +92,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sleepapp.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="sleepapp.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sleepapp.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="70" selection-start="1491" selection-end="1491" vertical-scroll-proportion="0.54811203">
+            <state line="51" column="125" selection-start="1546" selection-end="1546" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -122,10 +123,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="alarm.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="alarm.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/events/alarm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="30" selection-start="174" selection-end="174" vertical-scroll-proportion="0.0">
+            <state line="53" column="13" selection-start="1329" selection-end="1329" vertical-scroll-proportion="0.8721072">
               <folding />
             </state>
           </provider>
@@ -181,8 +182,8 @@
         <option value="$PROJECT_DIR$/display/display.py" />
         <option value="$PROJECT_DIR$/display/clock.py" />
         <option value="$PROJECT_DIR$/actions.py" />
-        <option value="$PROJECT_DIR$/events/alarm.py" />
         <option value="$PROJECT_DIR$/sleepapp.py" />
+        <option value="$PROJECT_DIR$/events/alarm.py" />
       </list>
     </option>
   </component>
@@ -1326,7 +1327,11 @@
       <created>1426534596799</created>
       <updated>1426534596799</updated>
     </task>
-    <option name="localTasksCounter" value="207" />
+    <task id="LOCAL-00207" summary="New changelist">
+      <created>1426534731823</created>
+      <updated>1426534731823</updated>
+    </task>
+    <option name="localTasksCounter" value="208" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1518,19 +1523,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/events/alarm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="30" selection-start="174" selection-end="174" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sleepapp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="70" selection-start="1491" selection-end="1491" vertical-scroll-proportion="0.54811203">
+        <state line="51" column="125" selection-start="1546" selection-end="1546" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/events/alarm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="13" selection-start="1329" selection-end="1329" vertical-scroll-proportion="0.8721072">
+          <folding />
         </state>
       </provider>
     </entry>
