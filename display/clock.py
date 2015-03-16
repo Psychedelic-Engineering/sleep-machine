@@ -18,8 +18,8 @@ class Clock():
 		self.width = self.display.width
 		self.height = self.display.height
 		self.fontColor = (0,0,0)
-		self.timeFont = pygame.font.Font(self.fontname, 64)
-		self.dateFont = pygame.font.Font(self.fontname, 19)
+		self.timeFont = pygame.font.Font(self.fontname, 200)
+		self.dateFont = pygame.font.Font(self.fontname, 40)
 		self.addrFont = pygame.font.Font(self.fontname, 12)
 		loc = locale.setlocale(locale.LC_TIME, "de_DE.UTF-8")
 		self.lastTime = ""
@@ -29,19 +29,18 @@ class Clock():
 		#timeStr = "24:57"
 		if timeStr != self.lastTime or force:
 			self.surface.fill((0,0,0))
-			#self.surface.fill((200,120,70))
 			surf = self.timeFont.render(timeStr, True, (255,96,0))
 			#self.surface.blit(surf, (2,0))
 			size = surf.get_size()
 			x = (self.width - size[0]) / 2
-			self.surface.blit(surf, (x, -30))
+			self.surface.blit(surf, (x, -80))
 
-			dateStr = datetime.datetime.now().strftime("%A %d.%B")
-			#dateStr = "Donnerstag, 22. September"
+			dateStr = datetime.datetime.now().strftime("%A %d.%B").decode(encoding='UTF-8')
+			#dateStr = u"Donnerstag, 22. September"
 			surf = self.dateFont.render(dateStr, True, (255,96,0))
 			size = surf.get_size()
 			x = (self.width - size[0]) / 2
-			self.surface.blit(surf, (x,self.height / 2))
+			self.surface.blit(surf, (x,self.height - 160))
 			self.lastTime = timeStr
 
 			"""

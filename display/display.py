@@ -16,19 +16,13 @@ class Display:
 			os.environ['SDL_VIDEODRIVER'] = 'fbcon'
 		os.environ["SDL_MOUSEDEV"] = "/dev/input/event1"
 		os.environ["SDL_MOUSEDRV"] = "TSLIB"
-		os.environ["TSLIB_TSDEVICE"] = "/dev/input/event1"
-		os.environ["LD_LIBRARY_PATH"] = "/usr/local/lib"
 
 		pygame.init()
 		pygame.font.init()
 		self.screen = pygame.display.set_mode((self.width, self.height))
 		#pygame.mouse.set_visible(False)
-		logging.info(pygame.display.get_driver())
-		logging.info(pygame.display.get_wm_info())
-		logging.info(pygame.display.Info())
 
 	def __del__(self):
-		logging.debug("pygame.quit")
 		pygame.quit()
 
 	def flip(self):
