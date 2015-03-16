@@ -12,8 +12,8 @@ def switchRelais():
 	mcp.output(0, 1)
 	mcp.output(1, 1)
 	time.sleep(5)
-	mcp.output(0, 0)
-	mcp.output(1, 0)
+	#mcp.output(0, 0)
+	#mcp.output(1, 0)
 
 
 def doAlarm(sleepApp):
