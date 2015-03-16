@@ -48,8 +48,10 @@ class SleepApp:
 
 		self.scheduler = Scheduler()
 		# ToDo: Alarme in config File, periodisch auslesen
-		self.scheduler.addAlarm("*", "22", "20", actions.switchRelais)
-		self.scheduler.addAlarm("*", "*", "*/2", actions.switchRelais)
+		#self.scheduler.addAlarm("*", "22", "20", actions.switchRelais)
+		#self.scheduler.addAlarm("*", "*", "39", actions.switchRelais)
+		for i in range(0,58,2):
+			self.scheduler.addAlarm("*", "*", i, actions.switchRelais)
 		#self.scheduler.addAlarm("*", "23", "22", actions.doAlarm)
 		#self.scheduler.addAlarm("*", "0", "30", actions.doAlarm)
 
