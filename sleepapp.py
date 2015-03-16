@@ -49,7 +49,7 @@ class SleepApp:
 		self.scheduler = Scheduler()
 		# ToDo: Alarme in config File, periodisch auslesen
 		self.scheduler.addAlarm("*", "22", "20", actions.switchRelais)
-		self.scheduler.addAlarm("*", "7", "17", actions.switchRelais)
+		self.scheduler.addAlarm("*", "*", "*", actions.switchRelais)
 		#self.scheduler.addAlarm("*", "23", "22", actions.doAlarm)
 		#self.scheduler.addAlarm("*", "0", "30", actions.doAlarm)
 
