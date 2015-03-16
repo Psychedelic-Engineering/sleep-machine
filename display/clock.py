@@ -18,7 +18,7 @@ class Clock():
 		self.width = self.display.width
 		self.height = self.display.height
 		self.fontColor = (0,0,0)
-		self.timeFont = pygame.font.Font(self.fontname, 200)
+		self.timeFont = pygame.font.Font(self.fontname, 180)
 		self.dateFont = pygame.font.Font(self.fontname, 40)
 		self.addrFont = pygame.font.Font(self.fontname, 12)
 		loc = locale.setlocale(locale.LC_TIME, "de_DE.UTF-8")
