@@ -4,12 +4,11 @@
     <list id="4ccba5c5-68a6-412d-9095-580a69f02126" name="Failed commit: Default (2)" comment="Updated readme" />
     <list default="true" id="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" name="New changelist" comment="New changelist">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/events/alarm.py" afterPath="$PROJECT_DIR$/events/alarm.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sleepapp.py" afterPath="$PROJECT_DIR$/sleepapp.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Python.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1426534730676" ignored="false" />
+    <file path="/Dummy.txt" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1426534849241" ignored="false" />
     <file path="/fakesensor.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1413451706385" ignored="false" />
     <file path="/graph.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410534560764" ignored="false" />
     <file path="/mainapp.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1411149983998" ignored="false" />
@@ -126,7 +125,7 @@
       <file leaf-file-name="alarm.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/events/alarm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="13" selection-start="1329" selection-end="1329" vertical-scroll-proportion="0.8721072">
+            <state line="39" column="39" selection-start="931" selection-end="931" vertical-scroll-proportion="0.69427526">
               <folding />
             </state>
           </provider>
@@ -1331,7 +1330,11 @@
       <created>1426534731823</created>
       <updated>1426534731823</updated>
     </task>
-    <option name="localTasksCounter" value="208" />
+    <task id="LOCAL-00208" summary="New changelist">
+      <created>1426534850559</created>
+      <updated>1426534850559</updated>
+    </task>
+    <option name="localTasksCounter" value="209" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1534,7 +1537,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/events/alarm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="13" selection-start="1329" selection-end="1329" vertical-scroll-proportion="0.8721072">
+        <state line="39" column="39" selection-start="931" selection-end="931" vertical-scroll-proportion="0.69427526">
           <folding />
         </state>
       </provider>
