@@ -39,7 +39,7 @@ class Alarm:
 	def check(self, timeNow):
 		match = self.matchTime(timeNow)
 		if match:
-			print("alarm match ", self.active)
+			print("alarm match ", self.active, self.thread, self.thread.is_alive())
 		if not match and self.active:
 			self.active = False
 		if match and not self.active:

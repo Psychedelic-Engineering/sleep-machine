@@ -8,7 +8,7 @@
     </list>
     <ignored path="Python.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1426533387040" ignored="false" />
+    <file path="/Dummy.txt" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1426533954060" ignored="false" />
     <file path="/fakesensor.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1413451706385" ignored="false" />
     <file path="/graph.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410534560764" ignored="false" />
     <file path="/mainapp.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1411149983998" ignored="false" />
@@ -19,7 +19,7 @@
     <file path="/teensy.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410709867448" ignored="false" />
     <file path="/main.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1412343319591" ignored="false" />
     <file path="/scheduler.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410097126680" ignored="false" />
-    <file path="/alarm.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1426533939636" ignored="false" />
+    <file path="/alarm.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1426534104581" ignored="false" />
     <file path="/LightController.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410005589536" ignored="false" />
     <file path="/a.dummy" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410098346878" ignored="false" />
     <file path="/logger.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410098291630" ignored="false" />
@@ -105,7 +105,7 @@
       <file leaf-file-name="actions.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/actions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="56" selection-start="123" selection-end="123" vertical-scroll-proportion="0.0">
+            <state line="15" column="20" selection-start="376" selection-end="376" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -125,7 +125,7 @@
       <file leaf-file-name="alarm.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/events/alarm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="45" selection-start="980" selection-end="980" vertical-scroll-proportion="0.73081607">
+            <state line="41" column="82" selection-start="1017" selection-end="1017" vertical-scroll-proportion="0.73081607">
               <folding />
             </state>
           </provider>
@@ -1306,7 +1306,11 @@
       <created>1426533388778</created>
       <updated>1426533388778</updated>
     </task>
-    <option name="localTasksCounter" value="202" />
+    <task id="LOCAL-00202" summary="New changelist">
+      <created>1426533955497</created>
+      <updated>1426533955498</updated>
+    </task>
+    <option name="localTasksCounter" value="203" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1322,7 +1326,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39963832" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24188481" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22888283" sideWeight="0.97760415" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22888283" sideWeight="0.97760415" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26454446" sideWeight="0.9994794" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1482,15 +1486,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/actions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="56" selection-start="123" selection-end="123" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sleepapp.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="30" selection-start="688" selection-end="688" vertical-scroll-proportion="0.0">
@@ -1507,9 +1502,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/actions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="20" selection-start="376" selection-end="376" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/events/alarm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="45" selection-start="980" selection-end="980" vertical-scroll-proportion="0.73081607">
+        <state line="41" column="82" selection-start="1017" selection-end="1017" vertical-scroll-proportion="0.73081607">
           <folding />
         </state>
       </provider>
