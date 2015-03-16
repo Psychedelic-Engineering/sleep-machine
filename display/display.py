@@ -16,6 +16,8 @@ class Display:
 			os.environ['SDL_VIDEODRIVER'] = 'fbcon'
 		os.environ["SDL_MOUSEDEV"] = "/dev/input/event1"
 		os.environ["SDL_MOUSEDRV"] = "TSLIB"
+		os.environ["TSLIB_TSDEVICE"] = "/dev/input/event1"
+		os.environ["LD_LIBRARY_PATH"] = "/usr/local/lib"
 
 		pygame.init()
 		pygame.font.init()
