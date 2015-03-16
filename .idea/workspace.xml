@@ -8,7 +8,7 @@
     </list>
     <ignored path="Python.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1426533954060" ignored="false" />
+    <file path="/Dummy.txt" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1426534119458" ignored="false" />
     <file path="/fakesensor.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1413451706385" ignored="false" />
     <file path="/graph.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410534560764" ignored="false" />
     <file path="/mainapp.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1411149983998" ignored="false" />
@@ -19,7 +19,7 @@
     <file path="/teensy.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410709867448" ignored="false" />
     <file path="/main.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1412343319591" ignored="false" />
     <file path="/scheduler.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410097126680" ignored="false" />
-    <file path="/alarm.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1426534104581" ignored="false" />
+    <file path="/alarm.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1426534183766" ignored="false" />
     <file path="/LightController.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410005589536" ignored="false" />
     <file path="/a.dummy" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410098346878" ignored="false" />
     <file path="/logger.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410098291630" ignored="false" />
@@ -125,7 +125,7 @@
       <file leaf-file-name="alarm.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/events/alarm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="82" selection-start="1017" selection-end="1017" vertical-scroll-proportion="0.73081607">
+            <state line="43" column="22" selection-start="1024" selection-end="1024" vertical-scroll-proportion="0.7673569">
               <folding />
             </state>
           </provider>
@@ -1310,7 +1310,11 @@
       <created>1426533955497</created>
       <updated>1426533955498</updated>
     </task>
-    <option name="localTasksCounter" value="203" />
+    <task id="LOCAL-00203" summary="New changelist">
+      <created>1426534120767</created>
+      <updated>1426534120767</updated>
+    </task>
+    <option name="localTasksCounter" value="204" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1513,7 +1517,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/events/alarm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="82" selection-start="1017" selection-end="1017" vertical-scroll-proportion="0.73081607">
+        <state line="43" column="22" selection-start="1024" selection-end="1024" vertical-scroll-proportion="0.7673569">
           <folding />
         </state>
       </provider>
