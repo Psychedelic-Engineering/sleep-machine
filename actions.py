@@ -6,6 +6,7 @@ GPIO.setmode(GPIO.BOARD)
 GPIO.setup(11, GPIO.OUT)
 GPIO.output(11, GPIO.HIGH)
 
+
 def switchRelais():
 	logging.info("Alarm")
 	GPIO.output(11, GPIO.LOW)
