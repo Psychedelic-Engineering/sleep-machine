@@ -9,7 +9,7 @@
     </list>
     <ignored path="Python.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1426625520979" ignored="false" />
+    <file path="/Dummy.txt" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1426625772683" ignored="false" />
     <file path="/fakesensor.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1413451706385" ignored="false" />
     <file path="/graph.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410534560764" ignored="false" />
     <file path="/mainapp.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1411149983998" ignored="false" />
@@ -93,7 +93,7 @@
       <file leaf-file-name="sleepapp.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sleepapp.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="32" selection-start="1836" selection-end="1836" vertical-scroll-proportion="0.26868907">
+            <state line="52" column="45" selection-start="1609" selection-end="1609" vertical-scroll-proportion="0.17118093">
               <folding />
             </state>
           </provider>
@@ -102,7 +102,7 @@
       <file leaf-file-name="actions.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/actions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="21" selection-start="398" selection-end="398" vertical-scroll-proportion="0.0">
+            <state line="18" column="19" selection-start="434" selection-end="434" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -1350,7 +1350,11 @@
       <created>1426625522375</created>
       <updated>1426625522375</updated>
     </task>
-    <option name="localTasksCounter" value="214" />
+    <task id="LOCAL-00214" summary="New changelist">
+      <created>1426625774106</created>
+      <updated>1426625774106</updated>
+    </task>
+    <option name="localTasksCounter" value="215" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1532,7 +1536,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/actions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="21" selection-start="398" selection-end="398" vertical-scroll-proportion="0.0">
+        <state line="18" column="19" selection-start="434" selection-end="434" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#0#20#0" expanded="true" />
           </folding>
@@ -1541,7 +1545,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sleepapp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="32" selection-start="1836" selection-end="1836" vertical-scroll-proportion="0.26868907">
+        <state line="52" column="45" selection-start="1609" selection-end="1609" vertical-scroll-proportion="0.17118093">
           <folding />
         </state>
       </provider>
