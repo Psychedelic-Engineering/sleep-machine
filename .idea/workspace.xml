@@ -9,7 +9,7 @@
     </list>
     <ignored path="Python.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1426625772683" ignored="false" />
+    <file path="/Dummy.txt" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1426625976445" ignored="false" />
     <file path="/fakesensor.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1413451706385" ignored="false" />
     <file path="/graph.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410534560764" ignored="false" />
     <file path="/mainapp.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1411149983998" ignored="false" />
@@ -30,7 +30,7 @@
     <file path="/settings.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410265694006" ignored="false" />
     <file path="/sertest.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410618556045" ignored="false" />
     <file path="/README.md" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1412343105690" ignored="false" />
-    <file path="/sleepapp.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1426540503920" ignored="false" />
+    <file path="/sleepapp.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1426626168805" ignored="false" />
     <file path="/actions.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1426540547576" ignored="false" />
     <file path="$PROJECT_DIR$/../../Radwende-Drawbot/Python/mainapp.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1413556126735" ignored="false" />
     <file path="$PROJECT_DIR$/../../Radwende-Drawbot/Python/bikemap.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1413205859143" ignored="false" />
@@ -93,7 +93,7 @@
       <file leaf-file-name="sleepapp.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sleepapp.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="45" selection-start="1609" selection-end="1609" vertical-scroll-proportion="0.17118093">
+            <state line="57" column="41" selection-start="1745" selection-end="1745" vertical-scroll-proportion="0.2524377">
               <folding />
             </state>
           </provider>
@@ -102,7 +102,7 @@
       <file leaf-file-name="actions.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/actions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="19" selection-start="434" selection-end="434" vertical-scroll-proportion="0.0">
+            <state line="20" column="0" selection-start="439" selection-end="439" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -1354,7 +1354,11 @@
       <created>1426625774106</created>
       <updated>1426625774106</updated>
     </task>
-    <option name="localTasksCounter" value="215" />
+    <task id="LOCAL-00215" summary="New changelist">
+      <created>1426625978437</created>
+      <updated>1426625978437</updated>
+    </task>
+    <option name="localTasksCounter" value="216" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1536,7 +1540,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/actions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="19" selection-start="434" selection-end="434" vertical-scroll-proportion="0.0">
+        <state line="20" column="0" selection-start="439" selection-end="439" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#0#20#0" expanded="true" />
           </folding>
@@ -1545,7 +1549,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sleepapp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="45" selection-start="1609" selection-end="1609" vertical-scroll-proportion="0.17118093">
+        <state line="57" column="41" selection-start="1745" selection-end="1745" vertical-scroll-proportion="0.2524377">
           <folding />
         </state>
       </provider>
