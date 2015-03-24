@@ -8,7 +8,7 @@
     </list>
     <ignored path="Python.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1427066987355" ignored="false" />
+    <file path="/Dummy.txt" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1427124633263" ignored="false" />
     <file path="/fakesensor.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1413451706385" ignored="false" />
     <file path="/graph.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410534560764" ignored="false" />
     <file path="/mainapp.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1411149983998" ignored="false" />
@@ -29,7 +29,7 @@
     <file path="/settings.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410265694006" ignored="false" />
     <file path="/sertest.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410618556045" ignored="false" />
     <file path="/README.md" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1412343105690" ignored="false" />
-    <file path="/sleepapp.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1426626168805" ignored="false" />
+    <file path="/sleepapp.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1427190320588" ignored="false" />
     <file path="/actions.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1427066875184" ignored="false" />
     <file path="$PROJECT_DIR$/../../Radwende-Drawbot/Python/mainapp.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1413556126735" ignored="false" />
     <file path="$PROJECT_DIR$/../../Radwende-Drawbot/Python/bikemap.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1413205859143" ignored="false" />
@@ -96,7 +96,7 @@
       <file leaf-file-name="sleepapp.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sleepapp.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="45" selection-start="1609" selection-end="1609" vertical-scroll-proportion="0.46132338">
+            <state line="54" column="31" selection-start="1660" selection-end="1660" vertical-scroll-proportion="0.30754894">
               <folding />
             </state>
           </provider>
@@ -105,10 +105,8 @@
       <file leaf-file-name="actions.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/actions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="23" selection-start="401" selection-end="401" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#20#0" expanded="true" />
-              </folding>
+            <state line="2" column="0" selection-start="67" selection-end="437" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -217,7 +215,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -322,20 +319,21 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="237" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="238" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="recentsLimit" value="5" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="237" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="237" />
+    <property name="recentsLimit" value="5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin/python2.7" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="243" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="932" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="932" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="932" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="243" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="238" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -1385,7 +1383,11 @@
       <created>1427065105289</created>
       <updated>1427065105289</updated>
     </task>
-    <option name="localTasksCounter" value="222" />
+    <task id="LOCAL-00222" summary="New changelist">
+      <created>1427067067430</created>
+      <updated>1427067067430</updated>
+    </task>
+    <option name="localTasksCounter" value="223" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1523,13 +1525,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="199" selection-end="199" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/display/display.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="22" selection-start="642" selection-end="642" vertical-scroll-proportion="0.0">
@@ -1565,18 +1560,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="199" selection-end="199" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/actions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="23" selection-start="401" selection-end="401" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
+        <state line="2" column="0" selection-start="67" selection-end="437" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sleepapp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="45" selection-start="1609" selection-end="1609" vertical-scroll-proportion="0.46132338">
+        <state line="54" column="31" selection-start="1660" selection-end="1660" vertical-scroll-proportion="0.30754894">
           <folding />
         </state>
       </provider>
