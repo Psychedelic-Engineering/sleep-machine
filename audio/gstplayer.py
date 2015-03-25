@@ -78,7 +78,7 @@ class AudioPlayer:
 	def onPlay(self):
 		while self.playing:
 			if gst.STATE_VOID_PENDING in self.pipeline.get_state(gst.STATE_PLAYING):
-				pos =  self.pipeline.query_position(gst.FORMAT_TIME)
+				pos = self.pipeline.query_position(gst.FORMAT_TIME)
 				dur = self.pipeline.query_duration(gst.FORMAT_TIME)
 				self.progress = 1.0 * pos[0] / dur[0]
 				if self.onProgress:

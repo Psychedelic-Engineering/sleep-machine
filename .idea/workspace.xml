@@ -3,12 +3,13 @@
   <component name="ChangeListManager">
     <list id="4ccba5c5-68a6-412d-9095-580a69f02126" name="Failed commit: Default (2)" comment="Updated readme" />
     <list default="true" id="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" name="New changelist" comment="New changelist">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/audio/gstplayer.py" afterPath="$PROJECT_DIR$/audio/gstplayer.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sleepapp.py" afterPath="$PROJECT_DIR$/sleepapp.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Python.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1427292484438" ignored="false" />
+    <file path="/Dummy.txt" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1427292507625" ignored="false" />
     <file path="/fakesensor.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1413451706385" ignored="false" />
     <file path="/graph.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410534560764" ignored="false" />
     <file path="/mainapp.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1411149983998" ignored="false" />
@@ -29,7 +30,7 @@
     <file path="/settings.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410265694006" ignored="false" />
     <file path="/sertest.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410618556045" ignored="false" />
     <file path="/README.md" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1412343105690" ignored="false" />
-    <file path="/sleepapp.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1427191931716" ignored="false" />
+    <file path="/sleepapp.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1427293286841" ignored="false" />
     <file path="/actions.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1427066875184" ignored="false" />
     <file path="$PROJECT_DIR$/../../Radwende-Drawbot/Python/mainapp.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1413556126735" ignored="false" />
     <file path="$PROJECT_DIR$/../../Radwende-Drawbot/Python/bikemap.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1413205859143" ignored="false" />
@@ -75,10 +76,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gstplayer.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="gstplayer.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/audio/gstplayer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="88" column="20" selection-start="2990" selection-end="2990" vertical-scroll-proportion="0.0">
+            <state line="86" column="31" selection-start="2964" selection-end="2964" vertical-scroll-proportion="0.84622556">
               <folding />
             </state>
           </provider>
@@ -87,7 +88,7 @@
       <file leaf-file-name="playlist.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/audio/playlist.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="0" selection-start="1902" selection-end="2037" vertical-scroll-proportion="0.0">
+            <state line="82" column="8" selection-start="2068" selection-end="2068" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -102,10 +103,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sleepapp.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="sleepapp.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sleepapp.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="8" selection-start="1637" selection-end="1637" vertical-scroll-proportion="0.31500465">
+            <state line="54" column="9" selection-start="1638" selection-end="1638" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -115,15 +116,17 @@
         <entry file="file://$PROJECT_DIR$/actions.py">
           <provider selected="true" editor-type-id="text-editor">
             <state line="37" column="15" selection-start="723" selection-end="723" vertical-scroll-proportion="0.0">
-              <folding />
+              <folding>
+                <element signature="e#0#20#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="alarm.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/events/alarm.py">
+      <file leaf-file-name="scloud.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/audio/scloud.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="39" selection-start="931" selection-end="931" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -170,7 +173,6 @@
         <option value="$PROJECT_DIR$/display/settings.py" />
         <option value="$PROJECT_DIR$/display/__init__.py" />
         <option value="$PROJECT_DIR$/audio/scloud.py" />
-        <option value="$PROJECT_DIR$/audio/gstplayer.py" />
         <option value="$PROJECT_DIR$/audio/playlist.py" />
         <option value="$PROJECT_DIR$/hardware/fakesensor.py" />
         <option value="$PROJECT_DIR$/hardware/sensors.py" />
@@ -180,6 +182,7 @@
         <option value="$PROJECT_DIR$/events/alarm.py" />
         <option value="$PROJECT_DIR$/actions.py" />
         <option value="$PROJECT_DIR$/display/display.py" />
+        <option value="$PROJECT_DIR$/audio/gstplayer.py" />
         <option value="$PROJECT_DIR$/sleepapp.py" />
       </list>
     </option>
@@ -1399,13 +1402,18 @@
       <created>1427191937982</created>
       <updated>1427191937982</updated>
     </task>
-    <option name="localTasksCounter" value="226" />
+    <task id="LOCAL-00226" summary="New changelist">
+      <created>1427292509349</created>
+      <updated>1427292509349</updated>
+    </task>
+    <option name="localTasksCounter" value="227" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1173" extended-state="6" />
     <editor active="false" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32821077" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890996" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1420,7 +1428,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32821077" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1493,11 +1500,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/hardware/basestation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hardware/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
@@ -1530,13 +1532,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/actions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="15" selection-start="723" selection-end="723" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="0" selection-start="199" selection-end="199" vertical-scroll-proportion="0.0">
@@ -1565,13 +1560,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/audio/playlist.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="0" selection-start="1902" selection-end="2037" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/display/display.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="31" selection-start="469" selection-end="469" vertical-scroll-proportion="0.0">
@@ -1579,16 +1567,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/audio/gstplayer.py">
+    <entry file="file://$PROJECT_DIR$/audio/scloud.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="20" selection-start="2990" selection-end="2990" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/actions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="15" selection-start="723" selection-end="723" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/audio/playlist.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="8" selection-start="2068" selection-end="2068" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sleepapp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="8" selection-start="1637" selection-end="1637" vertical-scroll-proportion="0.31500465">
+        <state line="54" column="9" selection-start="1638" selection-end="1638" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/audio/gstplayer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="86" column="31" selection-start="2964" selection-end="2964" vertical-scroll-proportion="0.84622556">
           <folding />
         </state>
       </provider>
