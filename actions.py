@@ -12,7 +12,7 @@ mcp.output(1, 1)
 def switchRelais():
 	logging.info("Alarm")
 	mcp.output(0, 0)
-	time.sleep(10 * 60)
+	time.sleep(10 * 1)
 	mcp.output(1, 0)
 	time.sleep(20 * 60)
 	mcp.output(0, 1)
