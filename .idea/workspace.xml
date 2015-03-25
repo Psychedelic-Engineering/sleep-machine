@@ -8,7 +8,7 @@
     </list>
     <ignored path="Python.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1427297267293" ignored="false" />
+    <file path="/Dummy.txt" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1427297390697" ignored="false" />
     <file path="/fakesensor.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1413451706385" ignored="false" />
     <file path="/graph.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410534560764" ignored="false" />
     <file path="/mainapp.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1411149983998" ignored="false" />
@@ -1359,7 +1359,11 @@
       <created>1427297269071</created>
       <updated>1427297269071</updated>
     </task>
-    <option name="localTasksCounter" value="234" />
+    <task id="LOCAL-00234" summary="New changelist">
+      <created>1427297391892</created>
+      <updated>1427297391892</updated>
+    </task>
+    <option name="localTasksCounter" value="235" />
     <servers />
   </component>
   <component name="ToolWindowManager">
