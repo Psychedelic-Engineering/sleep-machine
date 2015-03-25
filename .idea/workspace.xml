@@ -8,7 +8,7 @@
     </list>
     <ignored path="Python.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1427314457900" ignored="false" />
+    <file path="/Dummy.txt" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1427314579193" ignored="false" />
     <file path="/fakesensor.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1413451706385" ignored="false" />
     <file path="/graph.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410534560764" ignored="false" />
     <file path="/mainapp.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1411149983998" ignored="false" />
@@ -69,7 +69,7 @@
       <file leaf-file-name="actions.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/actions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="21" selection-start="360" selection-end="360" vertical-scroll-proportion="0.19501625">
+            <state line="14" column="22" selection-start="361" selection-end="361" vertical-scroll-proportion="0.19501625">
               <folding />
             </state>
           </provider>
@@ -1379,7 +1379,11 @@
       <created>1427314459651</created>
       <updated>1427314459651</updated>
     </task>
-    <option name="localTasksCounter" value="239" />
+    <task id="LOCAL-00239" summary="New changelist">
+      <created>1427314581377</created>
+      <updated>1427314581377</updated>
+    </task>
+    <option name="localTasksCounter" value="240" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1552,7 +1556,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/actions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="21" selection-start="360" selection-end="360" vertical-scroll-proportion="0.19501625">
+        <state line="14" column="22" selection-start="361" selection-end="361" vertical-scroll-proportion="0.19501625">
           <folding />
         </state>
       </provider>
