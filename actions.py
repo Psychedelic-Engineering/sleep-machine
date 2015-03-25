@@ -7,6 +7,9 @@ mcp.config(0, mcp.OUTPUT)
 mcp.config(1, mcp.OUTPUT)
 mcp.output(0, 1)
 mcp.output(1, 1)
+time.sleep(2)
+mcp.output(0, 1)
+mcp.output(1, 1)
 
 
 def switchRelais():
