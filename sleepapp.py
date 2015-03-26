@@ -20,7 +20,7 @@ class SleepApp:
 	def __init__(self):
 		self.isRaspberry = False
 		self.emulateSensor = True
-		logging.basicConfig(format='%(message)s', level=logging.INFO)
+		logging.basicConfig(format='%(asctime)s %(message)s', level=logging.INFO, datefmt='%Y-%m-%d %H:%M:%S')
 		logging.info("init app")
 		self.quitting = False
 
@@ -77,7 +77,7 @@ class SleepApp:
 					break
 				if self.scheduler.elapsed(0.05):
 					# ToDo: Sensoren ggf. ueber Scheduler
-					self.sensor.readData()
+					#self.sensor.readData()
 					self.scheduler.checkAlarm()
 					# toDo: ggf. zentraler Display Manager
 					if self.guiMode:

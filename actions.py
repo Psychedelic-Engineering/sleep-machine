@@ -75,7 +75,6 @@ def fallasleep(sleepApp):
 	soundTrack.play()
 
 	while soundTrack.playing:
-		print "playing", soundTrack.player.progress
 		time.sleep(10)
 
 
