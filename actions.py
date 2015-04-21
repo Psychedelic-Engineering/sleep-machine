@@ -1,7 +1,7 @@
 import time, logging
 from audio.playlist import PlaylistSoundCloud
-from hardware.Adafruit_MCP230xx import Adafruit_MCP230XX
-
+#from hardware.Adafruit_MCP230xx import Adafruit_MCP230XX
+"""
 mcp = Adafruit_MCP230XX(busnum = 1, address = 0x20, num_gpios = 16)
 mcp.config(0, mcp.OUTPUT)
 mcp.config(1, mcp.OUTPUT)
@@ -20,7 +20,7 @@ def switchRelais():
 	time.sleep(20 * 60)
 	mcp.output(0, 1)
 	mcp.output(1, 1)
-
+"""
 
 def doAlarm(sleepApp):
 	import random
