@@ -33,8 +33,10 @@ class PowerPlug:
 	@classmethod
 	def alarm(cls):
 		cls.relaisOn(0)
-		time.sleep(10 * 60)
+		#time.sleep(10 * 60)
+		time.sleep(5)
 		cls.relaisOn(1)
-		time.sleep(20 * 60)
+		time.sleep(5)
+		#time.sleep(20 * 60)
 		cls.relaisOff(0)
 		cls.relaisOff(1)
