@@ -19,7 +19,7 @@ class SleepApp:
 
 	def __init__(self):
 		self.isRaspberry = False
-		self.emulateSensor = True
+		self.emulateSensor = False
 		logging.basicConfig(format='%(asctime)s %(message)s', level=logging.INFO, datefmt='%Y-%m-%d %H:%M:%S')
 		logging.info("init app")
 		self.quitting = False
@@ -48,9 +48,9 @@ class SleepApp:
 
 		self.scheduler = Scheduler()
 		# ToDo: Alarme in config File, periodisch auslesen
-		self.scheduler.addAlarm("*", "6", "45", actions.switchRelais)
+		#self.scheduler.addAlarm("*", "6", "45", actions.switchRelais)
 		#self.scheduler.addAlarm("*", "*", "2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58", actions.switchRelais)
-		self.scheduler.addAlarm("*", "21", "0", actions.switchRelais)
+		#self.scheduler.addAlarm("*", "21", "0", actions.switchRelais)
 
 		#actions.fallasleep(self)
 
@@ -75,6 +75,7 @@ class SleepApp:
 			while True:
 				if self.quitting:
 					break
+				self.sensor.readRaw()
 				if self.scheduler.elapsed(0.05):
 					# ToDo: Sensoren ggf. ueber Scheduler
 					#self.sensor.readData()

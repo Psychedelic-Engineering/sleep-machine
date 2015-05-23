@@ -2,6 +2,7 @@ import os
 import time
 import datetime
 import logging
+import gzip
 
 from hardware.channel import Channel
 
@@ -20,6 +21,8 @@ class Sensor:
 		self.device = device
 		self.initSensor()
 		self.logging = False
+		self.buffer = ""
+		self.lastTime = 0
 
 	def initSensor(self):
 		self.initialized = False
@@ -28,6 +31,8 @@ class Sensor:
 			header = header.split(";")
 			logging.info("Initsensor: %s", header)
 			self.initChannels(header)
+			self.device.write("b 0")
+			self.device.write("l 0")
 		except:
 			raise
 			logging.error("Initsensor error")
@@ -57,6 +62,21 @@ class Sensor:
 					self.channels[i].putValue(v)
 		except:
 			pass
+
+	def readRaw(self):
+		now = int(10*time.time())
+		if now > self.lastTime:
+			#data = self.device.readWaiting()
+			self.lastTime = now
+			data = self.device.sendCommand("!")
+			self.buffer += str(now) + "," + data + "\n"
+			if len(self.buffer) >= 10000:
+				logging.info("Writing Buffer")
+				file = gzip.open('logfile.txt.gz', 'a')
+				#file = open("logfile.txt", "a")
+				file.write(self.buffer)
+				file.close()
+				self.buffer = ""
 
 	def calibrate(self):
 		for c in self.channels:

@@ -9,8 +9,6 @@ class Peripherals:
 
 	@classmethod
 	def init(cls):
-		#from serial.tools import list_ports
-		#print list(list_ports.comports())
 		devPath = "/dev/"
 		teensyBaseMac = "tty.usbmodem"
 		teensyBaseRaspi = "ttyACM"
@@ -19,7 +17,7 @@ class Peripherals:
 				devName = devPath + fileName
 				try:
 					teensy = Teensy(devName)
-					#if teensy.name != "":
+					print teensy
 					if teensy.name in cls.knownDevices:
 						cls.devices[teensy.name] = teensy
 				except:
@@ -50,8 +48,9 @@ class Teensy:
 			#logging.debug("Teensy close")
 
 	def initSerial(self, device):
-		self.serial = Serial(device, 115200, timeout=0.5)
-		#self.serial.flush()
+		self.serial = Serial(device, 115200, timeout=1)
+		self.serial.write("l 0")
+		self.serial.flushInput()
 		self.initDevice()
 
 	def initDevice(self):
@@ -64,6 +63,17 @@ class Teensy:
 		except:
 			print "InitDevice Error"
 			pass
+
+	def write(self, data):
+		self.serial.write(data)
+
+	def read(self, numBytes):
+		return self.serial.read(numBytes)
+
+	def readWaiting(self):
+		if self.serial.inWaiting() > 0:
+			return self.read(self.serial.inWaiting())
+		return ""
 
 	def sendCommand(self, strCommand, seperator=None):
 		# sende Kommando und liefere Ergebnis, besserer Name

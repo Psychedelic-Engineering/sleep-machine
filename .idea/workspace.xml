@@ -3,20 +3,24 @@
   <component name="ChangeListManager">
     <list id="4ccba5c5-68a6-412d-9095-580a69f02126" name="Failed commit: Default (2)" comment="Updated readme" />
     <list default="true" id="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" name="New changelist" comment="New changelist">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/actions/powerplug.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/actions.py" afterPath="$PROJECT_DIR$/actions.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hardware/sensors.py" afterPath="$PROJECT_DIR$/hardware/sensors.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sleepapp.py" afterPath="$PROJECT_DIR$/sleepapp.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hardware/teensy.py" afterPath="$PROJECT_DIR$/hardware/teensy.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Python.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1431895361014" ignored="false" />
+    <file path="/Dummy.txt" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1432378569300" ignored="false" />
     <file path="/fakesensor.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1413451706385" ignored="false" />
     <file path="/graph.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410534560764" ignored="false" />
     <file path="/mainapp.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1411149983998" ignored="false" />
-    <file path="/sensors.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1413451715097" ignored="false" />
+    <file path="/sensors.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1432384246115" ignored="false" />
     <file path="/channel.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1414073908901" ignored="false" />
     <file path="/display.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1427191748903" ignored="false" />
     <file path="/clock.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1426532516820" ignored="false" />
-    <file path="/teensy.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410709867448" ignored="false" />
+    <file path="/teensy.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1432381702366" ignored="false" />
     <file path="/main.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1412343319591" ignored="false" />
     <file path="/scheduler.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1427357523120" ignored="false" />
     <file path="/alarm.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1426534844424" ignored="false" />
@@ -29,7 +33,7 @@
     <file path="/settings.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410265694006" ignored="false" />
     <file path="/sertest.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410618556045" ignored="false" />
     <file path="/README.md" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1412343105690" ignored="false" />
-    <file path="/sleepapp.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1429642413022" ignored="false" />
+    <file path="/sleepapp.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1432380253204" ignored="false" />
     <file path="/actions.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1428653105395" ignored="false" />
     <file path="$PROJECT_DIR$/../../Radwende-Drawbot/Python/mainapp.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1413556126735" ignored="false" />
     <file path="$PROJECT_DIR$/../../Radwende-Drawbot/Python/bikemap.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1413205859143" ignored="false" />
@@ -42,7 +46,8 @@
     <file path="$USER_HOME$/Desktop/CurrentWorks/FaceRecognition/detect.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1427047857028" ignored="false" />
     <file path="/detect.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1427047854471" ignored="false" />
     <file path="$USER_HOME$/Desktop/CurrentWorks/Serialtest/test.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1431458345197" ignored="false" />
-    <file path="/test.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1431458319695" ignored="false" />
+    <file path="/test.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1432298346276" ignored="false" />
+    <file path="$USER_HOME$/Desktop/CurrentWorks/SleepingMachine/Serialtest/test.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1432304335175" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,15 +64,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/display/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="fakesensor.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hardware/fakesensor.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -77,20 +73,60 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sleepapp.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="sleepapp.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sleepapp.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="39" selection-start="1435" selection-end="1435" vertical-scroll-proportion="0.58504874">
+            <state line="71" column="29" selection-start="2055" selection-end="2055" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="actions.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="scheduler.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/events/scheduler.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="42" column="13" selection-start="889" selection-end="889" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="alarm.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/events/alarm.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="42" selection-start="442" selection-end="442" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="actions.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/actions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="0" selection-start="809" selection-end="809" vertical-scroll-proportion="0.0">
+            <state line="8" column="0" selection-start="149" selection-end="149" vertical-scroll-proportion="0.14285715">
+              <folding>
+                <element signature="e#0#20#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Adafruit_MCP230xx.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hardware/Adafruit_MCP230xx.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="powerplug.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/actions/powerplug.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="25" selection-start="316" selection-end="316" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -98,8 +134,21 @@
       <file leaf-file-name="sensors.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hardware/sensors.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="35" selection-start="1748" selection-end="1985" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="72" column="39" selection-start="1629" selection-end="1629" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="teensy.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hardware/teensy.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="71" column="0" selection-start="1513" selection-end="1513" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -131,12 +180,10 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/display/settings.py" />
         <option value="$PROJECT_DIR$/display/__init__.py" />
         <option value="$PROJECT_DIR$/audio/scloud.py" />
         <option value="$PROJECT_DIR$/audio/playlist.py" />
         <option value="$PROJECT_DIR$/hardware/fakesensor.py" />
-        <option value="$PROJECT_DIR$/hardware/sensors.py" />
         <option value="$PROJECT_DIR$/hardware/channel.py" />
         <option value="$PROJECT_DIR$/display/gui.py" />
         <option value="$PROJECT_DIR$/display/clock.py" />
@@ -144,17 +191,18 @@
         <option value="$PROJECT_DIR$/display/display.py" />
         <option value="$PROJECT_DIR$/audio/gstplayer.py" />
         <option value="$PROJECT_DIR$/events/scheduler.py" />
-        <option value="$PROJECT_DIR$/hardware/teensy.py" />
         <option value="$PROJECT_DIR$/actions.py" />
+        <option value="$PROJECT_DIR$/actions/powerplug.py" />
         <option value="$PROJECT_DIR$/sleepapp.py" />
+        <option value="$PROJECT_DIR$/hardware/teensy.py" />
+        <option value="$PROJECT_DIR$/hardware/sensors.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="67" />
     <option name="y" value="23" />
-    <option name="width" value="1613" />
-    <option name="height" value="1023" />
+    <option name="width" value="1672" />
+    <option name="height" value="1152" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -284,6 +332,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Python" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Python" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="actions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -297,7 +359,7 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="237" />
     <property name="recentsLimit" value="5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="last_opened_file_path" value="/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin/python2.7" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/CurrentWorks/SleepingMachine/Serialtest" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="243" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="932" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="932" />
@@ -1458,27 +1520,31 @@
       <created>1429642460244</created>
       <updated>1429642460244</updated>
     </task>
-    <option name="localTasksCounter" value="249" />
+    <task id="LOCAL-00249" summary="New changelist">
+      <created>1431895408480</created>
+      <updated>1431895408480</updated>
+    </task>
+    <option name="localTasksCounter" value="250" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="23" width="1613" height="1023" extended-state="0" />
+    <frame x="0" y="23" width="1672" height="1152" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890996" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16491011" sideWeight="0.73711884" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1590909" sideWeight="0.8037037" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39963832" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24188481" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2628812" sideWeight="0.99938005" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19629629" sideWeight="0.9964115" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26454446" sideWeight="0.9994794" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32897604" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32821077" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -1550,26 +1616,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/hardware/teensy.py</url>
-          <line>62</line>
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="1" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/display/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/display/clock.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="12" selection-start="1724" selection-end="1745" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/display/display.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="31" selection-start="469" selection-end="469" vertical-scroll-proportion="0.0" />
@@ -1585,19 +1635,9 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/events/alarm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="39" selection-start="931" selection-end="931" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/events/timeevent.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/events/scheduler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="13" selection-start="889" selection-end="889" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/display/graph.py">
@@ -1605,30 +1645,9 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hardware/teensy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="12" selection-start="810" selection-end="810" vertical-scroll-proportion="0.016251354">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/display/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hardware/fakesensor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/actions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="0" selection-start="809" selection-end="809" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1640,17 +1659,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hardware/sensors.py">
+    <entry file="file://$PROJECT_DIR$/events/scheduler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="35" selection-start="1748" selection-end="1985" vertical-scroll-proportion="0.0">
+        <state line="42" column="13" selection-start="889" selection-end="889" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hardware/Adafruit_MCP230xx.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/events/alarm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="42" selection-start="442" selection-end="442" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hardware/teensy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="0" selection-start="1513" selection-end="1513" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hardware/fakesensor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sleepapp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="39" selection-start="1435" selection-end="1435" vertical-scroll-proportion="0.58504874">
+        <state line="71" column="29" selection-start="2055" selection-end="2055" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hardware/sensors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="39" selection-start="1629" selection-end="1629" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/actions/powerplug.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="25" selection-start="316" selection-end="316" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/actions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="149" selection-end="149" vertical-scroll-proportion="0.14285715">
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
