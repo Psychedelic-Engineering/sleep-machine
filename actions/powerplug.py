@@ -14,7 +14,7 @@ class PowerPlug:
 
 		cls.relaisOn(0)
 		cls.relaisOn(1)
-		time.sleep(2)
+		time.sleep(8)
 		cls.relaisOff(0)
 		cls.relaisOff(1)
 

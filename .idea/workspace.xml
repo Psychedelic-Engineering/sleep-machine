@@ -3,12 +3,12 @@
   <component name="ChangeListManager">
     <list id="4ccba5c5-68a6-412d-9095-580a69f02126" name="Failed commit: Default (2)" comment="Updated readme" />
     <list default="true" id="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" name="New changelist" comment="New changelist">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hardware/sensors.py" afterPath="$PROJECT_DIR$/hardware/sensors.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/actions/powerplug.py" afterPath="$PROJECT_DIR$/actions/powerplug.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Python.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1432391546653" ignored="false" />
+    <file path="/Dummy.txt" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1432392613145" ignored="false" />
     <file path="/fakesensor.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1413451706385" ignored="false" />
     <file path="/graph.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410534560764" ignored="false" />
     <file path="/mainapp.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1411149983998" ignored="false" />
@@ -83,20 +83,27 @@
         <entry file="file://$PROJECT_DIR$/actions/actions.py">
           <provider selected="true" editor-type-id="text-editor">
             <state line="8" column="0" selection-start="149" selection-end="149" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sensors.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hardware/sensors.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="46" column="16" selection-start="902" selection-end="902" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#0#20#0" expanded="true" />
+                <element signature="e#0#9#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sensors.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/hardware/sensors.py">
+      <file leaf-file-name="powerplug.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/actions/powerplug.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="36" selection-start="1626" selection-end="1626" vertical-scroll-proportion="0.6923077">
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
+            <state line="16" column="20" selection-start="355" selection-end="355" vertical-scroll-proportion="0.2588997">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -105,9 +112,7 @@
         <entry file="file://$PROJECT_DIR$/hardware/teensy.py">
           <provider selected="true" editor-type-id="text-editor">
             <state line="5" column="18" selection-start="113" selection-end="684" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -152,9 +157,9 @@
         <option value="$PROJECT_DIR$/events/scheduler.py" />
         <option value="$PROJECT_DIR$/actions.py" />
         <option value="$PROJECT_DIR$/hardware/teensy.py" />
-        <option value="$PROJECT_DIR$/actions/powerplug.py" />
         <option value="$PROJECT_DIR$/sleepapp.py" />
         <option value="$PROJECT_DIR$/hardware/sensors.py" />
+        <option value="$PROJECT_DIR$/actions/powerplug.py" />
       </list>
     </option>
   </component>
@@ -314,14 +319,14 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="237" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="238" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="237" />
     <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="237" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/CurrentWorks/SleepingMachine/Serialtest" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="243" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="932" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="932" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="932" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="243" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="238" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -1503,28 +1508,32 @@
       <created>1432391548143</created>
       <updated>1432391548143</updated>
     </task>
-    <option name="localTasksCounter" value="255" />
+    <task id="LOCAL-00255" summary="New changelist">
+      <created>1432391734060</created>
+      <updated>1432391734060</updated>
+    </task>
+    <option name="localTasksCounter" value="256" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1672" height="1027" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32821077" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890996" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1590909" sideWeight="0.7780105" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1590909" sideWeight="0.7780105" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39963832" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24188481" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22198953" sideWeight="0.9964115" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22198953" sideWeight="0.9964115" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26454446" sideWeight="0.9994794" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32897604" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32821077" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1626,40 +1635,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/display/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hardware/teensy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="18" selection-start="113" selection-end="684" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="187" selection-end="187" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hardware/Adafruit_MCP230xx.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/actions/actions.py">
+    <entry file="file://$PROJECT_DIR$/sleepapp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="149" selection-end="149" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
+        <state line="53" column="81" selection-start="1729" selection-end="1729" vertical-scroll-proportion="0.9020979" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hardware/fakesensor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/events/scheduler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="24" selection-start="736" selection-end="736" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1670,42 +1667,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/actions/powerplug.py">
+    <entry file="file://$PROJECT_DIR$/actions/actions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="9" selection-start="708" selection-end="708" vertical-scroll-proportion="0.75524473">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sleepapp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="81" selection-start="1729" selection-end="1729" vertical-scroll-proportion="0.9020979">
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hardware/fakesensor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/events/scheduler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="24" selection-start="736" selection-end="736" vertical-scroll-proportion="0.0">
+        <state line="8" column="0" selection-start="149" selection-end="149" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hardware/sensors.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="36" selection-start="1626" selection-end="1626" vertical-scroll-proportion="0.6923077">
+        <state line="46" column="16" selection-start="902" selection-end="902" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hardware/teensy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="18" selection-start="113" selection-end="684" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="187" selection-end="187" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/actions/powerplug.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="20" selection-start="355" selection-end="355" vertical-scroll-proportion="0.2588997">
+          <folding />
         </state>
       </provider>
     </entry>
