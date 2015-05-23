@@ -8,11 +8,10 @@ from hardware.teensy import Peripherals
 from hardware.fakesensor import FakeSensor
 from hardware.sensors import Sensor
 from display.display import Display
-from display.graph import Graph
 from display.clock import Clock
 from display.settings import Settings
 from events.scheduler import Scheduler
-import actions
+import actions.powerplug
 
 
 class SleepApp:
@@ -35,6 +34,8 @@ class SleepApp:
 			self.sensor = Sensor(Peripherals.devices["Pillow"])
 		#self.led = LED(Peripherals.devices["Basestation"])
 		#self.led.setLum(0, 0)
+
+		actions.powerplug.PowerPlug.init()
 
 		# toDo: ggf. zentraler Display Manager
 		self.screenMult = 4
