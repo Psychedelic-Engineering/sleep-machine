@@ -70,7 +70,7 @@ class Sensor:
 			self.lastTime = now
 			data = self.device.sendCommand("!")
 			self.buffer += str(now) + "," + data + "\n"
-			if len(self.buffer) >= 100000:
+			if len(self.buffer) >= 10000:
 				logging.info("Writing Buffer")
 				file = gzip.open('logfile.txt.gz', 'a')
 				#file = open("logfile.txt", "a")
