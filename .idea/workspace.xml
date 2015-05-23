@@ -3,14 +3,12 @@
   <component name="ChangeListManager">
     <list id="4ccba5c5-68a6-412d-9095-580a69f02126" name="Failed commit: Default (2)" comment="Updated readme" />
     <list default="true" id="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" name="New changelist" comment="New changelist">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/actions/powerplug.py" afterPath="$PROJECT_DIR$/actions/powerplug.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hardware/sensors.py" afterPath="$PROJECT_DIR$/hardware/sensors.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sleepapp.py" afterPath="$PROJECT_DIR$/sleepapp.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Python.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1432390303027" ignored="false" />
+    <file path="/Dummy.txt" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1432391546653" ignored="false" />
     <file path="/fakesensor.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1413451706385" ignored="false" />
     <file path="/graph.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410534560764" ignored="false" />
     <file path="/mainapp.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1411149983998" ignored="false" />
@@ -95,7 +93,7 @@
       <file leaf-file-name="sensors.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hardware/sensors.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="38" selection-start="1628" selection-end="1628" vertical-scroll-proportion="0.6923077">
+            <state line="72" column="36" selection-start="1626" selection-end="1626" vertical-scroll-proportion="0.6923077">
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -1501,7 +1499,11 @@
       <created>1432390304908</created>
       <updated>1432390304908</updated>
     </task>
-    <option name="localTasksCounter" value="254" />
+    <task id="LOCAL-00254" summary="New changelist">
+      <created>1432391548143</created>
+      <updated>1432391548143</updated>
+    </task>
+    <option name="localTasksCounter" value="255" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1700,7 +1702,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hardware/sensors.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="38" selection-start="1628" selection-end="1628" vertical-scroll-proportion="0.6923077">
+        <state line="72" column="36" selection-start="1626" selection-end="1626" vertical-scroll-proportion="0.6923077">
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
