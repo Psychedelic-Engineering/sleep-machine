@@ -8,7 +8,7 @@
     </list>
     <ignored path="Python.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1434485733631" ignored="false" />
+    <file path="/Dummy.txt" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1435264067439" ignored="false" />
     <file path="/fakesensor.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1413451706385" ignored="false" />
     <file path="/graph.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410534560764" ignored="false" />
     <file path="/mainapp.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1411149983998" ignored="false" />
@@ -29,7 +29,7 @@
     <file path="/settings.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410265694006" ignored="false" />
     <file path="/sertest.py" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1410618556045" ignored="false" />
     <file path="/README.md" changelist="fb73a798-6776-4ef0-9aeb-04954e62c150" time="1412343105690" ignored="false" />
-    <file path="/sleepapp.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1432739300190" ignored="false" />
+    <file path="/sleepapp.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1435264076909" ignored="false" />
     <file path="/actions.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1428653105395" ignored="false" />
     <file path="$PROJECT_DIR$/../../Radwende-Drawbot/Python/mainapp.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1413556126735" ignored="false" />
     <file path="$PROJECT_DIR$/../../Radwende-Drawbot/Python/bikemap.py" changelist="2e9ed115-c87e-4e2b-9f82-ca1a430029e2" time="1413205859143" ignored="false" />
@@ -61,19 +61,37 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="sleepapp.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="sleepapp.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sleepapp.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="29" selection-start="1814" selection-end="1814" vertical-scroll-proportion="0.0">
+            <state line="51" column="45" selection-start="1458" selection-end="1458" vertical-scroll-proportion="0.38244852">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="powerplug.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="sensors.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hardware/sensors.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="46" column="16" selection-start="902" selection-end="902" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gui.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/display/gui.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="158" column="33" selection-start="4042" selection-end="4401" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="powerplug.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/actions/powerplug.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="24" selection-start="394" selection-end="394" vertical-scroll-proportion="0.29252437">
+            <state line="18" column="24" selection-start="394" selection-end="394" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -166,6 +184,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -270,7 +289,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1478,7 +1496,11 @@
       <created>1432739321823</created>
       <updated>1432739321823</updated>
     </task>
-    <option name="localTasksCounter" value="258" />
+    <task id="LOCAL-00258" summary="New changelist">
+      <created>1434485794032</created>
+      <updated>1434485794032</updated>
+    </task>
+    <option name="localTasksCounter" value="259" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1574,11 +1596,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/display/gui.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="20" selection-start="269" selection-end="270" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/events/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
@@ -1614,13 +1631,6 @@
         <state line="35" column="24" selection-start="736" selection-end="736" vertical-scroll-proportion="0.50161815" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hardware/teensy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="18" selection-start="113" selection-end="684" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="0" selection-start="187" selection-end="187" vertical-scroll-proportion="0.0">
@@ -1638,28 +1648,42 @@
         <state line="8" column="0" selection-start="149" selection-end="149" vertical-scroll-proportion="0.045307443" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hardware/sensors.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="16" selection-start="902" selection-end="902" vertical-scroll-proportion="0.01618123" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/sleep.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/actions/powerplug.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="24" selection-start="394" selection-end="394" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hardware/teensy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="18" selection-start="113" selection-end="684" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hardware/sensors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="16" selection-start="902" selection-end="902" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/display/gui.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="158" column="33" selection-start="4042" selection-end="4401" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sleepapp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="29" selection-start="1814" selection-end="1814" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/actions/powerplug.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="24" selection-start="394" selection-end="394" vertical-scroll-proportion="0.29252437">
+        <state line="51" column="45" selection-start="1458" selection-end="1458" vertical-scroll-proportion="0.38244852">
           <folding />
         </state>
       </provider>
